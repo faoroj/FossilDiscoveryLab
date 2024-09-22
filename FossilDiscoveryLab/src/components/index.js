@@ -10,6 +10,13 @@ import Hero from "./home/Hero";
 import AboutUsEntry from "./about/AboutUsEntry";
 import MissionStatement from "./about/MissionStatement";
 import Extras from "./about/Extras";
+import Admission from "./visit/admission";
+import Directions from "./visit/directions";
+import Help from "./visit/help";
+import Questions from "./visit/questions";
+import Hours from "./visit/hours";
+
+
 
 
 export {
@@ -25,4 +32,9 @@ export {
   AboutUsEntry,
   MissionStatement,
   Extras,
+  Admission,
+  Directions,
+  Help,
+  Questions,
+  Hours,
 };

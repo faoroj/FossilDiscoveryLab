@@ -21,6 +21,8 @@ import Learning2 from "./Learning2.png";
 import JoinUs from "./JoinUs.png";
 import ContactUs from "./ContactUs.png";
 import FAQ from "./FAQ.png";
+import Hoursimg from "./hours_img.png";
+import Clock from "./clock.png";
 
 
 
@@ -47,5 +49,7 @@ export {
     Learning2,
     JoinUs,
     ContactUs,
-    FAQ
+    FAQ,
+    Hoursimg,
+    Clock
 };
