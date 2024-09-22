@@ -23,6 +23,11 @@ import ContactUs from "./ContactUs.png";
 import FAQ from "./FAQ.png";
 import Hoursimg from "./hours_img.png";
 import Clock from "./clock.png";
+import Googlemap from "./GoogleMap.png";
+import Handicap from "./AccessibleHandicap.png";
+import Address from "./AddressPointer.png";
+import Car from "./ParkingCar.png";
+
 
 
 
@@ -51,5 +56,10 @@ export {
     ContactUs,
     FAQ,
     Hoursimg,
-    Clock
+    Clock,
+    Googlemap,
+    Handicap,
+    Address,
+    Car,
+    
 };

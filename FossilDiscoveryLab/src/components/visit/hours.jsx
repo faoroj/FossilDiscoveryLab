@@ -24,10 +24,10 @@ const hours = () => {
           Open daily 8am-6pm
         </p>
 
-        <p className=' text-secondary text-bold-16 mt-5 text-center'>Prehistoric Palate Cafe</p>
-        <p className='text-normal-16 mt-1 text-center'>Lunch offered daily 11 a.m.- 4 p.m.</p>
+        <p className=' text-secondary text-bold-21 mt-5 text-center'>Prehistoric Palate Cafe</p>
+        <p className='text-normal-16 mt-1 text-center'>Lunch offered daily 11am - 4pm</p>
 
-        <p className='text-secondary text-bold-16 mt-[40px] text-center'>Holiday Hours</p>
+        <p className='text-secondary text-bold-21 mt-[40px] text-center'>Holiday Hours</p>
         <p className='text-normal-16 mt-1 text-center'>Thanksgiving | Closed</p>
         <p className='text-normal-16 mt-1 text-center'>Christmas Day | Closed</p>
         <p className='text-normal-16 mt-1 text-center'>New Year's Day | Closed</p>

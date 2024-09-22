@@ -1,7 +1,7 @@
 import { 
   Assistance, Divider, DonateBanner, facebook, hero, instagram, Learning, 
   logo,  Programs ,Tours, Trex, Trex2, Triceratops, twitter, youtube, Learning2, 
-  ContactUs, JoinUs, FAQ 
+  ContactUs, JoinUs, FAQ, Address, Handicap, Car
 } from "../assets";
 
 export const navLinks = [
@@ -144,42 +144,66 @@ export const services = [
     },
   ];
 
-export const ExtraResources = [
+  export const ExtraResources = [
+
+    {
+      id: "ExtraResources-1",
+      image: Learning2,
+      title: "Learning Resources",
+      content:"Explore our collection of educational materials and resources to enhance your dinosaur discoveries.",
+      link: "Learn Now >",
+  },
 
   {
-    id: "ExtraResources-1",
-    image: Learning2,
-    title: "Learning Resources",
-    content:"Explore our collection of educational materials and resources to enhance your dinosaur discoveries.",
-    link: "Learn Now >",
-},
+      id: "ExtraResources-2",
+      image: JoinUs,
+      title: "Join Us",
+      content:"Connect and collaborate with us with our professional positions and programs",
+      link: "View Careers >",
+  },
 
-{
-    id: "ExtraResources-2",
-    image: JoinUs,
-    title: "Join Us",
-    content:"Connect and collaborate with us with our professional positions and programs",
-    link: "View Careers >",
-},
+  {
+      id: "ExtraResources-3",
+      image: ContactUs,
+      title: "Contact Us",
+      content:"We're here to help! Reach out to us with any questions or inquiries.",
+      link: "Reach Out >",
+  },
 
-{
-    id: "ExtraResources-3",
-    image: ContactUs,
-    title: "Contact Us",
-    content:"We're here to help! Reach out to us with any questions or inquiries.",
-    link: "Reach Out >",
-},
+  {
+      id: "ExtraResources-4",
+      image: FAQ,
+      title: "FAQ",
+      content:"Find answers to commonly asked questions about our museum below.",
+      link: "Learn More >",
+  },
 
-{
-    id: "ExtraResources-4",
-    image: FAQ,
-    title: "FAQ",
-    content:"Find answers to commonly asked questions about our museum below.",
-    link: "Learn More >",
-},
+  ];
 
-
-];
+  export const Directions = [
+    {
+      id: "Directions-1",
+      title: "Address",
+      icon: Address,
+      content: "2600 Benjamin Franklin Parkway Philadelphia, PA 19130",
+      link: "Copy Address",
+    },
+    {
+      id: "Directions-2",
+      title: "Parking",
+      icon: Car,
+      content: "The parking lot entrance is located on Kensington Ave, just south of E Tiega St.",
+      link: "Google Map",
+       
+    },
+    {
+      id: "Directions-3",
+      title: "Accessible Parking",
+      icon: Handicap,
+      content: "We provide accessible parking spaces and bicycle racks to accommodate all visitors' needs.",
+      link: "Read More",
+    }
+  ];
 
   
  
