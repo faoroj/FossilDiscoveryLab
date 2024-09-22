@@ -194,7 +194,6 @@ export const services = [
       icon: Car,
       content: "The parking lot entrance is located on Kensington Ave, just south of E Tiega St.",
       link: "Google Map",
-       
     },
     {
       id: "Directions-3",
@@ -203,6 +202,34 @@ export const services = [
       content: "We provide accessible parking spaces and bicycle racks to accommodate all visitors' needs.",
       link: "Read More",
     }
+  ];
+
+  export const Admission = [
+    {
+      id: "Admission-1",
+      age: "Adults",
+      cost: "20$",
+    },
+    {
+      id: "Admission-2",
+      age: "Senior (60 & over)",
+      cost: "18$",
+    },
+    {
+      id: "Admission-3",
+      age: "Military",
+      cost: "18$",
+    },
+    {
+      id: "Admission-4",
+      age: "Students with valid ID",
+      cost: "15$",
+    },
+    {
+      id: "Admission-5",
+      age: "Children (8 & Under) ",
+      cost: "Free",
+    },
   ];
 
   
