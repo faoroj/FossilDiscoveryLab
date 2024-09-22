@@ -1,4 +1,4 @@
-import { ExtraResources } from '../constants';
+import { ExtraResources } from '../../constants';
 
 const Extras = () => {
   return (

@@ -1,4 +1,4 @@
-import { collection } from '../assets';
+import { collection } from '../../assets';
 
 const MissionStatement = () => {
   return (

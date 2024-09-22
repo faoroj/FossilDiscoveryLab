@@ -1,4 +1,4 @@
-import { footerlinks, socialMedia } from '../constants';
+import { footerlinks, socialMedia } from '../../constants';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {

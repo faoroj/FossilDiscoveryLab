@@ -1,4 +1,4 @@
-import { learnmore } from '../constants';
+import { learnmore } from '../../constants';
 
 const Learn = () => {
   return (

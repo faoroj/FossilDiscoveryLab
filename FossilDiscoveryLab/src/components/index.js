@@ -1,15 +1,15 @@
-import Navbar from "./Navbar";
-import Donate from "./Donate";
-import Exhibits from "./Exhibits";
-import Latest from "./Latest";
-import Learn from "./Learn";
-import Newsletter from "./Newsletter";
-import Services from "./Services";
-import Footer from "./Footer";
-import Hero from "./Hero";
-import AboutUsEntry from "./AboutUsEntry";
-import MissionStatement from "./MissionStatement";
-import Extras from "./Extras";
+import Navbar from "./nav/Navbar";
+import Donate from "./home/Donate";
+import Exhibits from "./home/Exhibits";
+import Latest from "./home/Latest";
+import Learn from "./home/Learn";
+import Newsletter from "./footer/Newsletter";
+import Services from "./home/Services";
+import Footer from "./footer/Footer";
+import Hero from "./home/Hero";
+import AboutUsEntry from "./about/AboutUsEntry";
+import MissionStatement from "./about/MissionStatement";
+import Extras from "./about/Extras";
 
 
 export {

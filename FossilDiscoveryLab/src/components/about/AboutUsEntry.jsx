@@ -1,4 +1,4 @@
-import { dinohead } from '../assets';
+import { dinohead } from '../../assets';
 const AboutUsEntry = () => {
   return (
     <section>

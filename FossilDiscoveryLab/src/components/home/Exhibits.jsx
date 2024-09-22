@@ -1,4 +1,4 @@
-import { exhibits } from '../constants';
+import { exhibits } from '../../constants';
 
 const ExhibitCard = ({ image, title, content, }) => (
   <div className='flexCenter flex-col'>

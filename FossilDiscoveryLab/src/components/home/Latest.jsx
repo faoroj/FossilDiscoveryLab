@@ -1,4 +1,4 @@
-import { Trex2 } from '../assets';
+import { Trex2 } from '../../assets';
 
 const Latest = () => {
   return (

@@ -1,4 +1,4 @@
-import {  hero, pointer } from '../assets';
+import {  hero, pointer } from '../../assets';
 
 const Hero = () => {
   return (

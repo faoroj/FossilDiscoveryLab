@@ -1,5 +1,5 @@
-import { services } from '../constants';
-import {  Assistance, Divider } from '../assets';
+import { services } from '../../constants';
+import {  Assistance, Divider } from '../../assets';
 
 const Services = () => {
   return (

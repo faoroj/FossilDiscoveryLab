@@ -1,5 +1,5 @@
-import { navLinks } from '../constants';
-import {  logo, search } from '../assets';
+import { navLinks } from '../../constants';
+import {  logo, search } from '../../assets';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 

@@ -1,4 +1,4 @@
-import { DonateBanner } from '../assets';
+import { DonateBanner } from '../../assets';
 
 const Donate = () => {
   return (
