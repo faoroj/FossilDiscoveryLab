@@ -1,5 +1,6 @@
 import { services } from '../../constants';
 import {  Assistance, Divider } from '../../assets';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   return (
@@ -37,15 +38,19 @@ const Services = () => {
           </div>
           ))}
 
-          <div>
-            <button type='button' className='custom__button__open mt-8'>Accessibility</button>
-          </div>
-        
+          <Link to="/Accessibility">
+            <div>
+              <button type='button' className='custom__button__open mt-8'>Accessibility</button>
+            </div>
+          </Link>
+          
        </div>
 
+       
        <div>
         <img src={Assistance} alt="assistance" className='w-[785px] absolute top-[200px]'/>
        </div>
+       
 
       </div>
   

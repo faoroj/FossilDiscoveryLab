@@ -53,9 +53,9 @@ const Footer = () => {
 
       <div className='flexStart'>
         <div className='flex justify-between px py-[10px]'>
-          <p className='mr-5 font-inter text-[12px]'>Privacy Policy</p>
-          <p className='mr-5 font-inter text-[12px] '>Join Us</p>
-          <p className='mr-5 font-inter text-[12px]'>Terms of Service</p>
+          <p className='mr-5 font-inter text-[12px] cursor-pointer'>Privacy Policy</p>
+          <p className='mr-5 font-inter text-[12px] cursor-pointer'>Join Us</p>
+          <p className='mr-5 font-inter text-[12px] cursor-pointer'>Terms of Service</p>
         </div>
 
         <div className='ml-auto mr-[340px]'>

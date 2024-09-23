@@ -1,4 +1,5 @@
 import {  hero, pointer } from '../../assets';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -14,8 +15,14 @@ const Hero = () => {
         <h2 className='text-medium-28 text-flat'>Step Into a World Lost in Time</h2>
 
         <div className='flexCenter flex-col sm:flex-row mt-14'>
-          <a href="/plan-your-visit" type='button' className='custom__button__rounded sm:mr-[40px] mt-[14px] sm:mt-0'>Plan Your Visit</a>
-          <a href="/accessibility" type='button' className='custom__button__rounded sm:mr-[40px] mt-[14px] sm:mt-0'>Accessibility</a>
+
+        <Link to="/VisitUs">
+          <button type='button' className='custom__button__rounded sm:mr-[40px] mt-[14px] sm:mt-0'>Plan Your Visit</button>
+        </Link>
+
+        <Link to="/Accessibility">
+          <button type='button' className='custom__button__rounded sm:mr-[40px] mt-[14px] sm:mt-0'>Accessibility</button>
+        </Link>
           <a href="/group-visit" type='button' className='custom__button__rounded mt-[14px] sm:mt-0'>Group Visit</a>
         </div>  
       </div>

@@ -31,6 +31,7 @@ import Dropdown from "./Dropdown.png";
 import Map from "./map.png";
 import QuestionMark from "./questionmark.png";
 import DropdownBlack from "./DropdownBlack.png";
+import Accessibility from "./accessibility.png";
 
 
 
@@ -68,6 +69,6 @@ export {
     Dropdown,
     Map,
     QuestionMark,
-    DropdownBlack
-    
+    DropdownBlack, 
+    Accessibility
 };
