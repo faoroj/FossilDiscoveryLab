@@ -15,16 +15,16 @@ const GroupVisitForm = () => {
           {index === 1 && (
             <div className='flex'>
               <div className='w-[300px] h-[45px] border rounded-[6px] mt-4 border-black mr-[30px]'>
-                <p className='text-normal-16 py-2 ml-3'>First</p>
+                <p className='text-normal-16 py-[9px] ml-3'>First</p>
               </div>
               <div className='w-[300px] h-[45px] border rounded-[6px] mt-4 border-black'>
-              <p className='text-normal-16 py-2 ml-3'>Last</p>
+              <p className='text-normal-16 py-[9px] ml-3'>Last</p>
               </div>
             </div>
             )}
 
           {index != 1 && (  
-            <div className={index === 8 ? 'w-full h-[170px] border rounded-[6px] mt-4 border-black' : 'border-black border w-[630px] h-[45px] rounded-[6px] mt-4'}></div>
+            <div className={index === 8 ? 'w-[800px] h-[170px] border rounded-[6px] mt-4 border-black' : 'border-black border w-[630px] h-[45px] rounded-[6px] mt-4'}></div>
           )}
 
           {form.icon && <img src={form.icon} alt={`${form.title} icon`} 
@@ -33,9 +33,9 @@ const GroupVisitForm = () => {
       ))} 
 
       <div className='mb-[100px] mt-[50px] flexCenter'>
-        <button className='bg-tertiarySecondary h-[70px] w-[370px] rounded-[10px] py-[17px] px-[90px] 
-          flexCenter text-bold-28 text-flat hover:bg-secondary'>
-          Submit Form
+        <button className='bg-tertiarySecondary h-[50px] w-[250px] rounded-[10px] py-[17px] px-[50px] 
+          flexCenter text-bold-21 text-flat hover:bg-secondary'>
+          Submit
         </button>
       </div>  
 

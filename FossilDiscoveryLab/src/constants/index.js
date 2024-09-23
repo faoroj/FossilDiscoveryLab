@@ -321,6 +321,33 @@ export const services = [
 
   ];
 
+  export const serviceDogsPolicy = {
+    title: "Service Dogs Policy",
+    introduction: "At our museum, we welcome visitors with service animals to ensure an inclusive and accessible experience for all. We recognize the vital role that service animals play in assisting individuals with disabilities, and we are committed to accommodating their presence within our premises.",
+    responsibilities: [
+      "Service animals must be harnessed, leashed, or tethered, unless these devices interfere with the animal's work or the individual's disability prevents using such devices.",
+      "The handler is responsible for the care, supervision, and control of the service animal at all times."
+    ],
+    exclusions: [
+      "Animals other than service animals, such as pets and emotional support animals, are not permitted within the museum.",
+      "Service animals that are not under control, pose a direct threat to the health or safety of others, or exhibit disruptive behavior (such as excessive barking or aggression) may be asked to leave."
+    ]
+  };
+
+  export const signLanguagePolicy = {
+    title: "Sign Language Interpreters",
+    introduction: "We are committed to providing an inclusive and accessible experience for all visitors at our museum. To assist individuals who are deaf or hard of hearing, we offer sign language interpreter services.",
+    requesting: [
+      "Visitors who require a sign language interpreter during their museum visit are kindly asked to submit a request at least two weeks in advance of their booked visit date.",
+      "Requests can be made by contacting our Accessibility Services Coordinator at help@fossildiscoverymuseum.org or 215-763-8100. Please provide the following information:"
+    ],
+    requesting2: [
+      "Date and time of your visit",
+      "Type of interpreter needed (e.g., American Sign Language, British Sign Language, etc.)"
+    ]
+  };
+  
+
   
  
 

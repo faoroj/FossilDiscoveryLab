@@ -16,6 +16,8 @@ import Help from "./visit/help";
 import Questions from "./visit/questions";
 import Hours from "./visit/hours";
 import AccessibilityHero from "./accessibility/accessibilityhero";
+import Info from "./accessibility/info";
+
 import GroupVisitHero from "./groupvisit/GroupVisitHero";
 import GroupVisitForm from "./groupvisit/GroupVisitForm";
 
@@ -42,5 +44,6 @@ export {
   Hours,
   AccessibilityHero,
   GroupVisitHero,
-  GroupVisitForm
+  GroupVisitForm,
+  Info
 };

@@ -1,4 +1,4 @@
-import {  Navbar, Footer, Newsletter, AccessibilityHero, } from "../components/";
+import {  Navbar, Footer, Newsletter, AccessibilityHero, Info } from "../components/";
 
 const Accessibility = () => {
   return (
@@ -13,8 +13,11 @@ const Accessibility = () => {
         <div>
           <div>
             <AccessibilityHero />
+            <Info />
+            {/*
             <Newsletter />
             <Footer />
+            */}
           </div>
         </div>
         
