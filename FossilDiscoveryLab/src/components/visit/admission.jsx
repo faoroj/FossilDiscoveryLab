@@ -17,7 +17,7 @@ const admission = () => {
           explorer, we welcome you to discover the wonders of the dinosaur 
           kingdom with us.
         </p>
-        <button type='button' className='custom__button__bevel mt-[20px]'>Buy Tickets</button>
+        <button type='button' className='custom__button__bevel custom__button__medium mt-[20px]'>Buy Tickets</button>
       </div>
 
       <div>

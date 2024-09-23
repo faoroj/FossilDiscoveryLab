@@ -12,7 +12,7 @@ const directions = () => {
 
       <div className='flex flex-row justify-between items-start space-x-[72px] mt-5 max-w-[1200px]'>
         
-        {Directions.map((parking) => (
+        {Directions.map((parking, index) => (
 
             <div key={parking.id} className='flex flex-col mb-[120px] h-[200px]'>
 
@@ -20,7 +20,12 @@ const directions = () => {
                   <h3 className="text-bold-21 max-w-[523px] mt-1 mr-1">
                       {parking.title}
                   </h3>
-                  <img src={parking.icon} alt={parking.title} className='w-[30px] h-[30px]'/>
+
+                  <img 
+                    src={parking.icon} 
+                    alt={parking.title} 
+                    className={index === 0 ? 'w-[21px] h-[27px] mt-1' : 'w-[30px] h-[30px] mt-[2px]'}
+                  />
                 </div>
 
                 <p className="text-normal-21 text-mediumBlack max-w-[523px] mt-5">
@@ -29,7 +34,7 @@ const directions = () => {
 
                 <div className="mt-auto">
                   <Link to={parking.page}>
-                    <p className="text-medium-21 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline ">
+                    <p className="text-medium-21 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
                       {parking.link}
                     </p>
                   </Link>

@@ -8,7 +8,7 @@ const Extras = () => {
 
             {ExtraResources.map((extra) => (
 
-              <div key={extra.id} className='flex flex-col mb-[120px] h-[500px]'>
+              <div key={extra.id} className='flex flex-col mb-[100px] h-[550px]'>
 
                 <img src={extra.image} alt={extra.title} className='w-full h-auto'/>
 
