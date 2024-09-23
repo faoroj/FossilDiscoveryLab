@@ -22,7 +22,7 @@ const questions = () => {
 
                 <div className='bg-black h-[1px] w-full mt-4 mb-2'></div>
                 <div className='flexBetween'>
-                  <p className="text-semibold-21">
+                  <p className="text-semibold-18">
                       {item.question}
                   </p>
                   <img src={item.icon} alt={item.title} className='w-[34px] h-[34px] cursor-pointer'/>

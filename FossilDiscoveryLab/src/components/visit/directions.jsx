@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const directions = () => {
   return (
-    <section className='flex flex-col px mt-[102px]'>
+    <section className='flex flex-col px mt-[150px] mb-[150px]'>
 
       <h1 className='text-semibold-48'>Directions and Parking</h1>
       <img src={Googlemap} alt='Google Map' className='w-[1240px] h-[435px] mt-5'/>
@@ -14,10 +14,10 @@ const directions = () => {
         
         {Directions.map((parking, index) => (
             <div className='flex'>
-              <div key={parking.id} className='flex flex-col mb-[120px] h-[200px] mt-3'>
+              <div key={parking.id} className='flex flex-col h-[170px] mt-3'>
 
                   <div className='flex'>
-                    <h3 className="text-bold-21 max-w-[523px] mt-1 mr-1">
+                    <h3 className="text-bold-18 max-w-[523px] mt-1 mr-1">
                         {parking.title}
                     </h3>
 
@@ -28,13 +28,13 @@ const directions = () => {
                     />
                   </div>
 
-                  <p className="text-normal-21 text-mediumBlack max-w-[523px] mt-5">
+                  <p className="text-normal-18 text-mediumBlack max-w-[523px] mt-5">
                     {parking.content}
                   </p>
 
                   <div className="mt-auto">
                     <Link to={parking.page}>
-                      <p className="text-medium-21 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
+                      <p className="text-medium-18 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
                         {parking.link}
                       </p>
                     </Link>
