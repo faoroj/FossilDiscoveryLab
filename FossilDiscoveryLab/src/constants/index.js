@@ -1,7 +1,7 @@
 import { 
   Assistance, Divider, DonateBanner, facebook, hero, instagram, Learning, 
   logo,  Programs ,Tours, Trex, Trex2, Triceratops, twitter, youtube, Learning2, 
-  ContactUs, JoinUs, FAQ, Address, Handicap, Car, Map, Dropdown, DropdownBlack
+  ContactUs, JoinUs, FAQ, Address, Handicap, Car, Map, Dropdown, DropdownBlack, Calender
 } from "../assets";
 
 export const navLinks = [
@@ -278,6 +278,47 @@ export const services = [
       question: "How can I support the museum through donations or volunteering?",
       icon: DropdownBlack
     }
+  ];
+
+  export const GroupForm = [
+    {
+      id: "GroupForm-1",
+      header: "Group Type*",
+    },
+    {
+      id: "GroupForm-2",
+      header: "Contact Name*",
+    },
+    {
+      id: "GroupForm-3",
+      header: "Contact Email*",
+    },
+    {
+      id: "GroupForm-4",
+      header: "Contact Phone*",
+    },
+    {
+      id: "GroupForm-5",
+      header: "Desired Date*",
+      icon: Calender,
+    },
+    {
+      id: "GroupForm-6",
+      header: "Number in group*",
+    },
+    {
+      id: "GroupForm-7",
+      header: "Arrival Time*",
+    },
+    {
+      id: "GroupForm-8",
+      header: "Departure Time*",
+    },
+    {
+      id: "GroupForm-9",
+      header: "Accessibility Requests*",
+    }
+
   ];
 
   

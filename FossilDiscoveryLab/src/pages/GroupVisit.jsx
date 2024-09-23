@@ -14,10 +14,8 @@ const GroupVisit = () => {
         <div>
           <GroupVisitHero />
           <GroupVisitForm />
-          {/*
           <Newsletter />
           <Footer />
-          */}
         </div>
       </div>
       

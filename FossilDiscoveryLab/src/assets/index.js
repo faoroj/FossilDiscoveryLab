@@ -32,6 +32,7 @@ import Map from "./map.png";
 import QuestionMark from "./questionmark.png";
 import DropdownBlack from "./DropdownBlack.png";
 import Accessibility from "./accessibility.png";
+import Calender from "./calender.png";
 
 
 
@@ -70,5 +71,6 @@ export {
     Map,
     QuestionMark,
     DropdownBlack, 
-    Accessibility
+    Accessibility,
+    Calender,
 };
