@@ -93,6 +93,7 @@ export const services = [
         title: "School Tours",
         content:"Want to organize a school visit? Book your tour now!",
         link: "Schedule Tour >",
+        page: "/GroupVisit"
     },
 
   ];
@@ -201,6 +202,7 @@ export const services = [
       icon: Handicap,
       content: "We provide accessible parking spaces and bicycle racks to accommodate all visitors' needs.",
       link: "Read More",
+      page: "/Accessibility"
     }
   ];
 

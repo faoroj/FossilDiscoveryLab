@@ -1,5 +1,6 @@
 import { Googlemap } from '../../assets';
 import { Directions } from '../../constants';
+import { Link } from 'react-router-dom';
 
 const directions = () => {
   return (
@@ -27,9 +28,11 @@ const directions = () => {
                 </p>
 
                 <div className="mt-auto">
-                  <p className="text-medium-21 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline ">
-                    {parking.link}
-                  </p>
+                  <Link to={parking.page}>
+                    <p className="text-medium-21 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline ">
+                      {parking.link}
+                    </p>
+                  </Link>
                 </div>
                 
             </div>

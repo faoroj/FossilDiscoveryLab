@@ -23,7 +23,11 @@ const Hero = () => {
         <Link to="/Accessibility">
           <button type='button' className='custom__button__rounded sm:mr-[40px] mt-[14px] sm:mt-0'>Accessibility</button>
         </Link>
-          <a href="/group-visit" type='button' className='custom__button__rounded mt-[14px] sm:mt-0'>Group Visit</a>
+
+
+        <Link to="/GroupVisit">
+          <button type='button' className='custom__button__rounded mt-[14px] sm:mt-0'>Group Visit</button>
+        </Link>
         </div>  
       </div>
 

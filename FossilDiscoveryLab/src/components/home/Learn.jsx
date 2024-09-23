@@ -1,4 +1,5 @@
 import { learnmore } from '../../constants';
+import { Link } from 'react-router-dom';
 
 const Learn = () => {
   return (
@@ -15,7 +16,7 @@ const Learn = () => {
 
             <img src={learn.image} alt={learn.title} className='w-full h-auto'/>
 
-            <h3 className="text-bold-21 max-w-[523px] mt-1">
+            <h3 className="text-bold-21 max-w-[523px] mt-3">
               {learn.title}
             </h3>
 
@@ -24,9 +25,11 @@ const Learn = () => {
             </p>
 
             <div className="mt-auto">
-              <p className="text-medium-21 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline ">
-                  {learn.link}
-              </p>
+              <Link to={learn.page}>
+                <p className="text-medium-21 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline ">
+                    {learn.link}
+                </p>
+              </Link>
             </div>
             
           </div>

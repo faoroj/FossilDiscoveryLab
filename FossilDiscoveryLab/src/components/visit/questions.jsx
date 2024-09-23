@@ -24,7 +24,7 @@ const questions = () => {
                   <p className="text-bold-21">
                       {item.question}
                   </p>
-                  <img src={item.icon} alt={item.title} className='w-[38px] h-[42px]'/>
+                  <img src={item.icon} alt={item.title} className='w-[34px] h-[34px]'/>
                 </div>
 
                 
