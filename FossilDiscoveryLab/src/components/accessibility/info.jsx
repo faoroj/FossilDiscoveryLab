@@ -3,7 +3,7 @@ import { Map } from '../../assets';
 
 const info = () => {
   return (
-    <section className='px mt-20'>
+    <section className='px mt-20 mb-[100px]'>
 
       {/* Parking */}
       <h1 className='text-bold-21'>Parking</h1>
@@ -64,7 +64,7 @@ const info = () => {
         Download our mobile map and guide to help find your away around the building.
       </p>
       <div className='inline-flex items-center mt-3 cursor-pointer'>
-        <p>Download Here</p>
+        <p className='text-secondary font-semibold font-inter'>Download Here</p>
         <img src={Map} alt="Map" className='ml-2 '></img>
       </div>
 

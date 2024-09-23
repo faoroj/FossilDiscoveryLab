@@ -14,10 +14,8 @@ const Accessibility = () => {
           <div>
             <AccessibilityHero />
             <Info />
-            {/*
             <Newsletter />
             <Footer />
-            */}
           </div>
         </div>
         
