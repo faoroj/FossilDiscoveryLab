@@ -12,7 +12,7 @@ const Learn = () => {
 
         {learnmore.map((learn) => (
 
-          <div key={learn.id} className='flex flex-col mb-[120px] h-[500px]'>
+          <div key={learn.id} className='flex flex-col mb-[120px] h-[450px]'>
 
             <img src={learn.image} alt={learn.title} className='w-full h-auto'/>
 
@@ -20,7 +20,7 @@ const Learn = () => {
               {learn.title}
             </h3>
 
-            <p className="text-normal-21 text-mediumBlack max-w-[523px] mt-1">
+            <p className="text-normal-18 text-mediumBlack max-w-[523px] mt-1">
               {learn.content}
             </p>
 

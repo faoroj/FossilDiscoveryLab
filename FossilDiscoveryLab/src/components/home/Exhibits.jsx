@@ -11,7 +11,7 @@ const ExhibitCard = ({ image, title, content, }) => (
       <h3 className="text-semibold-28 text-mediumBlack max-w-[523px]">
         {title}
       </h3>
-      <p className="text-normal-21 text-mediumBlack max-w-[523px]">
+      <p className="text-normal-18 text-mediumBlack max-w-[523px]">
         {content}
       </p>
 
@@ -29,7 +29,7 @@ const Exhibits = () => {
     <section className='px'>
       <div className='flexBetween mt-[81px]'>
         <h1 className='font-inter text-[38px] font-semibold leading-[150%]'>Explore our Exhibits</h1>
-        <p className='text-semibold-21 mr-5 cursor-pointer hover:underline'>View All &gt;</p>
+        <p className='text-semibold-18 mr-5 cursor-pointer hover:underline'>View All &gt;</p>
       </div>
 
       <div className='flexCenter mt-9'>
