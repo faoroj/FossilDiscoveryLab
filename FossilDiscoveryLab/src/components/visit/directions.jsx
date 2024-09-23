@@ -10,40 +10,45 @@ const directions = () => {
       <img src={Googlemap} alt='Google Map' className='w-[1240px] h-[435px] mt-5'/>
       <hr className='bg-black h-[1px] border-0 mt-[20px]'/>
 
-      <div className='flex flex-row justify-between items-start space-x-[72px] mt-5 max-w-[1200px]'>
+      <div className='flex  items-start   max-w-[1200px]'>
         
         {Directions.map((parking, index) => (
+            <div className='flex'>
+              <div key={parking.id} className='flex flex-col mb-[120px] h-[200px] mt-3'>
 
-            <div key={parking.id} className='flex flex-col mb-[120px] h-[200px]'>
+                  <div className='flex'>
+                    <h3 className="text-bold-21 max-w-[523px] mt-1 mr-1">
+                        {parking.title}
+                    </h3>
 
-                <div className='flex'>
-                  <h3 className="text-bold-21 max-w-[523px] mt-1 mr-1">
-                      {parking.title}
-                  </h3>
+                    <img 
+                      src={parking.icon} 
+                      alt={parking.title} 
+                      className={index === 0 ? 'w-[21px] h-[27px] mt-1' : 'w-[30px] h-[30px] mt-[2px]'}
+                    />
+                  </div>
 
-                  <img 
-                    src={parking.icon} 
-                    alt={parking.title} 
-                    className={index === 0 ? 'w-[21px] h-[27px] mt-1' : 'w-[30px] h-[30px] mt-[2px]'}
-                  />
-                </div>
+                  <p className="text-normal-21 text-mediumBlack max-w-[523px] mt-5">
+                    {parking.content}
+                  </p>
 
-                <p className="text-normal-21 text-mediumBlack max-w-[523px] mt-5">
-                  {parking.content}
-                </p>
+                  <div className="mt-auto">
+                    <Link to={parking.page}>
+                      <p className="text-medium-21 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
+                        {parking.link}
+                      </p>
+                    </Link>
+                  </div>
+                  
+              </div>
 
-                <div className="mt-auto">
-                  <Link to={parking.page}>
-                    <p className="text-medium-21 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
-                      {parking.link}
-                    </p>
-                  </Link>
-                </div>
-                
+              {index < 2 && (
+                <div className='bg-black w-[1px] h-[200px] mx-6'></div>
+              )}
+
             </div>
             
-          ))}
-        
+          ))} 
       </div>
 
     </section>
