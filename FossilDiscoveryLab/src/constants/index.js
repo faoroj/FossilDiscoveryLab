@@ -1,7 +1,7 @@
 import { 
   Assistance, Divider, DonateBanner, facebook, hero, instagram, Learning, 
   logo,  Programs ,Tours, Trex, Trex2, Triceratops, twitter, youtube, Learning2, 
-  ContactUs, JoinUs, FAQ, Address, Handicap, Car
+  ContactUs, JoinUs, FAQ, Address, Handicap, Car, Map, Dropdown, DropdownBlack
 } from "../assets";
 
 export const navLinks = [
@@ -230,6 +230,52 @@ export const services = [
       age: "Children (8 & Under) ",
       cost: "Free",
     },
+  ];
+
+  export const tips = [
+    {
+      id: "Tips-1",
+      title: "Where to eat",
+      content: "We are proud to work with local food and beverage suppliers to provide guests with a selection of dineries.",
+      link: "Suggested Dineries",
+      icon: Dropdown
+    },
+    {
+      id: "Tips-2",
+      title: "Mobile Map",
+      content: "The parking lot entrance is located on Kensington Ave, just south of E Tiega St.",
+      link: "Download Here",
+      icon: Map
+    },
+    {
+      id: "Tips-3",
+      title: "Still need help?",
+      content: "We provide accessible parking spaces and bicycle racks to accommodate all visitors' needs.",
+      link: "Contact Us (239) 255-0108",
+    }
+  ];
+
+  export const FrequentQuestions = [
+    {
+      id: "FrequentQuestions-1",
+      question: "What are your museum hours and admission prices?",
+      icon: DropdownBlack
+    },
+    {
+      id: "FrequentQuestions-2",
+      question: "Are there guided tours available? How can I schedule one?",
+      icon: DropdownBlack
+    },
+    {
+      id: "FrequentQuestions-3",
+      question: "Is the museum accessible for visitors with disabilities?",
+      icon: DropdownBlack
+    },
+    {
+      id: "FrequentQuestions-4",
+      question: "How can I support the museum through donations or volunteering?",
+      icon: DropdownBlack
+    }
   ];
 
   

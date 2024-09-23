@@ -17,10 +17,8 @@ const VisitUs = () => {
           <Admission />
           <Help />
           <Questions />
-          {/*
           <Newsletter />
-          <Footer />
-          */}
+          <Footer />   
         </div>
       </div>
 

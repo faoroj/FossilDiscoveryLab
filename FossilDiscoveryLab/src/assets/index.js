@@ -27,6 +27,10 @@ import Googlemap from "./GoogleMap.png";
 import Handicap from "./AccessibleHandicap.png";
 import Address from "./AddressPointer.png";
 import Car from "./ParkingCar.png";
+import Dropdown from "./Dropdown.png";
+import Map from "./map.png";
+import QuestionMark from "./questionmark.png";
+import DropdownBlack from "./DropdownBlack.png";
 
 
 
@@ -61,5 +65,9 @@ export {
     Handicap,
     Address,
     Car,
+    Dropdown,
+    Map,
+    QuestionMark,
+    DropdownBlack
     
 };
