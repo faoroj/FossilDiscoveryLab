@@ -2,11 +2,11 @@ import { Trex2 } from '../../assets';
 
 const Latest = () => {
   return (
-    <section className='px'>
+    <section className='max-container'>
 
-      <div className='flex flex-row mt-[80px]'>
+      <div className='flex flex-row'>
 
-        <img src={Trex2} alt="Trex" className=" h-[458px] object-contain"/>
+        <img src={Trex2} alt="Trex" className="h-[458px] object-contain"/>
          
 
         <div className="flex justify-center item-start flex-col bg-white w-full px-[26px] pt-[30px] max-h-[608px]">

@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Learn = () => {
   return (
-    <section className='px bg-white mt-[103px]'>
+    <section 
+    id='learn-more'
+    className='max-container'>
 
-      <h1 className='font-inter text-[38px] font-semibold leading-[150%] ml-[75px] pt-[81px]'>
+      <h1 className='font-inter text-[38px] font-semibold leading-[150%] ml-[75px]'>
         Learn More
       </h1>
 

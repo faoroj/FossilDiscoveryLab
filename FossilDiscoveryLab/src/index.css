@@ -5,18 +5,14 @@
 @tailwind utilities;
 
 :root {
-  --black-gradient: linear-gradient(
-    144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
-  );
-  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
   --color-white: #FFFFFF;
   --color-secondary: #9FBB73;
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -129,6 +125,16 @@
 }
 
 @layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@layer components {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
 
   /* Layout */
 
