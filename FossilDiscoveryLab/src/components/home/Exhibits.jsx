@@ -1,21 +1,21 @@
 import { exhibits } from '../../constants';
 
 const ExhibitCard = ({ image, title, content, }) => (
-  <div className='flexCenter flex-col'>
+  <div className='flex flex-col'>
 
-    <div className='w-[575px] h-[368px]'>
+    <div className='w-[470px]'>
       <img src={image} alt="exhibit" className="w-full h-full object-contain" />
     </div>
 
-    <div className="bg-white px-[26px] pt-[30px] flex flex-col h-[350px]">
-      <h3 className="text-semibold-28 text-mediumBlack max-w-[523px]">
+    <div className="bg-white pt-[30px] flex flex-col h-[300px]">
+      <h3 className="text-bold-21 text-mediumBlack max-w-[470px] px-[26px]">
         {title}
       </h3>
-      <p className="text-normal-18 text-mediumBlack max-w-[523px]">
+      <p className="text-normal-16 text-mediumBlack max-w-[470px] px-[26px] mt-3">
         {content}
       </p>
 
-      <div className='mt-auto mb-3'>
+      <div className='mt-auto mb-3 px-[26px]'>
         <button type='button' className='custom__button__open '>Learn More</button>
       </div>
 
