@@ -32,6 +32,30 @@ export const navLinks = [
     },
   ];
 
+  export const visitLinks = [
+    {
+        id: "Visit-1",
+        title: "Plan Your Visit",
+        path: "/VisitUs"
+    },
+    {
+        id: "Visit-2",
+        title: "Buy Tickets",
+        path: "/BuyTickets"
+    },
+    {
+        id: "Visit-3",
+        title: "Accessibility",
+        path: "/Accessibility"
+    },
+    {
+        id: "Visit-4",
+        title: "Group Visits",
+        path: "/GroupVisit"
+    },
+  ];
+
+
 export const exhibits = [
     {
       id: "exhibit-1",

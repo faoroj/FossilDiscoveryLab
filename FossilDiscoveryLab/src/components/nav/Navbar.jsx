@@ -1,10 +1,11 @@
-import { navLinks } from '../../constants';
+import { navLinks, visitLinks } from '../../constants';
 import {  logo, search } from '../../assets';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -13,6 +14,11 @@ const Navbar = () => {
       setActive(currentNav.title);
     }
   }, [location]);
+
+  const handleVisitClick = () => {
+    // Toggle the dropdown visibility
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <nav className='box-shadow'>
@@ -48,9 +54,8 @@ const Navbar = () => {
                 active === nav.title ? "bg-secondary" : "bg-transparent"
                 }`}
               />
-              
-            </li>
 
+            </li>
             
           ))}
         </ul>
@@ -66,7 +71,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
 
     </nav>
   )
