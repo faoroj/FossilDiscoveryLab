@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <section className=''>
+      {/* Location Section */}
       <div className='flex justify-between'>
         <div className='pl-[340px] flex justify-center flex-col'>
           <h1 className='text-semibold-21'>Location</h1>
@@ -13,6 +14,7 @@ const Footer = () => {
           <button className='custom__button__bevel custom__button__medium mt-4'>Buy Tickets</button>
         </div>
 
+        {/* Hours Section */}
         <div className='w-[1170px] h-[380px] bg-white flex justify-start'>
           <div className='pl-[35px] flex justify-center flex-col'>
             <h1 className='text-semibold-21'>Hours</h1>
@@ -20,6 +22,7 @@ const Footer = () => {
             <p className='text-normal-16'>Sunday: 11am-5pm</p>
           </div>
 
+          {/* Connect Section */}
           <div className='flex justify-center flex-col ml-[110px]'>
             <h1 className='text-semibold-21'>Connect</h1>
             <div className='flex'>
@@ -32,7 +35,8 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
+        
+          {/* Links Section */}
           <div className='ml-[170px] pr-[340px] flex justify-center flex-col'>
             <div className='flex flex-col'>
                 {footerlinks.map((link) => (

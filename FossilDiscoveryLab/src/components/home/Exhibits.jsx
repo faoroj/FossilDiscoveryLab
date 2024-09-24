@@ -27,7 +27,7 @@ const ExhibitCard = ({ image, title, content, }) => (
 const Exhibits = () => {
   return (
     <section className='px'>
-      <div className='flexBetween mt-[81px]'>
+      <div className='flexBetween mx-[100px] mt-[81px]'>
         <h1 className='font-inter text-[38px] font-semibold leading-[150%]'>Explore our Exhibits</h1>
         <p className='text-semibold-18 mr-5 cursor-pointer hover:underline'>View All &gt;</p>
       </div>

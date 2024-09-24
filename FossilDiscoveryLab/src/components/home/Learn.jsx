@@ -5,11 +5,11 @@ const Learn = () => {
   return (
     <section className='px bg-white mt-[103px]'>
 
-      <h1 className='text-normal-48 pt-[81px]'>
+      <h1 className='font-inter text-[38px] font-semibold leading-[150%] ml-[75px] pt-[81px]'>
         Learn More
       </h1>
 
-      <div className='flex flex-row justify-around items-start mt-[80px] '>
+      <div className='flex flex-row justify-around items-start mt-[50px] '>
         
           {learnmore.map((learn) => (
 

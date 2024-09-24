@@ -14,17 +14,30 @@ const GroupVisitForm = () => {
 
           {index === 1 && (
             <div className='flex'>
-              <div className='w-[300px] h-[45px] border rounded-[6px] mt-4 border-black mr-[30px]'>
-                <p className='text-normal-16 py-[9px] ml-3'>First</p>
-              </div>
-              <div className='w-[300px] h-[45px] border rounded-[6px] mt-4 border-black'>
-              <p className='text-normal-16 py-[9px] ml-3'>Last</p>
-              </div>
+              <input 
+                type="text"
+                className='w-[300px] h-[45px] border rounded-[6px] pl-4 mt-4 border-black mr-[30px]'
+                placeholder='First Name'
+              >
+              </input>
+
+              <input 
+                type="text"
+                className='w-[300px] h-[45px] border rounded-[6px] pl-4 mt-4 border-black'
+                placeholder='Last Name'
+              >
+              </input>
+
             </div>
             )}
 
           {index != 1 && (  
-            <div className={index === 8 ? 'w-[800px] h-[170px] border rounded-[6px] mt-4 border-black' : 'border-black border w-[630px] h-[45px] rounded-[6px] mt-4'}></div>
+            <input 
+              type="text"
+              className={index === 8 ? 'w-[800px] h-[170px] border rounded-[6px] pl-4 mt-4 border-black' : 'border-black border pl-4 w-[630px] h-[45px] rounded-[6px] mt-4'}>
+              
+
+            </input>
           )}
 
           {form.icon && <img src={form.icon} alt={`${form.title} icon`} 
