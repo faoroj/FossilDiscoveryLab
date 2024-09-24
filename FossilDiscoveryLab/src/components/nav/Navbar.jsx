@@ -16,7 +16,6 @@ const Navbar = () => {
   }, [location]);
 
   const handleVisitClick = () => {
-    // Toggle the dropdown visibility
     setIsDropdownOpen(!isDropdownOpen);
   };
 
