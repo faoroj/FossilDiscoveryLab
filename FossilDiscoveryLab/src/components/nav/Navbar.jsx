@@ -1,11 +1,18 @@
 import { navLinks } from '../../constants';
 import {  logo, search } from '../../assets';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
-  const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState('');
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentNav = navLinks.find((nav) => nav.path === location.pathname);
+    if (currentNav) {
+      setActive(currentNav.title);
+    }
+  }, [location]);
 
   return (
     <nav className='box-shadow'>
@@ -24,18 +31,27 @@ const Navbar = () => {
       </div>
 
       <div className='h-[44px] flexBetween bg-white'>
-        
+
         <ul className="list-none custom:flex hidden pl-[100px]">
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className={`text-bold-16 cursor-pointer ${
-                active === nav.title ? "text-secondary" : "text-dimWhite"
+              className={`text-bold-16 cursor-pointer text-center mt-[10px] ${
+                active === nav.title ? "text-secondary" : "text-White"
               } ${index === navLinks.length - 1 ? "mr-0" : "mr-6 md:mr-10"} hover:text-secondary`}
               onClick={() => setActive(nav.title)}
             >
               <Link to={nav.path}>{nav.title}</Link>
+
+              <hr
+                className={`w-[60px] h-[3px] rounded-[6px] mt-2 transition-all duration-300 ${
+                active === nav.title ? "bg-secondary" : "bg-transparent"
+                }`}
+              />
+              
             </li>
+
+            
           ))}
         </ul>
 
@@ -57,3 +73,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
