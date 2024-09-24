@@ -16,7 +16,7 @@ const Extras = () => {
                   {extra.title}
                 </h3>
 
-                <p className="text-normal-18 text-mediumBlack max-w-[523px] mt-5">
+                <p className="text-normal-16 text-mediumBlack max-w-[523px] mt-5">
                   {extra.content}
                 </p>
 
