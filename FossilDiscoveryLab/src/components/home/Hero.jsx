@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section id="home" className={`flex md:flex-row flex-col relative`}>
+    <section 
+      id="home" 
+      className={`flex md:flex-row flex-col relative`}>
 
       <img src={hero} alt='hero' className='flex-shrink-0 self-stretch w-full h-screen object-cover'/>
 
       
-      <div className='px-[32px] sm:px-[100px] absolute inset-0 flexCenter text-center flex-col'>
+      <div className='padding absolute inset-0 flexCenter text-center flex-col'>
         
         <div className='flexCenter'>
           <img src={pointer} alt="pointer" className='w-[39px] h-[39px] mr-3 border-none'/> 

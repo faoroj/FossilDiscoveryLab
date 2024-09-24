@@ -7,15 +7,15 @@ const Learn = () => {
     id='learn-more'
     className='max-container'>
 
-      <h1 className='font-inter text-[38px] font-semibold leading-[150%] ml-[75px]'>
+      <h1 className='font-inter text-[38px] font-semibold leading-[150%]'>
         Learn More
       </h1>
 
-      <div className='flex flex-row justify-around items-start mt-[50px] '>
+      <div className='flex flex-row justify-around items-start mt-[50px]'>
         
           {learnmore.map((learn) => (
 
-            <div key={learn.id} className='flex flex-col mb-[120px] h-[380px]'>
+            <div key={learn.id} className='flex flex-col h-[380px]'>
               <div className='w-full'>
                 <img src={learn.image} alt={learn.title} className='w-[250px] h-[190px] object-cover'/>
               </div>

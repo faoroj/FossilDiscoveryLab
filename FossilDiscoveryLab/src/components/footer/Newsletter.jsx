@@ -2,8 +2,8 @@ import React from 'react'
 
 const Newsletter = () => {
   return (
-    <section className='bg-primary w-full h-[162px]'>
-      <div className='flexCenter py-[59px] px-[320px]'>
+    <section className='bg-primary w-full h-[160px]'>
+      <div className='flexCenter py-[60px] px-[320px]'>
 
         <h1 className='text-flat text-normal-28'>Sign Up For Our Newsletter</h1>
         

@@ -28,7 +28,7 @@ const Exhibits = () => {
   return (
     <section className='max-container'>
 
-      <div className='flexBetween mx-[100px]'>
+      <div className='flexBetween'>
         <h1 className='font-inter text-[38px] font-semibold leading-[150%]'>Explore our Exhibits</h1>
         <p className='text-semibold-18 mr-5 cursor-pointer hover:underline'>View All &gt;</p>
       </div>
