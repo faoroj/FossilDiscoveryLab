@@ -18,9 +18,9 @@ const MissionStatement = () => {
       </div>
       
       <div className='relative mt-[35px]'>
-        <img src={ collection } alt='collection' className='w-full object-cover'/>
+        <img src={ collection } alt='collection' className='w-full h-[212px] sm:h-auto object-cover'/>
         <div className='absolute inset-0 flex justify-center items-center'>
-          <h1 className='text-[64px] font-extrabold font-inter text-flat text-center '>The Collection</h1>
+          <h1 className='font-extrabold font-inter text-flat text-center' style={{ fontSize: 'clamp(21px, 5vw, 64px)' }}>The Collection</h1>
         </div>
       </div>
 
