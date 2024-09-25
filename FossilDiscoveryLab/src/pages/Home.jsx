@@ -33,7 +33,7 @@ const App = () => {
         <Newsletter />
       </section>
 
-      <section>
+      <section className="padding-x padding-t">
         <Footer />
       </section>
 
