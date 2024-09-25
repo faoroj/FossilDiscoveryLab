@@ -2,15 +2,17 @@ import { ExtraResources } from '../../constants';
 
 const Extras = () => {
   return (
-    <section className='px mt-[103px]'>
+    <section 
+    id="extras"
+    className='max-container'>
 
-          <div className='flex flex-row justify-between items-start space-x-[72px] mt-7 max-w-[1200px]'>
+          <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-[64px] gap-12'>
 
             {ExtraResources.map((extra) => (
 
-              <div key={extra.id} className='flex flex-col mb-[100px] h-[500px]'>
+              <div key={extra.id} className='flex flex-1 flex-col w-full max-sm:w-full'>
 
-                <img src={extra.image} alt={extra.title} className='w-full h-auto'/>
+                <img src={extra.image} alt={extra.title} className='w-[260px] h-[300px]'/>
 
                 <h3 className="text-bold-18 max-w-[523px] mt-3">
                   {extra.title}

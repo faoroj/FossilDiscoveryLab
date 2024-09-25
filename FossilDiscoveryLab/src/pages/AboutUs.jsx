@@ -2,25 +2,30 @@ import {  Navbar, Footer, Newsletter, AboutUsEntry, MissionStatement, Extras } f
 
 const AboutUs = () => {
   return (
-    <div> 
+  <main className="relative"> 
+    <Navbar />
 
-      <div>
-        <div>
-          <Navbar />
-        </div>
-      </div>
-     
-      <div>
-        <div>
-          <AboutUsEntry />
-          <MissionStatement />
-          <Extras />
-          <Newsletter />
-          <Footer />
-        </div>
-      </div>
+    <section className="padding-x sm:py-16 py-8">
+      <AboutUsEntry />
+    </section>
 
-  </div>
+    <section className="padding">
+      <MissionStatement />
+    </section>
+
+    <section className="padding">
+      <Extras />
+    </section>
+
+    <section>
+      <Newsletter />
+    </section>
+
+    <section className="padding-x padding-t">
+      <Footer />
+    </section>
+
+  </main>
 
   )
 }

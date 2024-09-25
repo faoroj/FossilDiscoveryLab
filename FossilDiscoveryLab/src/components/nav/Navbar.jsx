@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className='absolute z-10 w-full'>
+    <header className='sticky z-10 w-full'>
       <nav className='box-shadow'>
 
         <div className='bg-primary flexBetween'>
