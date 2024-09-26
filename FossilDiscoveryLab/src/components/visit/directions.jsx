@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const directions = () => {
   return (
-    <section className='flex flex-col px mt-[150px] mb-[150px]'>
+    <section className='max-container'>
 
-      <h1 className='text-semibold-48'>Directions and Parking</h1>
-      <img src={Googlemap} alt='Google Map' className='w-[1240px] h-[435px] mt-5'/>
+      <h1 className='text-[21px] md:text-[48px] sm:text-[28px] font-inter font-semibold'>Directions and Parking</h1>
+      <img src={Googlemap} alt='Google Map' className='w-full h-[250px] md:h-[450px] sm:h-[350px] object-cover mt-5'/>
       <hr className='bg-black h-[1px] border-0 mt-[20px]'/>
 
       <div className='flex  items-start   max-w-[1200px]'>

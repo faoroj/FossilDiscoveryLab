@@ -2,27 +2,41 @@ import {  Questions, Admission, Help, Directions, Hours, Newsletter, Footer, Nav
 
 const VisitUs = () => {
   return (
-    <div> 
+    <main> 
+      <Navbar />
 
-      <div>
-        <div>
-          <Navbar />
-        </div>
-      </div>
-    
-      <div>
-        <div>
-          <Hours />
-          <Directions />
-          <Admission />
-          <Help />
-          <Questions />
-          <Newsletter />
-          <Footer />   
-        </div>
-      </div>
+      <section className="padding-x pt-[80px]">
+        <Hours />
+      </section>
 
-    </div>
+      <section className="padding">
+        <Directions />
+      </section>
+
+      <section className="padding-x">
+        <Admission />
+      </section>
+
+      <section>
+        <Help />
+      </section>
+
+      <section>
+        <Questions />
+      </section>
+
+      <section>
+        <Newsletter />
+      </section>
+
+      <section>
+        <Footer />
+      </section>
+      
+
+
+
+    </main>
 
 
   )

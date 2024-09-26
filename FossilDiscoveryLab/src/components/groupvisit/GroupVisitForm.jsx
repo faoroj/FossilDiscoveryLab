@@ -13,7 +13,7 @@ const GroupVisitForm = () => {
           </p>
 
           {index === 1 && (
-            <div className='flex flex-col sm:flex-row'>
+            <div className='flex flex-col ss:flex-row'>
               <input 
                 type="text"
                 className='w-full md:w-[19%] h-[45px] border rounded-[6px] pl-4 mt-4 border-black mr-[30px]'
