@@ -2,24 +2,27 @@ import {  Navbar, Footer, Newsletter, AccessibilityHero, Info } from "../compone
 
 const Accessibility = () => {
   return (
-    <div> 
+    <main className="relative"> 
+      <Navbar />
 
-      <div>
-        <div>
-          <Navbar />
-        </div>
-      </div>
-       
-        <div>
-          <div>
-            <AccessibilityHero />
-            <Info />
-            <Newsletter />
-            <Footer />
-          </div>
-        </div>
+        <section className="padding-x padding-t">
+          <AccessibilityHero />
+        </section>
+
+        <section>
+          <Info />
+        </section>
+
+        <section>
+         <Newsletter /> 
+        </section>
+         
+        <section>
+         <Footer />
+        </section>
         
-    </div>
+        
+    </main>
   )
 }
 

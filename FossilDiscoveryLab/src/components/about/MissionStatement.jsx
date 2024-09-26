@@ -2,9 +2,7 @@ import { collection } from '../../assets';
 
 const MissionStatement = () => {
   return (
-    <section
-    id="Mission-Statement"
-    className='max-container'>
+    <section id="Mission-Statement" className='max-container'>
 
       <div className="flex flex-col">
           <h1 className='text-semibold-48'>Mission Statement</h1>
@@ -18,10 +16,13 @@ const MissionStatement = () => {
       </div>
       
       <div className='relative mt-[35px]'>
+
         <img src={ collection } alt='collection' className='w-full h-[212px] sm:h-auto object-cover'/>
+        
         <div className='absolute inset-0 flex justify-center items-center'>
           <h1 className='font-extrabold font-inter text-flat text-center' style={{ fontSize: 'clamp(21px, 5vw, 64px)' }}>The Collection</h1>
         </div>
+
       </div>
 
       <div className="mt-[35px]">
