@@ -2,7 +2,7 @@ import { GroupForm } from '../../constants';
 
 const GroupVisitForm = () => {
   return (
-    <section className='px mt-8'>
+    <section className='max-container'>
 
       {GroupForm.map((form, index) => (
         <div key={form.id} className='flex flex-col mb-7'>
@@ -35,8 +35,6 @@ const GroupVisitForm = () => {
             <input 
               type="text"
               className={index === 8 ? 'w-[800px] h-[170px] border rounded-[6px] pl-4 mt-4 border-black' : 'border-black border pl-4 w-[630px] h-[45px] rounded-[6px] mt-4'}>
-              
-
             </input>
           )}
 
@@ -45,7 +43,7 @@ const GroupVisitForm = () => {
         </div>   
       ))} 
 
-      <div className='mb-[100px] mt-[50px] flexCenter'>
+      <div className='mt-[50px] flexCenter'>
         <button className='bg-tertiarySecondary h-[50px] w-[250px] rounded-[10px] py-[17px] px-[50px] 
           flexCenter text-bold-21 text-flat hover:bg-secondary'>
           Submit

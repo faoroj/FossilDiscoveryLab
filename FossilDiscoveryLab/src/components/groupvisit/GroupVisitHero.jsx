@@ -2,7 +2,8 @@ import React from 'react'
 
 const GroupVisitHero = () => {
   return (
-    <section className='px pt-[35px]'>
+    <section id="Group-Visit-Hero" className='max-container'>
+
         <h1 className='text-semibold-48'>Book a Group Visit</h1>
         <div className="w-[173px] h-[1px] bg-primary mt-[2px]"></div> 
 
@@ -15,7 +16,7 @@ const GroupVisitHero = () => {
             <li>Reservations should be made 2 weeks in advanced </li>
             <li>Accepted credit cards are American Express, Discover, MasterCard, and Visa  </li>
             <li>On the day of your visit all members of group will be required to arrive at the same time </li>
-            <li>For any further questions or assistance please email <span className='underline font-semibold underline-offset-[6px]'>scheduling@fossildiscoverylab.org </span> 
+            <li>For any further questions or assistance please email <span className='underline font-semibold underline-offset-[6px] break-words whitespace-normal'>scheduling@fossildiscoverylab.org </span> 
                 or call <span className='underline font-semibold underline-offset-[6px]'>215-763-8100</span> 
             </li>
         </ul>
