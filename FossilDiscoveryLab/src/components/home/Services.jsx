@@ -4,15 +4,24 @@ import { Link } from 'react-router-dom';
 
 const Services = () => {
   return (
-    <section className='relative'>
+    <section className='relative w-full'>
+      
+      <div className='relative'>
 
-      <img src={Divider} alt='divider' className='w-full h-[273px]'/>
+        <img src={Divider} alt="divider" className="flex-shrink-0 self-stretch w-full h-[273px] object-cover" />
 
-      <h1 className='absolute left-[524px] top-[53px] text-flat text-center text-bold-48 max-w-[872px]'>
-        We offer a variety of <span className='text-secondary text-center text-bold-48 underline'>services</span> 
-        &nbsp;to serve the <span className='text-secondary text-center text-bold-48'>needs</span> of visitors.
-      </h1>
+        <div className='padding absolute inset-0 flexCenter text-center'>
+          <h1 className='text-[32px] md:text-[48px] ss:text-[42px] font-bold font-inter leading-[150%] text-flat max-w-[800px]'>
+            We offer a variety of <span className="text-secondary underline">services</span> 
+            &nbsp;to serve the <span className="text-secondary">needs</span> of visitors.
+          </h1>
+        </div>
 
+      </div>
+ 
+
+      
+      
       <div className='flexStart max-container'>   
         <div className='mt-[29px]'>
           {services.map((service) => (
