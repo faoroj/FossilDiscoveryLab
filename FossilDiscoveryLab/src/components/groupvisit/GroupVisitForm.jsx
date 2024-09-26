@@ -13,17 +13,17 @@ const GroupVisitForm = () => {
           </p>
 
           {index === 1 && (
-            <div className='flex'>
+            <div className='flex flex-col sm:flex-row'>
               <input 
                 type="text"
-                className='w-[300px] h-[45px] border rounded-[6px] pl-4 mt-4 border-black mr-[30px]'
+                className='w-full md:w-[19%] h-[45px] border rounded-[6px] pl-4 mt-4 border-black mr-[30px]'
                 placeholder='First Name'
               >
               </input>
 
               <input 
                 type="text"
-                className='w-[300px] h-[45px] border rounded-[6px] pl-4 mt-4 border-black'
+                className='w-full md:w-[19%] h-[45px] border rounded-[6px] pl-4 mt-4 border-black'
                 placeholder='Last Name'
               >
               </input>
@@ -34,7 +34,7 @@ const GroupVisitForm = () => {
           {index != 1 && (  
             <input 
               type="text"
-              className={index === 8 ? 'w-[800px] h-[170px] border rounded-[6px] pl-4 mt-4 border-black' : 'border-black border pl-4 w-[630px] h-[45px] rounded-[6px] mt-4'}>
+              className={index === 8 ? 'w-full md:w-[40%] h-[170px] border rounded-[6px] pl-4 mt-4 border-black' : 'border-black border pl-4 w-full md:w-[40%] h-[45px] rounded-[6px] mt-4'}>
             </input>
           )}
 
