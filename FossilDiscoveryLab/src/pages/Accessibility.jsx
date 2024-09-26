@@ -9,7 +9,7 @@ const Accessibility = () => {
           <AccessibilityHero />
         </section>
 
-        <section>
+        <section className="padding">
           <Info />
         </section>
 
@@ -17,7 +17,7 @@ const Accessibility = () => {
          <Newsletter /> 
         </section>
          
-        <section>
+        <section className="padding-x padding-t">
          <Footer />
         </section>
         

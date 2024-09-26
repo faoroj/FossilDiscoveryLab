@@ -3,7 +3,7 @@ import { Map } from '../../assets';
 
 const info = () => {
   return (
-    <section className='px mt-20 mb-[100px]'>
+    <section className='max-container'>
 
       {/* Parking */}
       <h1 className='text-bold-21'>Parking</h1>
@@ -67,7 +67,6 @@ const info = () => {
         <p className='text-secondary font-semibold font-inter'>Download Here</p>
         <img src={Map} alt="Map" className='ml-2 '></img>
       </div>
-
 
     </section>
   )
