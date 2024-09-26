@@ -90,11 +90,11 @@
 
 
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
   .custom__button__open {
    padding: 0.5rem 1.5rem; 
   }
-}
+} */
 
 .custom__button__open:hover {
   background-color: var(--color-secondary); 
