@@ -31,7 +31,7 @@ const Exhibits = () => {
     <section className='max-container'>
 
       <div className='flexBetween '>
-        <h1 className='font-inter text-[22px] lg:text-[38px] md:text-[28px] sm:text-[22px] font-semibold leading-[150%]'>Explore our Exhibits</h1>
+        <h1 className='font-inter text-[32px] md:text-[48px] font-semibold leading-[150%]'>Explore our Exhibits</h1>
         <p className='text-semibold-16 md:text-semibold-18 mr-5 cursor-pointer hover:underline'>View All &gt;</p>
       </div>
 

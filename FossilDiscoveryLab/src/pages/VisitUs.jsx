@@ -29,7 +29,7 @@ const VisitUs = () => {
         <Newsletter />
       </section>
 
-      <section>
+      <section className="padding-x padding-t">
         <Footer />
       </section>
       
