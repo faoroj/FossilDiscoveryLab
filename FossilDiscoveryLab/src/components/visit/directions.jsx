@@ -6,15 +6,15 @@ const directions = () => {
   return (
     <section className='max-container'>
 
-      <h1 className='text-[21px] md:text-[48px] sm:text-[28px] font-inter font-semibold'>Directions and Parking</h1>
+      <h1 className='font-semibold font-inter leader-[150%] text-[32px] md:text-[48px]'>Directions and Parking</h1>
       <img src={Googlemap} alt='Google Map' className='w-full h-[250px] md:h-[450px] sm:h-[350px] object-cover mt-5'/>
       <hr className='bg-black h-[1px] border-0 mt-[20px]'/>
 
-      <div className='flex  items-start   max-w-[1200px]'>
+      <div className='flex flex-col md:flex-row justify-between items-start'>
         
         {Directions.map((parking, index) => (
-            <div className='flex'>
-              <div key={parking.id} className='flex flex-col h-[170px] mt-3'>
+            <div className='flex flex-col md:flex-row items-start md:items-center h-[140px] mt-8'>
+              <div key={parking.id} className='flex flex-col h-[170px]'>
 
                   <div className='flex'>
                     <h3 className="text-bold-18 max-w-[523px] mt-1 mr-1">
@@ -43,7 +43,7 @@ const directions = () => {
               </div>
 
               {index < 2 && (
-                <div className='bg-black w-[1px] h-[200px] mx-6'></div>
+                <div className='bg-black w-[1px] h-[200px] mx-6 hidden md:block'></div>
               )}
 
             </div>

@@ -3,7 +3,7 @@ import { FrequentQuestions } from '../../constants';
 
 const questions = () => {
   return (
-    <section className='mt-[160px] mb-[100px] px'>
+    <section className='max-container'>
 
       <div className='flexCenter'>
         <div className='bg-secondary h-[4px] w-[547px] border-0'></div>
@@ -11,7 +11,7 @@ const questions = () => {
         <div className='bg-secondary h-[4px] w-[547px] border-0'></div>
       </div>
 
-      <h1 className='text-semibold-48 mt-[115px]'>Frequently Asked Questions</h1>
+      <h1 className='font-semibold font-inter leader-[150%] text-[32px] md:text-[48px] mt-[60px] md:mt-[110px]'>Frequently Asked Questions</h1>
       <div className="w-[173px] h-[1px] bg-primary mt-[29px]"></div>
 
       <div className='flex flex-col mt-3'>
