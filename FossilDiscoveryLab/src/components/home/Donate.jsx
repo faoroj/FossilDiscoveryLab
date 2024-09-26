@@ -7,11 +7,12 @@ const Donate = () => {
       <img 
         src={DonateBanner} 
         alt='Exhibit' 
-        className='flex-shrink-0 self-stretch w-full h-[420px] object-cover'
+        className='w-full h-[200px] sm:h-[420px] ss:h-[300px] object-cover'
       />
-
-      <div className='bg-[rgba(217,217,217,0.7)] absolute w-[500px] h-[220px] inset-0 top-[100px] left-[404px]'>
-
+      
+      <div className='bg-[rgba(217,217,217,0.7)] relative sm:absolute w-full sm:w-[500px] sm:h-[220px] my-10 sm:my-0 h-auto
+        inset-0 p-4 flex justify-center flex-col gap-5 sm:gap-0 sm:left-[20%] sm:top-[20%]'>
+        
         <h1 className='text-semibold-21 pt-6 px-[46px]'>Want To Support Us?</h1>
         
         <p className='text-normal-18 text-mediumBlack pt-3 px-[46px]'>
@@ -21,7 +22,6 @@ const Donate = () => {
         <div className='flexCenter'>
           <button className='custom__button__bevel custom__button__medium mb-[15px]'>Donate</button>
         </div>
-
       </div>
 
 
