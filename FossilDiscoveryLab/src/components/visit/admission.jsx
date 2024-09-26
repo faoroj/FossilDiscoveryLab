@@ -24,7 +24,7 @@ const admission = () => {
         </div>
 
         {/* Right Content */}
-        <div className='w-full md:w-[50%] mt-4 md:mt-0'>
+        <div className='flex flex-col justify-end items-end w-full md:w-[50%] mt-4 md:mt-0'>
           {Admission.map((admiss) => (
           <div key={admiss.id} className='flexBetween mb-[15px] bg-white w-full lg:w-[584px] h-[60px] pl-[16px] pr-[25px] pt-1'>
               <div className='flex '>

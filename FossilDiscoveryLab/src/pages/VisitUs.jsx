@@ -5,7 +5,7 @@ const VisitUs = () => {
     <main> 
       <Navbar />
 
-      <section className="padding-x pt-[80px]">
+      <section className="padding-x pt-[40px] md:pt-[80px]">
         <Hours />
       </section>
 
@@ -17,7 +17,7 @@ const VisitUs = () => {
         <Admission />
       </section>
 
-      <section>
+      <section className="padding-x pt-[0px] md:pt-[200px]">
         <Help />
       </section>
 
