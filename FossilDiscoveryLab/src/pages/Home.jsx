@@ -25,7 +25,7 @@ const App = () => {
         <Learn />
       </section>
 
-      <section>
+      <section className="">
         <Donate />
       </section>
 

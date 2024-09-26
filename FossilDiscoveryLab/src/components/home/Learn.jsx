@@ -4,20 +4,21 @@ import { Link } from 'react-router-dom';
 const Learn = () => {
   return (
     <section 
-    id='learn-more'
-    className='max-container'>
+      id='learn-more'
+      className='max-container'
+    >
 
-      <h1 className='font-inter text-[38px] font-semibold leading-[150%]'>
+      <h1 className='font-inter text-[32px] md:text-[48px] font-semibold leading-[150%]'>
         Learn More
       </h1>
 
-      <div className='flex flex-row justify-around items-start mt-[50px]'>
+      <div className='grid md:grid-cols-3 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 sm:gap-[64px] gap-12 mt-[50px]'>
         
           {learnmore.map((learn) => (
 
-            <div key={learn.id} className='flex flex-col h-[380px]'>
+            <div key={learn.id} className='flex flex-col h-[460px] sm:h-[550px] custom:h-[530px] md:h-[520px] lg:h-[480px]'>
               <div className='w-full'>
-                <img src={learn.image} alt={learn.title} className='w-[250px] h-[190px] object-cover'/>
+                <img src={learn.image} alt={learn.title} className='w-[360px] h-[280px] object-cover'/>
               </div>
 
               <h3 className="text-bold-21 mt-3">
