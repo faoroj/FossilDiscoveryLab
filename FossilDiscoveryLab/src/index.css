@@ -26,8 +26,9 @@
   line-height: 24px;
   font-size: 16px;
   border-radius: 6px;
-  height: 41px;
+  height: 100%;
   width: 125px;
+  max-width: 125px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -39,6 +40,7 @@
   transform: translateY(-1px) translateX(1.2px); 
   font-weight: 900;
 }
+
 
 .custom__button__medium {
   height: 50px; 
