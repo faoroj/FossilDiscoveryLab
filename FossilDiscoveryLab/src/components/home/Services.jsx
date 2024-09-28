@@ -6,8 +6,8 @@ const Services = () => {
   return (
     <section id="services" className='relative w-full'>
       
+      {/*Divider Image */}
       <div className='relative w-full'>
-
         <img src={Divider} alt="divider" className="w-full h-[273px] object-cover" />
 
         <div className='padding absolute inset-0 flexCenter text-center'>
@@ -16,10 +16,9 @@ const Services = () => {
             &nbsp;to serve the <span className="text-secondary">needs</span> of visitors.
           </h1>
         </div>
-
       </div>
  
-      <div className='max-container px-8 sm:px-0 grid grid-cols-1 sm:grid-cols-2'>  
+      <div className='max-container padding-x grid grid-cols-1 custom:grid-cols-2'>  
 
         <div className='mt-[29px]'>
           {services.map((service) => (

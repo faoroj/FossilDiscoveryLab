@@ -16,7 +16,7 @@ const Hero = () => {
               <img 
                 src={pointer} 
                 alt="pointer" 
-                className='w-[39px] h-[39px] absolute left-[-50px] top-[32px] transform -translate-y-1/2' 
+                className='w-[39px] h-[39px] absolute left-[-50px] top-[32px] transform -translate-y-1/2 hidden sm:block' 
               /> 
               Welcome to The <span className='text-secondary'>Fossil</span> Discovery Lab
             </span>
