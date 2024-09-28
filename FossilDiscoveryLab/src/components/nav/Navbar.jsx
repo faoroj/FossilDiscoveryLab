@@ -3,6 +3,7 @@ import {  logo, search } from '../../assets';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Hamburgermenu, Exitmenu, Plus } from '../../assets';
+import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -98,53 +99,22 @@ const Navbar = () => {
 
             </button>
 
-            {/* Mobile Menu - Conditional Rendering */}
-            {isMobileMenuOpen && (
-              <div className="sm:hidden flex flex-col absolute top-[0px] left-0 bg-primary w-full h-screen z-100">
+            {/* Mobile Menu */}
+            <MobileMenu 
+              isMobileMenuOpen={isMobileMenuOpen} 
+              setIsMobileMenuOpen={setIsMobileMenuOpen}
+              navLinks={navLinks}
+              active={active}
+              setActive={setActive}
+            />
 
-                <div className='w-full flex items-center bg-flat h-[55px] px-12 py-4'> 
-                  <p className='flexCenter flex-1 font-inter font-normal text-[16px] xs:text-[21px]'>Todays hours: 8am-6pm</p>
-                  <img src={Exitmenu} alt="Exit Menu" className='w-[29px] h-[29px] cursor-pointer ' onClick={() => setIsMobileMenuOpen(false)}/>
-                </div>
-                
-                <ul className="list-none px-12 py-4 text-flat">
-                  {navLinks.map((nav, index) => (
-                    <li
-                      key={nav.id}
-                      className={`text-bold-28  mt-[20px] ${active === nav.title ? "text-secondary" : "text-White"} hover:text-secondary`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <Link 
-                          to={nav.path} 
-                          onClick={() => {
-                            setActive(nav.title);
-                            setIsMobileMenuOpen(false);
-                          }} 
-                        >{nav.title}
-                        </Link>
-
-                        {index >= 2 && (
-                          <img src={Plus} alt={`Image for ${nav.title}`} className="w-[30px] h-[30px] cursor-pointer" />
-                          )}
-                      </div>
-
-
-                      <div className='h-[1px] bg-flat mt-4'></div>
-                    </li>
-                  ))}
-                </ul>
-
-              </div>
-            )}
-
-            
             <div className='flexCenter'>
               {/*Todays Hours */}
               <p className='flexEnd text-normal-16 mr-2 hidden sm:block'>Todays hours: 8am-6pm</p>
               
               {/*Search */}
               <div className='flexCenter w-[115px] h-[33px]'> 
-                <img src={search} alt="search logo" className='ml-[10.92px] w-[25px] h-[25px] '></img>
+                <img src={search} alt="search logo" className='ml-[10.92px] w-[25px] h-[25px] cursor-pointer '></img>
                 <p className='ml-[2px] text-semibold-16'>Search</p>
               </div>
             </div>
