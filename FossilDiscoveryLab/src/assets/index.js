@@ -33,6 +33,9 @@ import QuestionMark from "./questionmark.png";
 import DropdownBlack from "./DropdownBlack.png";
 import Accessibility from "./accessibility.png";
 import Calender from "./calender.png";
+import Hamburgermenu from "./hamburgermenu.png";
+import Plus from "./Plus.png";
+import Exitmenu from "./exit.png";
 
 
 
@@ -73,4 +76,7 @@ export {
     DropdownBlack, 
     Accessibility,
     Calender,
+    Hamburgermenu,
+    Plus,
+    Exitmenu
 };

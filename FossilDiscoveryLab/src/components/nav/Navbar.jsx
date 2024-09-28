@@ -2,11 +2,14 @@ import { navLinks, visitLinks } from '../../constants';
 import {  logo, search } from '../../assets';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Hamburgermenu, Exitmenu, Plus } from '../../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
 
   useEffect(() => {
     const currentNav = navLinks.find((nav) => nav.path === location.pathname);
@@ -20,76 +23,121 @@ const Navbar = () => {
   };
 
   return (
-    <header className='sticky z-10 w-full'>
-      <nav className='box-shadow'>
+    <header className='sticky z-10 box-shadow'>
 
-        <div className='bg-primary flexBetween'>
-          <div className='pl-[32px] sm:pl-[100px]'>
-            <Link to="/">
-              <img src={logo} alt='Fossil Discovery Lab' className='w-[190px] h-[64px] cursor-pointer'/>
-            </Link>
-          </div>
+        {/* Top Section */}
+        <div className='bg-primary w-full'>
+          <div className='padding-x max-container flexBetween'>
 
-          <div className='pr-[32px] sm:pr-[100px] flexCenter'>
-            <button type='button' className='custom__button__bevel mr-[9px]'>Buy Tickets</button>
-            <button type='button' className='custom__button__bevel hidden sm:block'>Donate</button>
+            <div>
+              <Link to="/">
+                <img src={logo} alt='Fossil Discovery Lab' className='w-[190px] h-[64px] cursor-pointer object-contain'/>
+              </Link>
+            </div>
+
+            <div className='flexCenter'>
+              <button type='button' className='custom__button__bevel mr-[9px]'>Buy Tickets</button>
+              <button type='button' className='custom__button__bevel hidden sm:block'>Donate</button>
+            </div>
+
           </div>
         </div>
 
-        <div className='h-[44px] flexBetween bg-white relative'>
 
-          <ul className="list-none custom:flex hidden pl-[100px]">
+        {/*Bottom Section */}
+        <div className='w-full bg-white'>
+
+          <div className='max-container padding-x h-[44px] flexBetween'>
+
+            {/*Nav Links */}
+            <ul className="list-none md:flex hidden">
+              {navLinks.map((nav, index) => (
+                <li
+                  key={nav.id}
+                  className={`text-bold-16 cursor-pointer text-center mt-[10px] ${
+                    active === nav.title ? "text-secondary" : "text-White"
+                  } ${index === navLinks.length - 1 ? "mr-0" : "mr-6 md:mr-7"} hover:text-secondary`}
+                  onClick={nav.title === 'Visit' ? handleVisitClick : () => setActive(nav.title)}
+                >
+                  {nav.title !== 'Visit' ? (
+                    <Link to={nav.path}>{nav.title}</Link>
+                    ) : (
+                    <p>{nav.title}</p>
+                  )}
+
+                  <hr
+                    className={`w-[60px] h-[3px] rounded-[6px] mt-2 transition-all duration-300 ${
+                    active === nav.title ? "bg-secondary" : "bg-transparent"
+                    }`}
+                  />
+
+                </li>
+
+              ))}
+            </ul>
+
+      {/* Hamburger Icon - Visible on Small Screens */}
+      <button
+        className="md:hidden block"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+      <img src={Hamburgermenu}/>
+
+      </button>
+
+      {/* Mobile Menu - Conditional Rendering */}
+      {isMobileMenuOpen && (
+        <div className="sm:hidden flex flex-col absolute top-[0px] left-0 bg-primary w-full h-screen z-100">
+
+          <div className='w-full flex items-center bg-flat h-[55px] px-12 py-4'> 
+            <p className='flexCenter flex-1 font-inter font-normal text-[16px] sm:text-[21px]'>Todays hours: 8am-6pm</p>
+            <img src={Exitmenu} className='w-[29px] h-[29px]'/>
+          </div>
+          
+          <ul className="list-none px-12 py-4 text-flat">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`text-bold-16 cursor-pointer text-center mt-[10px] ${
-                  active === nav.title ? "text-secondary" : "text-White"
-                } ${index === navLinks.length - 1 ? "mr-0" : "mr-6 md:mr-10"} hover:text-secondary`}
-                onClick={nav.title === 'Visit' ? handleVisitClick : () => setActive(nav.title)}
+                className={`text-bold-28 cursor-pointer mt-[20px] ${active === nav.title ? "text-secondary" : "text-White"} hover:text-secondary`}
+                onClick={() => {
+                  setActive(nav.title);
+                  setIsMobileMenuOpen(false);
+                }}
               >
-                {nav.title !== 'Visit' ? (
-                  <Link to={nav.path}>{nav.title}</Link>
-                  ) : (
-                  <p>{nav.title}</p>
-                )}
+                <div className="flex items-center justify-between">
+                <Link to={nav.path}>{nav.title}</Link>
 
-                <hr
-                  className={`w-[60px] h-[3px] rounded-[6px] mt-2 transition-all duration-300 ${
-                  active === nav.title ? "bg-secondary" : "bg-transparent"
-                  }`}
-                />
+                {index >= 2 && (
+                  <img src={Plus} alt={`Image for ${nav.title}`} className="w-[30px] h-[30px]" />
+                  )}
+                </div>
 
+
+                <div className='h-[1px] bg-flat mt-4'></div>
               </li>
-
             ))}
           </ul>
 
-          {isDropdownOpen && (
-          <div className='absolute top-full left-[235px] w-[190px] h-[186px] px-[14px] flex justify-center items-center flex-col bg-secondary z-50'>
-            {visitLinks.map((nav, index) => (
-              <Link to={nav.path}>
-              <h1 key={index} className={`text-semibold-16 text-flat hover:text-black cursor-pointer ${index === 0 ? "mt-[0px]" : "mt-[12px]"}`}>
-                {nav.title}
-              </h1>
-              </Link>
-            ))}
-          </div>
-        )}
-
-
-          <div className='flexCenter pr-[100px]'>
-            <p className='flexEnd text-normal-16 mr-2'>
-              Todays hours: 8am-6pm
-            </p>
-
-            <div className='flexCenter w-[115px] h-[33px]'> 
-              <img src={search} alt="search logo" className='ml-[10.92px] w-[25px] h-[25px] '></img>
-              <p className='ml-[2px] text-semibold-16'>Search</p>
-            </div>
-          </div>
         </div>
+      )}
 
-      </nav>
+            
+              
+            
+            <div className='flexCenter'>
+              {/*Todays Hours */}
+              <p className='flexEnd text-normal-16 mr-2'>Todays hours: 8am-6pm</p>
+            
+              {/*Search */}
+              <div className='flexCenter w-[115px] h-[33px]'> 
+                <img src={search} alt="search logo" className='ml-[10.92px] w-[25px] h-[25px] '></img>
+                <p className='ml-[2px] text-semibold-16'>Search</p>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
     </header>
   )
 }
