@@ -18,6 +18,19 @@ const Navbar = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
+
   const handleVisitClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -76,58 +89,59 @@ const Navbar = () => {
               ))}
             </ul>
 
-      {/* Hamburger Icon - Visible on Small Screens */}
-      <button
-        className="md:hidden block"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-      >
-      <img src={Hamburgermenu}/>
+            {/* Hamburger Icon - Visible on Small Screens */}
+            <button
+              className="md:hidden block"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+            <img src={Hamburgermenu}/>
 
-      </button>
+            </button>
 
-      {/* Mobile Menu - Conditional Rendering */}
-      {isMobileMenuOpen && (
-        <div className="sm:hidden flex flex-col absolute top-[0px] left-0 bg-primary w-full h-screen z-100">
+            {/* Mobile Menu - Conditional Rendering */}
+            {isMobileMenuOpen && (
+              <div className="sm:hidden flex flex-col absolute top-[0px] left-0 bg-primary w-full h-screen z-100">
 
-          <div className='w-full flex items-center bg-flat h-[55px] px-12 py-4'> 
-            <p className='flexCenter flex-1 font-inter font-normal text-[16px] sm:text-[21px]'>Todays hours: 8am-6pm</p>
-            <img src={Exitmenu} className='w-[29px] h-[29px]'/>
-          </div>
-          
-          <ul className="list-none px-12 py-4 text-flat">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`text-bold-28 cursor-pointer mt-[20px] ${active === nav.title ? "text-secondary" : "text-White"} hover:text-secondary`}
-                onClick={() => {
-                  setActive(nav.title);
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                <div className="flex items-center justify-between">
-                <Link to={nav.path}>{nav.title}</Link>
-
-                {index >= 2 && (
-                  <img src={Plus} alt={`Image for ${nav.title}`} className="w-[30px] h-[30px]" />
-                  )}
+                <div className='w-full flex items-center bg-flat h-[55px] px-12 py-4'> 
+                  <p className='flexCenter flex-1 font-inter font-normal text-[16px] xs:text-[21px]'>Todays hours: 8am-6pm</p>
+                  <img src={Exitmenu} alt="Exit Menu" className='w-[29px] h-[29px] cursor-pointer ' onClick={() => setIsMobileMenuOpen(false)}/>
                 </div>
+                
+                <ul className="list-none px-12 py-4 text-flat">
+                  {navLinks.map((nav, index) => (
+                    <li
+                      key={nav.id}
+                      className={`text-bold-28  mt-[20px] ${active === nav.title ? "text-secondary" : "text-White"} hover:text-secondary`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <Link 
+                          to={nav.path} 
+                          onClick={() => {
+                            setActive(nav.title);
+                            setIsMobileMenuOpen(false);
+                          }} 
+                        >{nav.title}
+                        </Link>
+
+                        {index >= 2 && (
+                          <img src={Plus} alt={`Image for ${nav.title}`} className="w-[30px] h-[30px] cursor-pointer" />
+                          )}
+                      </div>
 
 
-                <div className='h-[1px] bg-flat mt-4'></div>
-              </li>
-            ))}
-          </ul>
+                      <div className='h-[1px] bg-flat mt-4'></div>
+                    </li>
+                  ))}
+                </ul>
 
-        </div>
-      )}
+              </div>
+            )}
 
-            
-              
             
             <div className='flexCenter'>
               {/*Todays Hours */}
-              <p className='flexEnd text-normal-16 mr-2'>Todays hours: 8am-6pm</p>
-            
+              <p className='flexEnd text-normal-16 mr-2 hidden sm:block'>Todays hours: 8am-6pm</p>
+              
               {/*Search */}
               <div className='flexCenter w-[115px] h-[33px]'> 
                 <img src={search} alt="search logo" className='ml-[10.92px] w-[25px] h-[25px] '></img>
