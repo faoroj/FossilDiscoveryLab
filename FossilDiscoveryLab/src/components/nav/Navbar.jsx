@@ -61,7 +61,7 @@ const Navbar = () => {
         {/*Bottom Section */}
         <div className='w-full bg-white'>
 
-          <div className='max-container padding-x h-[44px] flexBetween'>
+          <div className='relative max-container padding-x h-[44px] flexBetween'>
 
             {/*Nav Links */}
             <ul className="list-none md:flex hidden">
@@ -87,8 +87,23 @@ const Navbar = () => {
 
                 </li>
 
+                
+
               ))}
             </ul>
+
+            {/* Visit Dropdown menu */}
+            {isDropdownOpen && (
+              <div className='absolute top-full left-44 w-[190px] h-[186px] px-[14px] md:flex hidden justify-center items-center flex-col bg-secondary z-50'>
+                {visitLinks.map((nav, index) => (
+                  <Link to={nav.path}>
+                  <h1 key={index} className={`text-semibold-16 text-flat hover:text-black cursor-pointer ${index === 0 ? "mt-[0px]" : "mt-[12px]"}`}>
+                    {nav.title}
+                  </h1>
+                  </Link>
+                ))}
+              </div>
+              )}
 
             {/* Hamburger Icon - Visible on Small Screens */}
             <button
@@ -99,14 +114,7 @@ const Navbar = () => {
 
             </button>
 
-            {/* Mobile Menu */}
-            <MobileMenu 
-              isMobileMenuOpen={isMobileMenuOpen} 
-              setIsMobileMenuOpen={setIsMobileMenuOpen}
-              navLinks={navLinks}
-              active={active}
-              setActive={setActive}
-            />
+
 
             <div className='flexCenter'>
               {/*Todays Hours */}
@@ -120,6 +128,16 @@ const Navbar = () => {
             </div>
             
           </div>
+
+
+          {/* Mobile Menu */}
+          <MobileMenu 
+          isMobileMenuOpen={isMobileMenuOpen} 
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
+          navLinks={navLinks}
+          active={active}
+          setActive={setActive}
+        />
 
         </div>
     </header>

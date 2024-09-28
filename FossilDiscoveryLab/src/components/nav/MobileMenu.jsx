@@ -4,7 +4,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, s
     
     return (
         isMobileMenuOpen && (
-            <div className="sm:hidden flex flex-col absolute top-[0px] left-0 bg-primary w-full h-screen z-100">
+            <div className="md:hidden flex flex-col absolute top-[0px] left-0 bg-primary w-full h-screen z-100">
 
               <div className='w-full flex items-center bg-flat h-[55px] px-12 py-4'> 
                 <p className='flexCenter flex-1 font-inter font-normal text-[16px] xs:text-[21px]'>Todays hours: 8am-6pm</p>
