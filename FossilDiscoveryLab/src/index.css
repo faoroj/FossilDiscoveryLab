@@ -24,17 +24,47 @@
   letter-spacing: 0.32px;
   text-align: center;
   line-height: 24px;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 6px;
-  height: 41px;
-  width: 125px;
-  max-width: 125px;
+  height: 2.6rem; 
+  width: 8rem; 
+  max-width: 100%; 
   border: none;
   outline: none;
   cursor: pointer;
   justify-content: center; 
   align-items: center;     
 }
+
+@media (max-width: 768px) {
+  .custom__button__bevel {
+    font-size: 0.875rem; /* Slightly smaller font on smaller screens */
+    height: 2.2rem; /* Adjust height */
+    width: 7rem; /* Adjust width */
+  }
+}
+
+@media (max-width: 620px) {
+  .custom__button__bevel {
+    font-size: 0.875rem; /* Slightly smaller font on smaller screens */
+    height: 2.2rem; /* Adjust height */
+    width: 7rem; /* Adjust width */
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  .custom__button__bevel {
+    font-size: 0.6rem; /* Even smaller font */
+    height: 1.7rem;
+    width: 5rem;
+  }
+}
+
+
+
+
 
 .custom__button__bevel:hover {
   transform: translateY(-1px) translateX(1.2px); 

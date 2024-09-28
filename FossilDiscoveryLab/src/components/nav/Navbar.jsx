@@ -43,20 +43,19 @@ const Navbar = () => {
         <div className='bg-primary w-full'>
           <div className='padding-x max-container flexBetween'>
 
-            <div>
+            <div className=''>
               <Link to="/">
-                <img src={logo} alt='Fossil Discovery Lab' className='w-[190px] h-[64px] cursor-pointer object-contain'/>
+                <img src={logo} alt='Fossil Discovery Lab' className='w-[110px] h-[64px] xxs:h-[64px] xxs:w-[190px] cursor-pointer object-contain'/>
               </Link>
             </div>
 
-            <div className='flexCenter'>
+            <div className='flexCenter flex-shrink-0'>
               <button type='button' className='custom__button__bevel mr-[9px]'>Buy Tickets</button>
               <button type='button' className='custom__button__bevel hidden sm:block'>Donate</button>
             </div>
 
           </div>
         </div>
-
 
         {/*Bottom Section */}
         <div className='w-full bg-white'>
