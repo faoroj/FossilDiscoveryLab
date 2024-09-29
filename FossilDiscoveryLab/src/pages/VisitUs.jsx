@@ -13,11 +13,11 @@ const VisitUs = () => {
         <Directions />
       </section>
 
-      <section className="padding-x">
+      <section className="padding-x padding-t">
         <Admission />
       </section>
 
-      <section className="padding-x pt-[0px] md:pt-[200px]">
+      <section className="padding-x pt-[0px] md:pt-[200px] pb-[0px] md:pb-[150px]">
         <Help />
       </section>
 

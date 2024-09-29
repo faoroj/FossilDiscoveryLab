@@ -3,6 +3,14 @@ import { Directions } from '../../constants';
 import { Link } from 'react-router-dom';
 
 const directions = () => {
+
+  const copyToClipboard = (content) => {
+    navigator.clipboard.writeText(content).then(() => {  
+    }).catch((err) => {
+      console.error('Failed to copy: ', err);
+    });
+  };
+
   return (
     <section className='max-container'>
 
@@ -33,11 +41,22 @@ const directions = () => {
                   </p>
 
                   <div className="mt-auto">
-                    <Link to={parking.page}>
-                      <p className="text-medium-16 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
-                        {parking.link}
-                      </p>
-                    </Link>
+
+                    {index === 0 ? (
+                    <p 
+                      className="text-medium-16 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]"
+                      onClick={() => copyToClipboard(parking.content)}
+                    >
+                      {parking.link}
+                    </p>
+                    ) : (
+
+                      <Link to={parking.page}>
+                        <p className="text-medium-16 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
+                          {parking.link}
+                        </p>
+                      </Link>
+                      )}
                   </div>
                   
               </div>

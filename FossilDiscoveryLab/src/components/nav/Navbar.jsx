@@ -10,6 +10,8 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const currentDay = new Date().getDay();
+  const hours = currentDay === 0 ? "11am-5pm" : "8am-6pm"; 
 
 
   useEffect(() => {
@@ -113,11 +115,9 @@ const Navbar = () => {
 
             </button>
 
-
-
             <div className='flexCenter'>
               {/*Todays Hours */}
-              <p className='flexEnd text-normal-16 mr-2 hidden sm:block'>Todays hours: 8am-6pm</p>
+              <p className='flexEnd text-normal-16 mr-2 hidden sm:block'>Todays hours: {hours}</p>
               
               {/*Search */}
               <div className='flexCenter w-[115px] h-[33px]'> 
