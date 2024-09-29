@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className='max-container'>
+    <footer className=''>
 
-      
-      <div className='flex justify-between items-start gap-20 flex-wrap max-lg:flex-col mb-20'>
+      <div className='grid md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 grid-cols-1 gap-10 md:gap-20 mb-20 max-container padding-x padding-t'>
 
         {/* Location Section */}
         <div className='flex items-start flex-col'>
@@ -17,8 +16,7 @@ const Footer = () => {
           <button className='custom__button__bevel custom__button__medium mt-5'>Buy Tickets</button>
         </div>
  
-        <div className='flex justify-between lg:gap-15 gap-[150px] flex-wrap mr-[150px]'>
-  
+        
           {/* Hours Section */}
           <div className='flex justify-start items-start flex-col'>
             <h1 className='text-semibold-21'>Hours</h1>
@@ -41,7 +39,7 @@ const Footer = () => {
           </div>
         
           {/* Links Section */}
-          <div className='flex flex-col justify-start lg:gap-2 gap-6 flex-wrap'>
+          <div className='flex flex-col justify-start gap-2  flex-wrap'>
               {footerlinks.map((link) => (
               <div key={link.id} className=''>
                 <Link to={link.link}> 
@@ -53,23 +51,24 @@ const Footer = () => {
               ))}
           </div>
 
-        </div>
+        
       </div>
       
 
-      <hr className='bg-black bg-opacity-25 h-[2px] border-0'/>
+      <hr className='bg-black bg-opacity-25 h-[2px] w-full border-0'/>
 
-      <div className='flexStart'>
+      <div className='flexStart padding-x max-container'>
         <div className='flex justify-between py-[10px]'>
-          <p className='mr-5 font-inter text-[12px] cursor-pointer'>Privacy Policy</p>
-          <p className='mr-5 font-inter text-[12px] cursor-pointer'>Join Us</p>
-          <p className='mr-5 font-inter text-[12px] cursor-pointer'>Terms of Service</p>
+          <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px] cursor-pointer'>Privacy Policy</p>
+          <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px] cursor-pointer'>Join Us</p>
+          <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px] cursor-pointer'>Terms of Service</p>
         </div>
 
         <div className='ml-auto '>
-          <p className='mr-5 font-inter text-[12px]'>© 2000-2024 Fossil Discovery Lab. All rights reserved.</p>
+          <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px]'>© 2000-2024 Fossil Discovery Lab. All rights reserved.</p>
         </div>
       </div>
+
     </footer>
   )
 }
