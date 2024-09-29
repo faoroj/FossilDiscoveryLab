@@ -28,13 +28,13 @@ const directions = () => {
                     />
                   </div>
 
-                  <p className="text-normal-18 text-mediumBlack max-w-[523px] mt-5">
+                  <p className="text-normal-16 text-mediumBlack max-w-[523px] mt-5">
                     {parking.content}
                   </p>
 
                   <div className="mt-auto">
                     <Link to={parking.page}>
-                      <p className="text-medium-18 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
+                      <p className="text-medium-16 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
                         {parking.link}
                       </p>
                     </Link>

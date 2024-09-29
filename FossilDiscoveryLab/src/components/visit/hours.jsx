@@ -25,11 +25,11 @@ const hours = () => {
               </p>
 
               <p className=' text-secondary font-inter font-bold leading-[150%] text-[18px] ss:text-[21px] mt-5 text-center'>Prehistoric Palate Cafe</p>
-              <p className='font-inter font-normal leading-[150%] text-[12px] ss:text-[16px] mt-1 text-center'>Lunch offered daily 11am-4pm</p>
+              <p className='font-inter font-normal leading-[150%] text-[16px] ss:text-[16px] mt-1 text-center'>Lunch offered daily 11am-4pm</p>
               <p className='text-secondary font-inter font-bold leading-[150%] text-[18px] ss:text-[21px] mt-[15px] ss:mt-[40px] text-center'>Holiday Hours</p>
-              <p className='font-inter font-normal leading-[150%] text-[12px] ss:text-[16px] mt-1 text-center'>Thanksgiving | Closed</p>
-              <p className='font-inter font-normal leading-[150%] text-[12px] ss:text-[16px] mt-1 text-center'>Christmas Day | Closed</p>
-              <p className='font-inter font-normal leading-[150%] text-[12px] ss:text-[16px] mt-1 text-center'>New Year's Day | Closed</p>
+              <p className='font-inter font-normal leading-[150%] text-[16px] ss:text-[16px] mt-1 text-center'>Thanksgiving | Closed</p>
+              <p className='font-inter font-normal leading-[150%] text-[16px] ss:text-[16px] mt-1 text-center'>Christmas Day | Closed</p>
+              <p className='font-inter font-normal leading-[150%] text-[16px] ss:text-[16px] mt-1 text-center'>New Year's Day | Closed</p>
               <p className='font-inter font-normal leading-[150%] text-[12px] ss:text-[16px] italic text-center  mt-[20px] ss:mt-[40px]'>
                 Galleries are busiest on weekday mornings due to school trips
               </p>

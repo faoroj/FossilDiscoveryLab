@@ -21,7 +21,7 @@ const VisitUs = () => {
         <Help />
       </section>
 
-      <section className="padding-x padding-b sm:pt-[160px] pt-[96px]">
+      <section className="padding-x padding-b sm:pt-[100px] pt-[66px]">
         <Questions />
       </section>
 
