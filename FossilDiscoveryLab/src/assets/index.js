@@ -36,6 +36,7 @@ import Calender from "./calender.png";
 import Hamburgermenu from "./hamburgermenu.png";
 import Plus from "./Plus.png";
 import Exitmenu from "./exit.png";
+import Rightarrow from "./rightarrow.png";
 
 
 
@@ -78,5 +79,6 @@ export {
     Calender,
     Hamburgermenu,
     Plus,
-    Exitmenu
+    Exitmenu, 
+    Rightarrow
 };

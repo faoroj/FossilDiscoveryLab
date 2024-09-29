@@ -8,10 +8,10 @@ const Hero = () => {
       <img src={hero} alt='hero' className='flex-shrink-0 self-stretch w-full h-screen object-cover'/>
 
       
-      <div className='padding absolute inset-0 flexCenter text-center flex-col'>
+      <div className='padding absolute inset-0 flexCenter text-center flex-col mt-10'>
 
         <div className='flexCenter relative'>
-          <h1 className='text-bold-48 text-flat relative'>
+          <h1 className='font-inter font-bold leading-[150%] text-[38px] xs:text-[48px] text-flat relative'>
             <span className="relative">
               <img 
                 src={pointer} 
@@ -23,22 +23,22 @@ const Hero = () => {
           </h1>
         </div>
 
-        <h2 className='text-medium-28 text-flat'>Step Into a World Lost in Time</h2>
+        <h2 className='font-inter font-medium leading-[150%] text-flat text-[21px] sm:text-[28px]'>Step Into a World Lost in Time</h2>
 
-        <div className='flexCenter flex-col sm:flex-row mt-14'>
+        <div className='flexCenter flex-col sm:flex-row mt-6 sm:mt-14'>
 
           <Link to="/VisitUs">
-            <button type='button' className='custom__button__rounded sm:mr-[40px] mt-[14px] sm:mt-0'>Plan Your Visit</button>
+            <button type='button' className='custom__button__rounded sm:mr-[40px]'>Plan Your Visit</button>
           </Link>
 
           <Link to="/Accessibility">
             <button type='button' className='custom__button__rounded sm:mr-[40px] mt-[14px] sm:mt-0'>Accessibility</button>
           </Link>
 
-
           <Link to="/GroupVisit">
             <button type='button' className='custom__button__rounded mt-[14px] sm:mt-0'>Group Visit</button>
           </Link>
+
         </div>  
       </div>
 

@@ -107,7 +107,7 @@
   color: var(--color-secondary);
   text-align: center;
   font-family: Inter;
-  font-size: 21.32px;
+  font-size: 21px;
   font-style: normal;
   font-weight: 800;
   line-height: 150%; 
@@ -121,12 +121,12 @@
 }
 
 
-
-/*@media (max-width: 480px) {
+@media (max-width: 1200px) {
   .custom__button__open {
    padding: 0.5rem 1.5rem; 
+   font-size: 18px
   }
-} */
+}
 
 .custom__button__open:hover {
   background-color: var(--color-secondary); 
@@ -215,6 +215,22 @@
     .px {
       @apply px-[340px]; 
     }
+  }
+
+
+  /* Font 12px */
+
+  .text-normal-12 {
+    @apply font-inter font-normal text-[12px] leading-[150%];
+  }  
+  .text-medium-12 {
+    @apply font-inter font-medium text-[12px] leading-[150%];
+  }
+  .text-semibold-12 {
+    @apply font-inter font-semibold text-[12px] leading-[150%];
+  }  
+  .text-bold-12 {
+    @apply font-inter font-bold text-[12px] leading-[150%];
   }
 
 

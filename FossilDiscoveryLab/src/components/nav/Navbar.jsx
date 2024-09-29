@@ -37,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className='sticky z-10 box-shadow'>
+    <header className='absolute w-full z-10 box-shadow'>
 
         {/* Top Section */}
         <div className='bg-primary w-full'>

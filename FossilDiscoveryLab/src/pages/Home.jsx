@@ -9,7 +9,7 @@ const App = () => {
         <Hero />
       </section>
 
-      <section className="padding">
+      <section className="padding-x">
         <Exhibits />
       </section>
 
@@ -17,9 +17,9 @@ const App = () => {
         <Services />
       </section>
 
-      <section className="padding">
+      {/* <section className="padding">
         <Latest />
-      </section>
+      </section> */}
 
       <section className="bg-white padding">
         <Learn />
