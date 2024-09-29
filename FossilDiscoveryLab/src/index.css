@@ -128,6 +128,20 @@
   }
 }
 
+@media (max-width: 620px) {
+  .custom__button__open {
+    padding: 1rem 2rem; 
+    font-size: 22px;   
+  }
+}
+
+@media (max-width: 400px) {
+  .custom__button__open {
+    padding: 0.4rem 1rem; 
+    font-size: 16px;      
+  }
+}
+
 .custom__button__open:hover {
   background-color: var(--color-secondary); 
   color: white; 

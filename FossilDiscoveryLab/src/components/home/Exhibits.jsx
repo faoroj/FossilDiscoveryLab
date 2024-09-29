@@ -9,7 +9,7 @@ const ExhibitCard = ({ image, title, content, }) => (
       <img src={image} alt="exhibit" className="w-full h-full object-cover" />
     </div>
 
-    <div className="bg-white pt-6 flex flex-col h-[300px] flex-grow">
+    <div className="bg-white pt-6 flex flex-col xxs:h-[300px] flex-grow">
 
       <h3 className="text-bold-16 xxs:text-[21px] sm:text-[21px] text-mediumBlack px-6">
         {title}
