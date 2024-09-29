@@ -1,7 +1,18 @@
 import { Link } from 'react-router-dom';
-import { Exitmenu, Plus } from '../../assets';
+import { Exitmenu, Plus, Whiteminus } from '../../assets';
+import { useState } from 'react';
+import { visitLinks } from '../../constants';
+
 const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, setActive }) => {
-    
+
+  const [collapsedItems, setCollapsedItems] = useState({});
+  const toggleCollapse = (index) => {
+    setCollapsedItems((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index], 
+    }));
+  };
+
     return (
         isMobileMenuOpen && (
             <div className="md:hidden flex flex-col absolute top-[0px] left-0 bg-primary w-full h-screen z-100">
@@ -15,8 +26,9 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, s
                 {navLinks.map((nav, index) => (
                   <li
                     key={nav.id}
-                    className={`text-bold-28  mt-[20px] `}
+                    className={`text-bold-28 mt-[20px]`}
                   >
+
                     <div className="flex items-center justify-between">
                       <Link 
                         to={nav.path} 
@@ -29,10 +41,31 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, s
                       </Link>
 
                       {index >= 2 && (
-                        <img src={Plus} alt={`Image for ${nav.title}`} className="w-[30px] h-[30px] cursor-pointer" />
+                        <img 
+                          src={collapsedItems[index] ? Whiteminus : Plus}
+                          alt={`Image for ${nav.title}`} 
+                          className="w-[30px] h-[30px] cursor-pointer"
+                          onClick={() => toggleCollapse(index)} />
                         )}
                     </div>
 
+                    {collapsedItems[index] && (
+                      <div className="px-5">
+                        {visitLinks.map((nav, index) => (
+                          
+                          <Link to={nav.path}>
+                            <div className='flex items-center gap-1 mt-2'>
+                              <h1 key={index} className='text-medium-21 text-flat hover:text-secondary underline underline-offset-[4px] cursor-pointer'>
+                              {nav.title}
+                              </h1>
+                              <img src={nav.icon} alt='white arrow' className='w-[21px] h-[21px]'/>
+                            </div>
+                          </Link>
+                          
+                        ))}
+
+                      </div>
+                    )}
 
                     <div className='h-[1px] bg-flat mt-4'></div>
                   </li>

@@ -23,7 +23,7 @@ const hours = () => {
           </p>
 
           <div>
-            <p className='underline underline-offset-[4px] text-secondary text-bold-16  mt-[20px] custom:mt-[37px] ml-3 cursor-pointer'>Read More</p>
+            <p className='underline underline-offset-[4px] text-secondary text-bold-16 mt-[20px] custom:mt-[37px] ml-3 cursor-pointer'>Read More</p>
           </div>
           
 

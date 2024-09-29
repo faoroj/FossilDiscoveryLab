@@ -1,7 +1,7 @@
 import { 
   Assistance, Divider, DonateBanner, facebook, hero, instagram, Learning, 
   logo,  Programs ,Tours, Trex, Trex2, Triceratops, twitter, youtube, Learning2, 
-  ContactUs, JoinUs, FAQ, Address, Handicap, Car, Map, Dropdown, DropdownBlack, Calender
+  ContactUs, JoinUs, FAQ, Address, Handicap, Car, Map, Dropdown, DropdownBlack, Calender, Whitearrowright
 } from "../assets";
 
 export const navLinks = [
@@ -36,22 +36,26 @@ export const navLinks = [
     {
         id: "Visit-1",
         title: "Plan Your Visit",
-        path: "/VisitUs"
+        path: "/VisitUs",
+        icon: Whitearrowright,
     },
     {
         id: "Visit-2",
         title: "Buy Tickets",
-        path: "/BuyTickets"
+        path: "/BuyTickets",
+        icon: Whitearrowright,
     },
     {
         id: "Visit-3",
         title: "Accessibility",
-        path: "/Accessibility"
+        path: "/Accessibility",
+        icon: Whitearrowright,
     },
     {
         id: "Visit-4",
         title: "Group Visits",
-        path: "/GroupVisit"
+        path: "/GroupVisit",
+        icon: Whitearrowright,
     },
   ];
 
@@ -371,6 +375,8 @@ export const services = [
     ]
   };
   
+ 
+
 
   
  

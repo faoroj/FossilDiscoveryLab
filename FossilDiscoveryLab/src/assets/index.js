@@ -37,6 +37,8 @@ import Hamburgermenu from "./hamburgermenu.png";
 import Plus from "./Plus.png";
 import Exitmenu from "./exit.png";
 import Rightarrow from "./rightarrow.png";
+import Whitearrowright from "./whitearrowright.png";
+import Whiteminus from "./whiteminus.png";
 
 
 
@@ -80,5 +82,7 @@ export {
     Hamburgermenu,
     Plus,
     Exitmenu, 
-    Rightarrow
+    Rightarrow,
+    Whitearrowright,
+    Whiteminus,
 };
