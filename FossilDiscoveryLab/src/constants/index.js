@@ -288,25 +288,33 @@ export const services = [
   export const FrequentQuestions = [
     {
       id: "FrequentQuestions-1",
-      question: "What are your museum hours and admission prices?",
+      question: "What are your museum hours?",
+      answer: "Our museum is open during the following hours: Monday to Saturday: 8:00AM-6:00PM Sunday: 11:00AM-5:00PM",
       icon: DropdownBlack
     },
     {
       id: "FrequentQuestions-2",
       question: "Are there guided tours available? How can I schedule one?",
+      answer: "Our knowledgeable guides provide in-depth insights into our exhibits, offering a rich, educational experience for visitors of all ages. To schedule a guided tour, please visit our website or contact us directly at 215-763-8100 or help@fossildiscoverymuseum.org Tours are available for individuals, groups, and school visits, and we recommend booking in advance to ensure availability.",
       icon: DropdownBlack
     },
     {
       id: "FrequentQuestions-3",
       question: "Is the museum accessible for visitors with disabilities?",
+      answer: "We are committed to providing an inclusive experience for all guests, offering accessible entrances, restrooms, and pathways throughout the museum. Additionally, we have wheelchair rentals available at no charge on a first-come, first-served basis.If you have any specific accessibility needs or questions, please feel free to contact us in advance at 215-763-8100 or help@fossildiscoverymuseum.org, and we'll be happy to assist in making your visit as comfortable as possible.",
       icon: DropdownBlack
     },
     {
       id: "FrequentQuestions-4",
       question: "How can I support the museum through donations or volunteering?",
+      answer: "There are several ways to support our museum! You can contribute by making a donation, which helps us preserve exhibits, fund educational programs, and maintain our facilities. Donations can be made through our website or by contacting us directly. We also offer volunteer opportunities for those looking to get involved. Volunteers assist with various tasks, from guiding visitors to helping with special events.",
       icon: DropdownBlack
     }
   ];
+
+
+
+
 
   export const GroupForm = [
     {

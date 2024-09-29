@@ -1,7 +1,17 @@
 import { QuestionMark } from '../../assets';
 import { FrequentQuestions } from '../../constants';
+import { useState } from 'react';
 
 const questions = () => {
+
+  const [collapsedItems, setCollapsedItems] = useState({});
+  const toggleCollapse = (index) => {
+    setCollapsedItems((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index], 
+    }));
+  };
+
   return (
     <section className='max-container'>
 
@@ -16,7 +26,7 @@ const questions = () => {
 
       <div className='flex flex-col mt-3'>
         
-        {FrequentQuestions.map((item) => (
+        {FrequentQuestions.map((item, index) => (
 
             <div key={item.id} className='flex flex-col mt-6'>
 
@@ -25,9 +35,18 @@ const questions = () => {
                   <p className="text-semibold-16">
                       {item.question}
                   </p>
-                  <img src={item.icon} alt={item.title} className='w-[34px] h-[34px] cursor-pointer'/>
+                  <img src={item.icon} alt={item.title} className='w-[34px] h-[34px] cursor-pointer' onClick={() => toggleCollapse(index)}/>
                 </div>
-  
+
+                {collapsedItems[index] && (
+                <div className="px-5">
+                  <p className='text-normal-16'>{item.answer}</p>
+                </div>
+                )}
+
+
+
+
             </div>
             
           ))}
