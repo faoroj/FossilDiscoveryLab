@@ -2,10 +2,10 @@ import React from 'react'
 
 const GroupVisitHero = () => {
   return (
-    <section id="Group-Visit-Hero" className='max-container'>
+    <section id="Group-Visit-Hero" className='max-container mt-[108px]'>
 
-        <h1 className='text-semibold-48'>Book a Group Visit</h1>
-        <div className="w-[173px] h-[1px] bg-primary mt-[2px]"></div> 
+        <h1 className='text-[32px] sm:text-[48px] font-inter font-semibold leading-[150%]'>Book a Group Visit</h1>
+        <div className="w-[173px] h-[1px] bg-primary mt-[3px]"></div> 
 
         <p className='text-normal-21 max-w-[800px] mt-[30px]'>
             For group visits of 20 or more we offer a rate of 12$ per person.

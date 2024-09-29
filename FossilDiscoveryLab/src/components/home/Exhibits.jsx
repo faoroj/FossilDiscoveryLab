@@ -15,7 +15,7 @@ const ExhibitCard = ({ image, title, content, }) => (
         {title}
       </h3>
 
-      <p className="font-inter font-normal leading-[150%] text-[12px] xs:text-[14px] ss:text-[12px] md:text-[16px] text-mediumBlack px-6 mt-3">
+      <p className="font-inter font-normal leading-[150%] text-[14px] xs:text-[16px] ss:text-[12px] md:text-[16px] text-mediumBlack px-6 mt-3">
         {content}
       </p>
 

@@ -13,7 +13,7 @@ const AboutUs = () => {
       <MissionStatement />
     </section>
 
-    <section className="padding">
+    <section className="padding-x padding-b">
       <Extras />
     </section>
 

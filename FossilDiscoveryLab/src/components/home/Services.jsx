@@ -27,7 +27,7 @@ const Services = () => {
                 {service.title}
               </h3>
               
-            <p className="text-normal-18 text-mediumBlack max-w-[623px] mt-4">
+            <p className="text-normal-16 text-mediumBlack max-w-[623px] mt-4">
               {service.content.split("help@fossildiscoverymuseum.org").map((part, index) => (
                 <>
                   {part}

@@ -15,7 +15,7 @@ const Donate = () => {
         
         <h1 className='text-semibold-21 '>Want To Support Us?</h1>
         
-        <p className='text-[12px] font-inter font-normal leading-[150%] xs:text-[16px] text-mediumBlack '>
+        <p className='text-[16px] xs:text-[16px] font-inter font-normal leading-[150%]  text-mediumBlack '>
           Donations allow us to continue building new exhibits, develop new education programs and more.
         </p>
 

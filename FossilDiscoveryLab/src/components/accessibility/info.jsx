@@ -13,7 +13,7 @@ const info = () => {
 
 
       {/* Service Dogs Policy */} 
-      <h2 className="text-bold-21 mt-[80px]">{serviceDogsPolicy.title}</h2>
+      <h2 className="text-bold-21 mt-[35px] ss:mt-[45px] md:mt-[80px]">{serviceDogsPolicy.title}</h2>
       <p className="mt-2">{serviceDogsPolicy.introduction}</p>
       <h3 className="text-semibold-16 mt-6">Responsibilities of the Handler:</h3>
         <ul className="list-disc list-outside ml-[40px] mt-2">
@@ -29,7 +29,7 @@ const info = () => {
         </ul>
       
       {/* Audio Induction Loops */}  
-      <h1 className='text-bold-21 mt-[80px]'>Audio Induction Loops</h1>
+      <h1 className='text-bold-21 mt-[35px] ss:mt-[45px] md:mt-[80px]'>Audio Induction Loops</h1>
       <p>
         Visitors who would benefit from the audio induction loop system are invited to request a 
         receiver at the information desk. Our staff will be happy to assist in setting up the device 
@@ -37,14 +37,14 @@ const info = () => {
       </p>
       
       {/* Free Wi-fi */}  
-      <h1 className='text-bold-21 mt-[80px]'>Free Wi-fi</h1>
+      <h1 className='text-bold-21 mt-[35px] ss:mt-[45px] md:mt-[80px]'>Free Wi-fi</h1>
       <p>
         We are pleased to offer free WiFi access to enhance your visit and provide convenience 
         during your stay.
       </p>
 
       {/* Sign Language Interpreters */}   
-      <h2 className="text-bold-21 mt-[80px]">{signLanguagePolicy.title}</h2>
+      <h2 className="text-bold-21 mt-[35px] ss:mt-[45px] md:mt-[80px]">{signLanguagePolicy.title}</h2>
       <p className="mt-2">{signLanguagePolicy.introduction}</p>
       <h3 className="text-semibold-16 mt-6">Requesting a Sign Language Interpreter:</h3>
         <ul className="list-disc list-outside ml-[40px] mt-2">
@@ -59,7 +59,7 @@ const info = () => {
         </ul>
 
       {/* Mobile Map */}
-      <h1 className='text-bold-21 mt-[80px]'>Mobile Map</h1>
+      <h1 className='text-bold-21 mt-[35px] ss:mt-[45px] md:mt-[80px]'>Mobile Map</h1>
       <p>
         Download our mobile map and guide to help find your away around the building.
       </p>

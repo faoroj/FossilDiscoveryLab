@@ -2,10 +2,10 @@ import { Accessibility } from '../../assets';
 
 const accessibilityhero = () => {
   return (
-    <section id="accessibility" className='max-container'>
+    <section id="accessibility" className='max-container mt-[80px]'>
 
         <div className='relative'>
-          <img src={ Accessibility } alt='accessibility' className='w-full h-auto md:h-[450px] sm:h-[250px] object-cover'/>
+          <img src={ Accessibility } alt='accessibility' className='w-full h-[200px] md:h-[450px] sm:h-[350px] object-cover'/>
 
           <div className='absolute inset-0 flex justify-center items-center'>
             <h1 className='font-extrabold font-inter text-flat text-center' style={{ fontSize: 'clamp(21px, 5vw, 64px)' }}>Accessibility</h1>

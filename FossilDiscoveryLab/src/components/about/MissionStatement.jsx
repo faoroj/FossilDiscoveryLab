@@ -5,8 +5,8 @@ const MissionStatement = () => {
     <section id="Mission-Statement" className='max-container'>
 
       <div className="flex flex-col">
-          <h1 className='text-semibold-48'>Mission Statement</h1>
-          <p className='text-normal-18 mt-[29px]'>
+          <h1 className='text-[32px] sm:text-[48px] font-inter font-semibold leading-[150%]'>Mission Statement</h1>
+          <p className='text-normal-16 mt-[29px]'>
             Our mission is to inspire curiosity, ignite imaginations, 
             and educate visitors of all ages about the fascinating history 
             of Earth's most magnificent creatures. Dive into the prehistoric 
@@ -26,7 +26,7 @@ const MissionStatement = () => {
       </div>
 
       <div className="mt-[35px]">
-        <p className='text-normal-18'>
+        <p className='text-normal-16'>
           From the mighty Tyrannosaurus rex to the graceful Pteranodon, our exhibits showcase a 
           wide range of dinosaur species that once ruled the ancient landscapes. Marvel at the 
           perfectly preserved skeletons, fossilized footprints, and rare artifacts that provide 
@@ -34,7 +34,7 @@ const MissionStatement = () => {
           tells a unique story of evolution, survival, and the mysteries of the past.
         </p>
 
-        <p className='text-bold-18 text-secondary mt-[28px] hover:cursor-pointer hover:underline'>
+        <p className='text-bold-16 text-secondary mt-[28px] hover:cursor-pointer hover:underline'>
           View Our Collection &gt;
         </p>
       </div>
