@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Hours Section */}
           <div className='flex justify-start items-start flex-col'>
             <h1 className='text-semibold-21'>Hours</h1>
-            <p className='text-normal-16'>Monday - Saturday: 8am - 6pm</p>
+            <p className='text-normal-16'>Monday - Saturday: 8am-6pm</p>
             <p className='text-normal-16'>Sunday: 11am-5pm</p>
           </div>
 

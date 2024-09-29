@@ -38,32 +38,28 @@
 
 @media (max-width: 768px) {
   .custom__button__bevel {
-    font-size: 0.875rem; /* Slightly smaller font on smaller screens */
-    height: 2.2rem; /* Adjust height */
-    width: 7rem; /* Adjust width */
+    font-size: 0.875rem; 
+    height: 2.2rem; 
+    width: 7rem; 
   }
 }
 
 @media (max-width: 620px) {
   .custom__button__bevel {
-    font-size: 0.875rem; /* Slightly smaller font on smaller screens */
-    height: 2.2rem; /* Adjust height */
-    width: 7rem; /* Adjust width */
+    font-size: 0.875rem; 
+    height: 2.2rem; 
+    width: 7rem; 
   }
 }
-
 
 
 @media (max-width: 400px) {
   .custom__button__bevel {
-    font-size: 0.6rem; /* Even smaller font */
+    font-size: 0.6rem; 
     height: 1.7rem;
     width: 5rem;
   }
 }
-
-
-
 
 
 .custom__button__bevel:hover {
@@ -76,6 +72,14 @@
   height: 50px; 
   width: 154px;
   font-size: 18px;
+}
+
+@media (max-width: 400px) {
+  .custom__button__medium {
+    font-size: 0.7rem; 
+    height: 2.3rem;
+    width: 7rem;
+  }
 }
 
 .custom__button__rounded {
