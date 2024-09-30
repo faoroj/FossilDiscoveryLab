@@ -2,7 +2,7 @@ import { navLinks, visitLinks } from '../../constants';
 import {  logo, search } from '../../assets';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Hamburgermenu, Exitmenu, Plus } from '../../assets';
+import { Hamburgermenu } from '../../assets';
 import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
   
     if (currentDropdownNav) {
       setActive(currentDropdownNav.title);
-      setActiveParent('Visit'); // Set activeParent to Visit for dropdown items
+      setActiveParent('Visit'); 
     }
   }, [location]);
  
@@ -45,6 +45,7 @@ const Navbar = () => {
 
   const handleVisitClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
+    setActiveParent('Visit');
   };
 
   return (
@@ -81,17 +82,17 @@ const Navbar = () => {
                   className={`text-bold-16 cursor-pointer text-center mt-[10px] 
                     ${(active === nav.title || (activeParent === 'Visit' && nav.title === 'Visit')) ? "text-secondary" : "text-White"} 
                     ${index === navLinks.length - 1 ? "mr-0" : "mr-6 md:mr-7"} hover:text-secondary`}
-                  onClick={nav.title === 'Visit' ? handleVisitClick : () => setActive(nav.title)}
+                  onClick={nav.title === 'Visit' ? handleVisitClick : null}
                   
                 >
                   {nav.title !== 'Visit' ? (
-                    <Link to={nav.path}>{nav.title}</Link>
+                    <Link to={nav.path} className="block w-full h-[70%]">{nav.title}</Link>
                     ) : (
                     <p>{nav.title}</p>
                   )}
 
                   <hr
-                    className={`w-[60px] h-[3px] rounded-[6px] mt-2 transition-all duration-300 ${
+                    className={`w-[60px] h-[3px] rounded-[6px] left-14 mt-2 transition-all duration-300 ${
                     (active === nav.title || (activeParent === 'Visit' && nav.title === 'Visit')) ? "bg-secondary" : "bg-transparent"
                     }`}
                   />
