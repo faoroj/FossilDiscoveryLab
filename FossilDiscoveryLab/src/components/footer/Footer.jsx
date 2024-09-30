@@ -30,9 +30,13 @@ const Footer = () => {
             <div className='flex'>
               {socialMedia.map((ssm) => (
                 <div key={ssm.id} className=''>
-                  <Link to={ssm.link}> 
+                  <a 
+                    href={ssm.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
                     <img src={ssm.icon} alt={ssm.id} className=''/>
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>
