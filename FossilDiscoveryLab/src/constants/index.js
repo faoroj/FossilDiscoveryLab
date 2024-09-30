@@ -223,6 +223,7 @@ export const services = [
       icon: Car,
       content: "The parking lot entrance is located on Kensington Ave, just south of E Tiega St.",
       link: "Google Map",
+      page: "https://maps.app.goo.gl/UqpA7c6RduYp4T4q9"
     },
     {
       id: "Directions-3",
@@ -311,9 +312,6 @@ export const services = [
       icon: DropdownBlack
     }
   ];
-
-
-
 
 
   export const GroupForm = [

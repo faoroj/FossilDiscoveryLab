@@ -15,7 +15,7 @@ const help = () => {
 
               {index === 1 ? (
                 
-                <a href={mobileMap}download="FDL_MobileMap.png">
+                <a href={mobileMap} download="FDL_MobileMap.png">
                   <div className='flexCenter'>
                     <p className='text-semibold-16  text-secondary mr-3 mt-3'>{item.link}</p>
                     {item.icon && <img src={item.icon} alt={`${item.title} icon`} className='mt-3'/>}

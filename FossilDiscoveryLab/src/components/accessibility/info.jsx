@@ -1,5 +1,6 @@
 import { serviceDogsPolicy, signLanguagePolicy } from '../../constants';
 import { Map } from '../../assets';
+import mobileMap from '../../assets/mobilemap.png';
 
 const info = () => {
   return (
@@ -63,11 +64,13 @@ const info = () => {
       <p>
         Download our mobile map and guide to help find your away around the building.
       </p>
-      <div className='inline-flex items-center mt-3 cursor-pointer'>
-        <p className='text-secondary font-semibold font-inter'>Download Here</p>
-        <img src={Map} alt="Map" className='ml-2 '></img>
-      </div>
-
+      
+      <a href={mobileMap} download="FDL_MobileMap.png">
+        <div className='inline-flex items-center mt-3 cursor-pointer'>
+          <p className='text-secondary font-semibold font-inter'>Download Here</p>
+          <img src={Map} alt="Map" className='ml-2 '></img>
+        </div>
+      </a>
     </section>
   )
 }

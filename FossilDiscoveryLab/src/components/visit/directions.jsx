@@ -41,7 +41,6 @@ const directions = () => {
                   </p>
 
                   <div className="mt-auto">
-
                     {index === 0 ? (
                     <p 
                       className="text-medium-16 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]"
@@ -49,16 +48,24 @@ const directions = () => {
                     >
                       {parking.link}
                     </p>
+                    ) : index === 1 ? (
+                      <a 
+                        href={parking.page} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <p className="text-medium-16 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
+                          {parking.link}
+                        </p>
+                      </a>
                     ) : (
-
                       <Link to={parking.page}>
                         <p className="text-medium-16 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline underline-offset-[6px]">
                           {parking.link}
                         </p>
                       </Link>
                       )}
-                  </div>
-                  
+                  </div>  
               </div>
 
               {index < 2 && (
