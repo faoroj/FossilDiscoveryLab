@@ -27,12 +27,15 @@ const GroupVisitForm = () => {
     <section className='max-container'>
       {GroupForm.map((form, index) => (
         <div key={form.id} className='flex flex-col mb-7'>
-
+          
+          
           <p className='text-bold-16'>
             {form.header.slice(0, -1)}
+            {index !=8 && (
             <span className="text-red-500">{form.header.slice(-1)}</span>
+            )}
           </p>
-
+       
           {index === 1 && (
             <div className='flex flex-col ss:flex-row'>
               <input 
