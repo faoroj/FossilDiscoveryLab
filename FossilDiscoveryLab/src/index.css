@@ -151,9 +151,22 @@
   color: white; 
 }
 
+.react-datepicker {
+  z-index: 9999; 
+}
+
+.react-datepicker-wrapper {
+  width: 40%; /* Adjust as needed */ /* Match your input field */
+}
+
+@media (max-width: 1060px) {
+  .react-datepicker-wrapper {
+    width: 100%;
+  }}
+
 
 .react-datepicker__header {
-  background-color: white; /* Change header background */
+  background-color: white; 
   color: white; 
   border-bottom: none;
 

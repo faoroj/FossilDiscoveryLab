@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; // Import the CSS
 import { GroupForm } from '../../constants';
 
 const GroupVisitForm = () => {
   const [selectedDate, setSelectedDate] = useState(null);
+  const [calendarOpen, setCalendarOpen] = useState(false);
+  const datePickerRef = useRef(null);
 
   // Function to handle date change
   const handleDateChange = (date) => {
     setSelectedDate(date);
+    setCalendarOpen(false); 
+  };
+
+  const toggleCalendar = () => {
+    if (calendarOpen) {
+      datePickerRef.current.setOpen(false); // Close the calendar
+    } else {
+      datePickerRef.current.setOpen(true); // Open the calendar
+    }
+    setCalendarOpen(!calendarOpen); // Toggle state
   };
 
   return (
@@ -30,7 +42,7 @@ const GroupVisitForm = () => {
               />
               <input 
                 type="text"
-                className='w-full md:w-[19%] h-[45px] border rounded-[6px] pl-4 mt-4 border-black'
+                className='w-full md:w-[19%] h-[45px] border rounded-[6px] px-4 mt-4 border-black'
                 placeholder='Last Name'
               />
             </div>
@@ -43,11 +55,13 @@ const GroupVisitForm = () => {
                 <div className='relative flex flex-col'>
                   
                   <DatePicker
+                  
                     selected={selectedDate}
                     onChange={handleDateChange}
                     dateFormat="MM/dd/yyyy"
-                    className='border-black border px-4 w-full md:w-[40%] h-[45px] rounded-[6px] mt-4'
-                    placeholderText="mm/dd/yyyy"
+                    className='border-black border px-4 w-full md:w-[100%] h-[45px] rounded-[6px] mt-4'
+                    placeholderText="mm/dd/yyyy"    
+                    
                   />
 
                   {form.icon && (
@@ -60,14 +74,13 @@ const GroupVisitForm = () => {
                   )}
                 </div>
 
-                
-
               ) : (
                 
                 <input 
                   type="text"
-                  className={index === 8 ? 'w-full md:w-[40%] h-[170px] border rounded-[6px] pl-4 mt-4 border-black' : 
-                    'border-black border px-4 w-full md:w-[40%] h-[45px] rounded-[6px] mt-4'}
+                  className={index === 8 
+                    ? 'w-full md:w-[40%] h-[75px] xs:h-[45px] border rounded-[6px] px-4 mt-4 border-black' 
+                    :'border-black border px-4 w-full md:w-[40%] h-[45px] rounded-[6px] mt-4'}
                   placeholder=''
                 />
               )}
