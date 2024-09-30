@@ -7,6 +7,7 @@ import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
+  const [activeParent, setActiveParent] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,8 +19,16 @@ const Navbar = () => {
     const currentNav = navLinks.find((nav) => nav.path === location.pathname);
     if (currentNav) {
       setActive(currentNav.title);
+      setActiveParent('');
+    }
+    const currentDropdownNav = visitLinks.find((nav) => nav.path === location.pathname);
+  
+    if (currentDropdownNav) {
+      setActive(currentDropdownNav.title);
+      setActiveParent('Visit'); // Set activeParent to Visit for dropdown items
     }
   }, [location]);
+ 
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -69,10 +78,11 @@ const Navbar = () => {
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
-                  className={`text-bold-16 cursor-pointer text-center mt-[10px] ${
-                    active === nav.title ? "text-secondary" : "text-White"
-                  } ${index === navLinks.length - 1 ? "mr-0" : "mr-6 md:mr-7"} hover:text-secondary`}
+                  className={`text-bold-16 cursor-pointer text-center mt-[10px] 
+                    ${(active === nav.title || (activeParent === 'Visit' && nav.title === 'Visit')) ? "text-secondary" : "text-White"} 
+                    ${index === navLinks.length - 1 ? "mr-0" : "mr-6 md:mr-7"} hover:text-secondary`}
                   onClick={nav.title === 'Visit' ? handleVisitClick : () => setActive(nav.title)}
+                  
                 >
                   {nav.title !== 'Visit' ? (
                     <Link to={nav.path}>{nav.title}</Link>
@@ -82,13 +92,11 @@ const Navbar = () => {
 
                   <hr
                     className={`w-[60px] h-[3px] rounded-[6px] mt-2 transition-all duration-300 ${
-                    active === nav.title ? "bg-secondary" : "bg-transparent"
+                    (active === nav.title || (activeParent === 'Visit' && nav.title === 'Visit')) ? "bg-secondary" : "bg-transparent"
                     }`}
                   />
 
                 </li>
-
-                
 
               ))}
             </ul>
@@ -97,9 +105,18 @@ const Navbar = () => {
             {isDropdownOpen && (
               <div className='absolute top-full left-44 w-[190px] h-[186px] px-[14px] md:flex hidden justify-center items-center flex-col bg-secondary z-50'>
                 {visitLinks.map((nav, index) => (
-                  <Link to={nav.path}>
-                  <h1 key={index} className={`text-semibold-16 text-flat hover:text-black cursor-pointer ${index === 0 ? "mt-[0px]" : "mt-[12px]"}`}>
-                    {nav.title}
+                  <Link 
+                    key={index} 
+                    to={nav.path}
+                    onClick={() => {
+                      setActiveParent('Visit'); // Set "Visit" as the active parent link
+                      setActive(nav.title); // Set the clicked dropdown link as active
+                      setIsDropdownOpen(false); // Optionally close the dropdown after clicking
+                    }}
+                    >
+
+                  <h1 className={`text-semibold-16 text-flat hover:text-black cursor-pointer ${index === 0 ? "mt-[0px]" : "mt-[12px]"}`}>
+                    {nav.dropdowntitle}  
                   </h1>
                   </Link>
                 ))}

@@ -35,25 +35,29 @@ export const navLinks = [
   export const visitLinks = [
     {
         id: "Visit-1",
-        title: "Plan Your Visit",
+        title: "Visit",
+        dropdowntitle: "Plan Your Visit",
         path: "/VisitUs",
         icon: Whitearrowright,
     },
     {
         id: "Visit-2",
-        title: "Buy Tickets",
+        title: "Visit",
+        dropdowntitle: "Buy Tickets",
         path: "/BuyTickets",
         icon: Whitearrowright,
     },
     {
         id: "Visit-3",
-        title: "Accessibility",
+        title: "Visit",
+        dropdowntitle: "Accessibility",
         path: "/Accessibility",
         icon: Whitearrowright,
     },
     {
         id: "Visit-4",
-        title: "Group Visits",
+        title: "Visit",
+        dropdowntitle: "Group Visits",
         path: "/GroupVisit",
         icon: Whitearrowright,
     },
