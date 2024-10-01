@@ -13,13 +13,13 @@ const App = () => {
         <Exhibits />
       </section>
 
-      <section className='padding-t'>
+      <section className='padding-y'>
         <Services />
       </section>
 
-      <section className="padding-x padding-y">
+      {/* <section className="padding-x padding-y">
         <Latest />
-      </section>
+      </section> */}
 
       <section className="bg-white padding">
         <Learn />

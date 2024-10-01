@@ -11,10 +11,10 @@ const Learn = () => {
 
       <motion.h1 
         className='font-inter text-[32px] md:text-[48px] font-semibold leading-[150%]'
-        initial={{opacity:0, y:-120}}
-        whileInView={{opacity:1, y:0}}
+        initial={{opacity:0}}
+        whileInView={{opacity:1}}
         viewport={{ once: true, amount:1 }}
-        transition={{ type: 'spring', damping: 20, mass: 0.5, }}
+        transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.1 }}
         >
         Learn More
       </motion.h1>

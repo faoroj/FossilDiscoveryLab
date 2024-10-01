@@ -33,8 +33,8 @@ const Services = () => {
               key={service.id}
               initial={{ opacity: 0, y: 120 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 1 + index * 0.3 }}
+              viewport={{ once: true, amount: .1 }}
+              transition={{ duration: 0.4, ease: 'linear', delay: .6 + index * 0.3 }}
               className='mt-7'
             >
               <h3 className="text-bold-21 max-w-[523px]">{service.title}</h3>
@@ -58,8 +58,8 @@ const Services = () => {
             <motion.div
               initial={{ opacity: 0, y: 120 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 2 }}
+              viewport={{ once: true, amount: .1 }}
+              transition={{ duration: 0.4, delay: 1.3 }}
             >
               <button type='button' className='custom__button__open mt-8'>Accessibility</button>
             </motion.div>

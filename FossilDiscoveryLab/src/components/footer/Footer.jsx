@@ -1,11 +1,18 @@
 import { footerlinks, socialMedia } from '../../constants';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
     <footer className=''>
 
-      <div className='grid md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 grid-cols-1 gap-10 md:gap-20 mb-20 max-container padding-x padding-t'>
+      <motion.div 
+        className='grid md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 grid-cols-1 gap-10 md:gap-20 mb-20 max-container padding-x padding-t'
+        initial={{opacity:0}}
+        whileInView={{opacity:1}}
+        viewport={{ once: true, amount:1 }}
+        transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.1 }}
+      >
 
         {/* Location Section */}
         <div className='flex items-start flex-col'>
@@ -56,23 +63,28 @@ const Footer = () => {
           </div>
 
         
-      </div>
+      </motion.div>
       
+      <motion.div
+        initial={{opacity:0}}
+        whileInView={{opacity:1}}
+        viewport={{ once: true, amount:.1 }}
+        transition={{ duration: 0.4, ease: 'easeInOut', delay: .4 }}
+      >
+        <hr className='bg-black bg-opacity-25 h-[2px] w-full border-0'/>
 
-      <hr className='bg-black bg-opacity-25 h-[2px] w-full border-0'/>
+        <div className='flexStart padding-x max-container'>
+          <div className='flex justify-between py-[10px]'>
+            <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px] cursor-pointer'>Privacy Policy</p>
+            <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px] cursor-pointer'>Join Us</p>
+            <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px] cursor-pointer'>Terms of Service</p>
+          </div>
 
-      <div className='flexStart padding-x max-container'>
-        <div className='flex justify-between py-[10px]'>
-          <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px] cursor-pointer'>Privacy Policy</p>
-          <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px] cursor-pointer'>Join Us</p>
-          <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px] cursor-pointer'>Terms of Service</p>
+          <div className='ml-auto '>
+            <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px]'>© 2000-2024 Fossil Discovery Lab. All rights reserved.</p>
+          </div>
         </div>
-
-        <div className='ml-auto '>
-          <p className='mr-2 sm:mr-5 font-inter text-[9px] sm:text-[12px]'>© 2000-2024 Fossil Discovery Lab. All rights reserved.</p>
-        </div>
-      </div>
-
+      </motion.div>
     </footer>
   )
 }
