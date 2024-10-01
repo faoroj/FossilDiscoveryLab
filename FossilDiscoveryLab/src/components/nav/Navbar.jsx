@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Hamburgermenu } from '../../assets';
 import MobileMenu from './MobileMenu';
+import { easeInOut, motion } from 'framer-motion'
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -49,7 +50,12 @@ const Navbar = () => {
   };
 
   return (
-    <header className='absolute w-full z-10 box-shadow'>
+    <motion.header 
+      className='absolute w-full z-10 box-shadow'
+      initial={{ y: -130 }}
+      animate= {{ y: 0 }}
+      transition={{ duration: .7, ease: easeInOut }}
+      >
 
         {/* Top Section */}
         <div className='bg-primary w-full'>
@@ -157,7 +163,7 @@ const Navbar = () => {
         />
 
         </div>
-    </header>
+    </motion.header>
   )
 }
 
