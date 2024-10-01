@@ -1,5 +1,6 @@
 import { learnmore } from '../../constants';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Learn = () => {
   return (
@@ -8,15 +9,28 @@ const Learn = () => {
       className='max-container'
     >
 
-      <h1 className='font-inter text-[32px] md:text-[48px] font-semibold leading-[150%]'>
+      <motion.h1 
+        className='font-inter text-[32px] md:text-[48px] font-semibold leading-[150%]'
+        initial={{opacity:0, y:-120}}
+        whileInView={{opacity:1, y:0}}
+        viewport={{ once: true, amount:1 }}
+        transition={{ type: 'spring', damping: 20, mass: 0.5, }}
+        >
         Learn More
-      </h1>
+      </motion.h1>
 
       <div className='grid md:grid-cols-3 sm:grid-cols-2 ss:grid-cols-2 grid-cols-1 sm:gap-[32px] gap-12 mt-[50px]'>
         
-          {learnmore.map((learn) => (
+          {learnmore.map((learn, i) => (
 
-            <div key={learn.id} className='flex flex-col h-[460px] '>
+            <motion.div 
+              key={learn.id} 
+              className='flex flex-col h-[460px]'
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 1 + (i*.1) }}
+              initial={{ opacity: 0, y: 100 * (i+1) }} 
+              whileInView={{ opacity: 1, y: 0 }}  
+              viewport={{ once: true}}
+            >
               <div className='w-full'>
                 <img src={learn.image} alt={learn.title} className='w-[360px] h-[280px] object-cover'/>
               </div>
@@ -36,7 +50,7 @@ const Learn = () => {
                   </p>
                 </Link>
               </div> 
-            </div>
+            </motion.div>
           ))}
         </div>
 
