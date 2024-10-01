@@ -1,10 +1,17 @@
 import { Trex2 } from '../../assets';
+import { motion } from 'framer-motion';
 
 const hours = () => {
   return (
     <section id="hours" className='max-container'>
 
-      <div className='flex flex-col custom:flex-row items-center md:items-stretch'> 
+      <motion.div 
+        className='flex flex-col custom:flex-row items-center md:items-stretch'
+        initial= {{opacity:0}}
+        whileInView={{opacity:1, scale: [.6, 1, 1.1, 1]}}
+        transition={{ duration: 0.4, ease: 'easeInOut'}}
+        viewport={{ once: true, amount: 0.7 }}
+      > 
 
         {/* Left: Image Section */}
         <div className='flex-1'>
@@ -29,7 +36,7 @@ const hours = () => {
 
         </div>
 
-      </div>
+      </motion.div>
     </section>
   )
 }

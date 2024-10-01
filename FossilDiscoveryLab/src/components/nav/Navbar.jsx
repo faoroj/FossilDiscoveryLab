@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Hamburgermenu } from '../../assets';
 import MobileMenu from './MobileMenu';
-import { easeInOut, motion } from 'framer-motion'
+import { easeInOut, motion, Variants } from 'framer-motion'
 
 const Navbar = () => {
   const [active, setActive] = useState('');
