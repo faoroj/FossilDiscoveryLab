@@ -1,50 +1,32 @@
-import {  hero, pointer } from '../../assets';
+import { hero, pointer } from '../../assets';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+
+const buttons = [
+  { label: 'Plan Your Visit', link: '/VisitUs', delay: 2 },
+  { label: 'Accessibility', link: '/Accessibility', delay: 2.3 },
+  { label: 'Group Visit', link: '/GroupVisit', delay: 2.6 },
+];
 
 const Hero = () => {
   return (
-    <section id="home" className={`flex md:flex-row flex-col relative`}>
-
+    <section id="home" className='flex md:flex-row flex-col relative'>
       <img 
         src={hero} 
         alt='hero' 
-        className='flex-shrink-0 self-stretch w-full h-screen object-cover'
-        
+        className='flex-shrink-0 self-stretch w-full h-screen object-cover' 
       />
 
-      <motion.div 
-        className='padding absolute inset-0 flexCenter text-center flex-col mt-10'
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 1, 
-            },
-          },
-        }}
-        >
-
-        <motion.div 
-          className='flexCenter flex-col relative'
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1 },
-          }}
-          transition={{ staggerChildren: 0.4  }}
-          >
+      <div className='padding absolute inset-0 flexCenter text-center flex-col mt-10'>
+        <div className='flexCenter flex-col relative'>
           <motion.h1 
-            variants={{
-              hidden: { opacity: 0, y: 100 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.4,  ease: "easeInOut" }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, ease: 'easeInOut', delay: 1 }}
             className='font-inter font-bold leading-[150%] text-[38px] xs:text-[48px] text-flat relative'
-            >
-            <span className="relative" >
+          >
+            <span className="relative">
               <img 
                 src={pointer} 
                 alt="pointer" 
@@ -55,76 +37,36 @@ const Hero = () => {
           </motion.h1>
 
           <motion.h2 
-            variants={{
-              hidden: { opacity: 0, y: 100 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.4,  ease: "easeInOut" }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, ease: 'easeInOut', delay: 1.5 }}
             className='font-inter font-medium leading-[150%] text-flat text-[21px] sm:text-[28px]'
-            >
+          >
             Step Into a World Lost in Time
           </motion.h2>
+        </div>
 
-        </motion.div>
-
-
-        <motion.div 
-          className='flexCenter flex-col sm:flex-row mt-6 sm:mt-14'
-          variants={{
-            hidden: {opacity: 0},
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.4,
-              },
-            },
-          }}
-          >
-
-          <Link to="/VisitUs">
-            <motion.button 
-              variants={{
-                hidden: { opacity: 0, y: 120 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.6 }}
-              type='button' 
-              className='custom__button__rounded sm:mr-[40px]'
-              >Plan Your Visit
-            </motion.button>
-          </Link>
-
-          <Link to="/Accessibility">
-            <motion.button 
-              variants={{
-                hidden: { opacity: 0, y: 120 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.6 }}
-              type='button' 
-              className='custom__button__rounded sm:mr-[40px] mt-[14px] sm:mt-0'
-              >Accessibility
-            </motion.button>
-          </Link>
-
-          <Link to="/GroupVisit">
-            <motion.button 
-              variants={{
-                hidden: { opacity: 0, y: 120 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.6 }}
-              type='button' 
-              className='custom__button__rounded mt-[14px] sm:mt-0'
-              >Group Visit
-            </motion.button>
-          </Link>
-
-        </motion.div>  
-      </motion.div>
-
+        <div className='flexCenter flex-col sm:flex-row mt-6 sm:mt-14'>
+          {buttons.map((button, index) => (
+            <Link key={index} to={button.link}>
+              <motion.button
+                type='button'
+                className={`custom__button__rounded ${index !== 0 ? 'mt-[14px] sm:mt-0 sm:mr-[40px]' : 'sm:mr-[40px]'}`}
+                initial={{ opacity: 0, y: 120 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: button.delay }}
+              >
+                {button.label}
+              </motion.button>
+            </Link>
+          ))}
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
+
