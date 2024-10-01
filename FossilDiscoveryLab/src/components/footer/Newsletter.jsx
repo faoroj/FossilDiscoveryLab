@@ -20,7 +20,7 @@ const Newsletter = () => {
           className='bg-primary w-full h-[180px] xxs:h-[273px] object-cover'
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          viewport={{ once: true, amount:1 }}
+          viewport={{ once: true, }}
           transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.1 }}
         >
 

@@ -1,21 +1,43 @@
 import { collection } from '../../assets';
+import { motion } from 'framer-motion';
+
 
 const MissionStatement = () => {
   return (
     <section id="Mission-Statement" className='max-container'>
+      
 
       <div className="flex flex-col">
-          <h1 className='text-[32px] sm:text-[48px] font-inter font-semibold leading-[150%]'>Mission Statement</h1>
-          <p className='text-normal-16 mt-[29px]'>
+          <motion.h1 
+            className='text-[32px] sm:text-[48px] font-inter font-semibold leading-[150%]'
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true,}}
+            transition={{ duration: 0.6, ease: 'easeInOut', delay:1.5 }}
+          >Mission Statement
+          </motion.h1>
+          <motion.p 
+            className='text-normal-16 mt-[29px]'
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true,  }}
+            transition={{ duration: 0.6, delay: 1.7, ease: 'easeInOut' }}
+          >
             Our mission is to inspire curiosity, ignite imaginations, 
             and educate visitors of all ages about the fascinating history 
             of Earth's most magnificent creatures. Dive into the prehistoric 
             past with us, where every fossil tells a story, and every visit 
             sparks a new adventure in learning and discovery."
-          </p>
+          </motion.p>
       </div>
       
-      <div className='relative mt-[35px]'>
+      <motion.div 
+        className='relative mt-[35px]'
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: .6, delay: 1.9, ease: 'easeInOut' }}
+      >
 
         <img src={ collection } alt='collection' className='w-full h-[212px] sm:h-auto object-cover'/>
         
@@ -23,9 +45,15 @@ const MissionStatement = () => {
           <h1 className='font-extrabold font-inter text-flat text-center' style={{ fontSize: 'clamp(21px, 5vw, 64px)' }}>The Collection</h1>
         </div>
 
-      </div>
+      </motion.div>
 
-      <div className="mt-[35px]">
+      <motion.div 
+        className="mt-[35px]"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, }}
+        transition={{ duration: 0.6, delay: 1.6, ease: 'easeInOut' }}
+      >
         <p className='text-normal-16'>
           From the mighty Tyrannosaurus rex to the graceful Pteranodon, our exhibits showcase a 
           wide range of dinosaur species that once ruled the ancient landscapes. Marvel at the 
@@ -37,7 +65,7 @@ const MissionStatement = () => {
         <p className='text-bold-16 text-secondary mt-[28px] hover:cursor-pointer hover:underline'>
           View Our Collection &gt;
         </p>
-      </div>
+      </motion.div>
 
     </section>
   )

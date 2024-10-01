@@ -1,4 +1,20 @@
 import { ExtraResources } from '../../constants';
+import { motion } from 'framer-motion';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1 }
+};
+
+const contentVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 }
+};
 
 const Extras = () => {
   return (
@@ -6,27 +22,45 @@ const Extras = () => {
 
       <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 grid-cols-1 sm:gap-[64px] gap-8'>
 
-        {ExtraResources.map((extra) => (
+        {ExtraResources.map((extra, index) => (
 
-          <div key={extra.id} className='flex flex-1 flex-col w-full max-sm:w-full'>
+          <motion.div 
+            key={extra.id} 
+            className='flex flex-1 flex-col w-full max-sm:w-full'
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ delay: 1 * index, duration: 0.6, ease: 'easeInOut' }}
+          >
 
-            <img src={extra.image} alt={extra.title} className='w-full h-[337px] object-cover'/>
+            <motion.img 
+              src={extra.image} 
+              alt={extra.title} 
+              className='w-full h-[337px] object-cover'
+              variants={imageVariants}
+              transition={{ duration: 0.5, ease: 'easeInOut', delay: 2 }}
+            />
 
-            <h3 className="text-bold-18 max-w-[523px] mt-3">
-              {extra.title}
-            </h3>
+            <motion.div
+              variants={contentVariants}
+              transition={{ delay: 0.2, duration: 0.5, ease: 'easeInOut', delay: 2  }}
+            >
+              <h3 className="text-bold-18 max-w-[523px] mt-3">
+                {extra.title}
+              </h3>
 
-            <p className="text-normal-16 text-mediumBlack max-w-[300px] mt-5">
-              {extra.content}
-            </p>
-
-            <div className="mt-auto">
-              <p className="text-medium-16 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline ">
-                  {extra.link}
+              <p 
+                className="text-normal-16 text-mediumBlack max-w-[300px] mt-5">
+                {extra.content}
               </p>
-            </div>
-            
-          </div>
+
+              <div className="mt-auto">
+                <p className="text-medium-16 text-secondary max-w-[523px] mt-2 cursor-pointer hover:underline ">
+                    {extra.link}
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
         ))}
 
       </div>
