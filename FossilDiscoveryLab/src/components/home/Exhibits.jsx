@@ -1,9 +1,17 @@
 import { exhibits } from '../../constants';
 import { Rightarrow } from '../../assets';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 
-const ExhibitCard = ({ image, title, content, }) => (
-  <div className='flex flex-col w-full max-w-full'>
+const ExhibitCard = ({ image, title, content, index }) => (
+  <motion.div 
+    className='flex flex-col w-full max-w-full'
+    initial={index % 2 === 0 ? { opacity: 0, x: -700 } : { opacity: 0, x: 700 }}
+    whileInView={{ opacity: 1, x:0 }}   
+    viewport={{ once: true}}
+    transition={{type:'spring', damping:18, mass:0.75, delay:1.5}} 
+  >
 
     <div className='w-full'>
       <img src={image} alt="exhibit" className="w-full h-full object-cover" />
@@ -25,20 +33,35 @@ const ExhibitCard = ({ image, title, content, }) => (
 
     </div>
     
-  </div>
+  </motion.div>
 );
 
 const Exhibits = () => {
+
   return (
     <section className='max-container'>
 
-      <div className='flexBetween flex-col sm:flex-row'>
-        <h1 className='font-inter text-[21px] xxs:text-[32px] md:text-[48px] font-semibold leading-[150%]'>Explore our Exhibits</h1>
+      <div 
+        className='flexBetween flex-col sm:flex-row'
+      >
+        <motion.h1 className='font-inter text-[21px] xxs:text-[32px] md:text-[48px] font-semibold leading-[150%]'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x:0, scale: [1, 1.1, 1, 1.1, 1, 1.03, 1] }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.85, ease: 'easeInOut', delay:1 }} 
+        >
+          Explore our Exhibits
+        </motion.h1>
 
-        <div className='flexCenter'>
+        <motion.div className='flexCenter'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x:0, scale: [1, 1.1, 1, 1.1, 1, 1.03, 1] }}
+          viewport={{ once: true, amount: 1 }}
+          transition={{ duration: 0.85, ease: 'easeInOut', delay:1 }} >
+
           <p className='text-semibold-16 md:text-semibold-18 mr-2 cursor-pointer hover:underline'>View All</p>
           <img src={Rightarrow} alt='right arrow' className='h-[13px] w-[10px] hidden sm:block'/>
-        </div> 
+        </motion.div> 
       </div>
 
       

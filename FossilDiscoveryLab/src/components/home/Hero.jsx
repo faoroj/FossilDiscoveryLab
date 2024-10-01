@@ -13,7 +13,6 @@ const Hero = () => {
         
       />
 
-      
       <motion.div 
         className='padding absolute inset-0 flexCenter text-center flex-col mt-10'
         initial="hidden"
@@ -88,7 +87,7 @@ const Hero = () => {
                 hidden: { opacity: 0, y: 120 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               type='button' 
               className='custom__button__rounded sm:mr-[40px]'
               >Plan Your Visit
@@ -101,7 +100,7 @@ const Hero = () => {
                 hidden: { opacity: 0, y: 120 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               type='button' 
               className='custom__button__rounded sm:mr-[40px] mt-[14px] sm:mt-0'
               >Accessibility
@@ -114,7 +113,7 @@ const Hero = () => {
                 hidden: { opacity: 0, y: 120 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               type='button' 
               className='custom__button__rounded mt-[14px] sm:mt-0'
               >Group Visit
