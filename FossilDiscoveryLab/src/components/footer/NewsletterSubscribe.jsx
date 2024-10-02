@@ -4,6 +4,7 @@ import Newsletter from './Newsletter';
 const NewsletterSubscribe = () => {
 
   const MAILCHIMP_URL = process.env.NEXT_PUBLIC_MAILCHIMP_URL;
+  console.log('Mailchimp URL:', MAILCHIMP_URL);
 
   return (
     <MailchimpSubscribe
