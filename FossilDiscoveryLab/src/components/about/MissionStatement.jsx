@@ -35,8 +35,8 @@ const MissionStatement = () => {
         className='relative mt-[35px]'
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: .6, delay: 1.9, ease: 'easeInOut' }}
+        viewport={{ once: true, }}
+        transition={{ duration: .6, delay: 1.5, ease: 'easeInOut' }}
       >
 
         <img src={ collection } alt='collection' className='w-full h-[212px] sm:h-auto object-cover'/>
@@ -51,8 +51,8 @@ const MissionStatement = () => {
         className="mt-[35px]"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, }}
-        transition={{ duration: 0.6, delay: 1.6, ease: 'easeInOut' }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.6, ease: 'easeInOut' }}
       >
         <p className='text-normal-16'>
           From the mighty Tyrannosaurus rex to the graceful Pteranodon, our exhibits showcase a 

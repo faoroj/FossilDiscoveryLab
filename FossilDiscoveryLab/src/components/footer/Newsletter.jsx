@@ -7,7 +7,7 @@ const Newsletter = () => {
   const animationVariants = {  
     left: { initial: { opacity: 0, x: -100 }, whileInView: { opacity: 1, x: 0 } },
     right: { initial: { opacity: 0, x: 100 }, whileInView: { opacity: 1, x: 0 } },
-    trans: {transition: { type: 'spring', damping: 18, mass: 0.75, delay: 1.5 } } 
+    trans: {transition: { type: 'spring', damping: 18, mass: 0.75, delay: 0.7 } } 
 };
 
 
@@ -42,7 +42,7 @@ const Newsletter = () => {
               initial={{opacity:0}}
               whileInView={{opacity:1}}
               viewport={{ once: true, amount:1 }}
-              transition={{ duration: 0.85, ease: 'easeInOut', delay: 1.7}}
+              transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.9}}
             />   
           
 

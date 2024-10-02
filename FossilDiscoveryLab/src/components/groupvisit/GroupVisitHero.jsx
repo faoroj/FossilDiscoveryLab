@@ -1,8 +1,17 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 const GroupVisitHero = () => {
   return (
-    <section id="Group-Visit-Hero" className='max-container mt-[108px]'>
+    <motion.section 
+      id="Group-Visit-Hero" 
+      className='max-container mt-[108px]'
+      initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      viewport={{ once: true, amount:1 }}
+      transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.3 }}
+
+    >
 
         <h1 className='text-[32px] sm:text-[48px] font-inter font-semibold leading-[150%]'>Book a Group Visit</h1>
         <div className="w-[173px] h-[1px] bg-primary mt-[3px]"></div> 
@@ -20,7 +29,7 @@ const GroupVisitHero = () => {
                 or call <span className='underline font-semibold underline-offset-[6px]'>215-763-8100</span> 
             </li>
         </ul>
-    </section>
+    </motion.section>
   )
 }
 

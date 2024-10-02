@@ -1,8 +1,16 @@
 import { Accessibility } from '../../assets';
+import { motion } from 'framer-motion';
 
 const accessibilityhero = () => {
   return (
-    <section id="accessibility" className='max-container mt-[80px]'>
+    <motion.section 
+      id="accessibility" 
+      className='max-container mt-[80px]'
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.6 }}
+      transition={{ duration: 0.3, delay: 0.4, ease: 'easeInOut' }}
+    >
 
         <div className='relative'>
           <img src={ Accessibility } alt='accessibility' className='w-full h-[200px] md:h-[450px] sm:h-[350px] object-cover'/>
@@ -21,7 +29,7 @@ const accessibilityhero = () => {
         </p>
 
         
-    </section>
+    </motion.section>
   )
 }
 

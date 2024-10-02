@@ -1,5 +1,6 @@
 import {  Navbar, Footer, Newsletter, AccessibilityHero, Info } from "../components/";
 
+
 const Accessibility = () => {
   return (
     <main className="relative"> 

@@ -1,10 +1,17 @@
 import { serviceDogsPolicy, signLanguagePolicy } from '../../constants';
 import { Map } from '../../assets';
 import mobileMap from '../../assets/mobilemap.png';
+import { motion } from 'framer-motion';
 
 const info = () => {
   return (
-    <section className='max-container'>
+    <motion.section 
+      className='max-container'
+      initial= {{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.8, staggerChildren: 1, delayChildren: 1   }} 
+    >
 
       {/* Parking */}
       <h1 className='text-bold-21'>Parking</h1>
@@ -71,7 +78,7 @@ const info = () => {
           <img src={Map} alt="Map" className='ml-2 '></img>
         </div>
       </a>
-    </section>
+    </motion.section>
   )
 }
 

@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; // Import the CSS
 import { GroupForm } from '../../constants';
+import { motion } from 'framer-motion';
 
 const GroupVisitForm = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -26,7 +27,14 @@ const GroupVisitForm = () => {
   return (
     <section className='max-container'>
       {GroupForm.map((form, index) => (
-        <div key={form.id} className='flex flex-col mb-7'>
+        <motion.div 
+          key={form.id} 
+          className='flex flex-col mb-7'
+          initial= {{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.8 }} 
+        >
           
           
           <p className='text-bold-16'>
@@ -89,15 +97,21 @@ const GroupVisitForm = () => {
               )}
             </>
           )}
-        </div>
+        </motion.div>
       ))}
 
-      <div className='mt-[50px] flexCenter'>
+      <motion.div 
+        className='mt-[50px] flexCenter'
+        initial= {{ opacity: 0}}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.8 }} 
+      >
         <button className='bg-tertiarySecondary h-[50px] w-[250px] rounded-[10px] py-[17px] px-[50px] 
           flexCenter text-bold-21 text-flat hover:bg-secondary'>
           Submit
         </button>
-      </div>  
+      </motion.div>  
     </section>
   );
 };

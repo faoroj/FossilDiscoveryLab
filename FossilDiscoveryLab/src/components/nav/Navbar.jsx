@@ -14,6 +14,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const currentDay = new Date().getDay();
   const hours = currentDay === 0 ? "11am-5pm" : "8am-6pm"; 
+  const isHomePage = location.pathname === '/';
 
 
   useEffect(() => {
@@ -52,7 +53,7 @@ const Navbar = () => {
   return (
     <motion.header 
       className='absolute w-full z-10 box-shadow'
-      initial={{ y: -130 }}
+      initial={{ y: isHomePage ? -130 : 0 }}
       animate= {{ y: 0 }}
       transition={{ duration: .7, ease: easeInOut }}
       >
