@@ -4,6 +4,7 @@ import Exhibits from "./home/Exhibits";
 import Latest from "./home/Latest";
 import Learn from "./home/Learn";
 import Newsletter from "./footer/Newsletter";
+import NewsletterSubscribe from "./footer/NewsletterSubscribe";
 import Services from "./home/Services";
 import Footer from "./footer/Footer";
 import Hero from "./home/Hero";
@@ -45,5 +46,6 @@ export {
   AccessibilityHero,
   GroupVisitHero,
   GroupVisitForm,
-  Info
+  Info, 
+  NewsletterSubscribe,
 };

@@ -81,6 +81,7 @@ const Newsletter = ({ status, message, onValidated }) => {
         
           <motion.input 
             onChange={(event) => setEmail(event?.target?.value ?? '')}
+            id='email'
             type="email"
             placeholder='Email Address'
             className='w-full ss:w-[600px] rounded-[6px] border border-black bg-flat h-[30px] xxs:h-[50px] pl-4 text-normal-16 focus:outline-none'
@@ -101,21 +102,26 @@ const Newsletter = ({ status, message, onValidated }) => {
             viewport={{ once: true }}
           >Submit
           </motion.button>
+
         </div>
+        
+          {/* Error Handling */}
+          <div className="min-h-42px absolute inset-0 top-[180px] left-[850px]">
+            { 'sending' === status ? <Loading showSpinner message="Sending..." contentColorClass="text-white" hasVisibilityToggle={false}/> : null }
+            {'error' === status || error ? (
+              <div
+                className="text-red-700 pt-2"
+                dangerouslySetInnerHTML={{ __html: error || getMessage( message ) }}
+              />
+            ) : null }
+            {'success' === status && 'error' !== status && !error && (
+              <div className="text-green-200 font-bold pt-2" dangerouslySetInnerHTML={{ __html: sanitize(message) }} />
+            )}
+          </div>
+
       </div>
 
-      <div className="min-h-42px">
-        { 'sending' === status ? <Loading showSpinner message="Sending..." contentColorClass="text-white" hasVisibilityToggle={false}/> : null }
-        {'error' === status || error ? (
-          <div
-            className="text-red-700 pt-2"
-            dangerouslySetInnerHTML={{ __html: error || getMessage( message ) }}
-          />
-        ) : null }
-        {'success' === status && 'error' !== status && !error && (
-          <div className="text-green-200 font-bold pt-2" dangerouslySetInnerHTML={{ __html: sanitize(message) }} />
-        )}
-      </div>
+
 
     </section>
   );

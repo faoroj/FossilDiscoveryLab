@@ -1,14 +1,15 @@
 import DOMPurify from 'dompurify';
 
 /**
- * Sanitize markup or text when used inside dangerouslysetInnerHTML
+ * Sanitize markup or text when used inside dangerouslySetInnerHTML
  *
- * @param {string} content Plain or html string.
+ * @param {string} content Plain or HTML string.
  *
  * @return {string} Sanitized string
  */
-export const sanitize = ( content ) => {
-	return process.browser ? DOMPurify.sanitize( content ) : content;
+export const sanitize = (content) => {
+  // Directly sanitize content using DOMPurify
+  return DOMPurify.sanitize(content);
 };
 
 /**
@@ -17,8 +18,8 @@ export const sanitize = ( content ) => {
  * @param {Int} count Count.
  * @param {String} text text.
  *
- * @returns {string} Singular or plural from of text.
+ * @returns {string} Singular or plural form of text.
  */
-export const getSingularOrPluralText = ( count, text ) => {
+export const getSingularOrPluralText = (count, text) => {
   return 1 < count ? `${text}s` : text;
 };

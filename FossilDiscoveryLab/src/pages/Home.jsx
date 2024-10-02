@@ -1,4 +1,5 @@
-import { Donate, Exhibits, Hero, Latest, Learn, Services, Navbar, Footer, Newsletter } from "../components/";
+import { Donate, Exhibits, Hero, Latest, Learn, Services, Navbar, Footer, Newsletter, NewsletterSubscribe } from "../components/";
+
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
       </section>
 
       <section>
-        <Newsletter />
+        <NewsletterSubscribe />
       </section>
 
       <section className="">
