@@ -11,7 +11,7 @@ const AboutUsEntry = () => {
           initial= {{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.8 }} 
+          transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.6 }} 
         >
             <h1 className='text-[32px] sm:text-[48px] font-inter font-semibold leading-[150%]'>About Us</h1>
             <div className="w-[173px] h-[1px] bg-primary mt-[30px]"></div>
@@ -30,7 +30,7 @@ const AboutUsEntry = () => {
           initial= {{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.8 }} 
+          transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.6 }} 
         >
           <img src={dinohead} alt='dinohead' className='h-auto max-h-[400px] custom:max-h-[700px]'/>
         </motion.div>

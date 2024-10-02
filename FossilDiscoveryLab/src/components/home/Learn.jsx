@@ -27,7 +27,7 @@ const Learn = () => {
               key={learn.id} 
               className='flex flex-col h-[460px]'
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 1 + (i*.1) }}
-              initial={{ opacity: 0, y: 100 * (i+1) }} 
+              initial={{ opacity: 0, y: 100  }} 
               whileInView={{ opacity: 1, y: 0 }}  
               viewport={{ once: true}}
             >

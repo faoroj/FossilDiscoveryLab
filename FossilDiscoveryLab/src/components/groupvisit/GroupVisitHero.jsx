@@ -9,7 +9,7 @@ const GroupVisitHero = () => {
       initial={{opacity:0}}
       whileInView={{opacity:1}}
       viewport={{ once: true, amount:1 }}
-      transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.3 }}
+      transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.3 }}
 
     >
 

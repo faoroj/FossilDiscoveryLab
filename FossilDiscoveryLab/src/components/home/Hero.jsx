@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const buttons = [
-  { label: 'Plan Your Visit', link: '/VisitUs', delay: 2 },
-  { label: 'Accessibility', link: '/Accessibility', delay: 2.3 },
-  { label: 'Group Visit', link: '/GroupVisit', delay: 2.6 },
+  { label: 'Plan Your Visit', link: '/VisitUs', delay: 1.8 },
+  { label: 'Accessibility', link: '/Accessibility', delay: 2 },
+  { label: 'Group Visit', link: '/GroupVisit', delay: 2.2 },
 ];
 
 const Hero = () => {
@@ -23,7 +23,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, ease: 'easeInOut', delay: 1 }}
+            transition={{ duration: 0.4, ease: 'easeInOut', delay: .8 }}
             className='font-inter font-bold leading-[150%] text-[38px] xs:text-[48px] text-flat relative'
           >
             <span className="relative">
@@ -40,7 +40,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, ease: 'easeInOut', delay: 1.5 }}
+            transition={{ duration: 0.4, ease: 'easeInOut', delay: 1.3 }}
             className='font-inter font-medium leading-[150%] text-flat text-[21px] sm:text-[28px]'
           >
             Step Into a World Lost in Time
@@ -56,7 +56,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 120 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: button.delay }}
+                transition={{ duration: 0.3, delay: button.delay }}
               >
                 {button.label}
               </motion.button>

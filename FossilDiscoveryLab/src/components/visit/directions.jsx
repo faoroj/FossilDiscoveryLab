@@ -1,6 +1,7 @@
 import { Googlemap } from '../../assets';
 import { Directions } from '../../constants';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const directions = () => {
 
@@ -12,7 +13,13 @@ const directions = () => {
   };
 
   return (
-    <section className='max-container'>
+    <motion.section 
+      className='max-container'
+      initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      viewport={{ once: true, amount: 0.13 }}
+      transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.3 }}
+    >
 
       <h1 className='font-semibold font-inter leader-[150%] text-[32px] md:text-[48px]'>Directions and Parking</h1>
       <img src={Googlemap} alt='Google Map' className='w-full h-[250px] md:h-[450px] sm:h-[350px] object-cover mt-5'/>
@@ -77,7 +84,7 @@ const directions = () => {
           ))} 
       </div>
 
-    </section>
+    </motion.section>
   )
 }
 

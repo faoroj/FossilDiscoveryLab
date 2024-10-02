@@ -14,7 +14,7 @@ const ExhibitCard = ({ image, title, content, index }) => (
     {...animationVariants[index % 2 === 0 ? 'left' : 'right']}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
-    transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.8 }} 
+    transition={{ type: 'spring', damping: 12, mass: 0.3, delay: 0.7 }} 
   >
     <div className='w-full'>
       <img src={image} alt="exhibit" className="w-full h-full object-cover" />

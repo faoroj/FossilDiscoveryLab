@@ -10,8 +10,8 @@ const Footer = () => {
         className='grid md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 grid-cols-1 gap-10 md:gap-20 mb-20 max-container padding-x padding-t'
         initial={{opacity:0}}
         whileInView={{opacity:1}}
-        viewport={{ once: true, amount:1 }}
-        transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.1 }}
+        viewport={{ once: true, amount:.6 }}
+        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.1 }}
       >
 
         {/* Location Section */}
@@ -68,8 +68,8 @@ const Footer = () => {
       <motion.div
         initial={{opacity:0}}
         whileInView={{opacity:1}}
-        viewport={{ once: true, amount:.1 }}
-        transition={{ duration: 0.4, ease: 'easeInOut', delay: .4 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.3, ease: 'easeInOut', delay: .3 }}
       >
         <hr className='bg-black bg-opacity-25 h-[2px] w-full border-0'/>
 

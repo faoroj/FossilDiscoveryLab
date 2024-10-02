@@ -33,7 +33,7 @@ const GroupVisitForm = () => {
           initial= {{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.8 }} 
+          transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.5 }} 
         >
           
           

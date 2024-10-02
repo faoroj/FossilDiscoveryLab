@@ -33,7 +33,7 @@ const Services = () => {
               key={service.id}
               initial={{ opacity: 0, y: 120 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: .1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4, ease: 'linear', delay: .6 + index * 0.3 }}
               className='mt-7'
             >
@@ -58,7 +58,7 @@ const Services = () => {
             <motion.div
               initial={{ opacity: 0, y: 120 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: .1 }}
+              viewport={{ once: true  }}
               transition={{ duration: 0.4, delay: 1.3 }}
             >
               <button type='button' className='custom__button__open mt-8'>Accessibility</button>
@@ -72,7 +72,7 @@ const Services = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.6 }}
+          transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.8 }}
         >
           <img src={Assistance} alt="assistance" className='w-full max-w-[600px] -mt-3 xxs:-mt-8 xs:-mt-16 sm:-mt-18 object-contain z-10'/>
         </motion.div>

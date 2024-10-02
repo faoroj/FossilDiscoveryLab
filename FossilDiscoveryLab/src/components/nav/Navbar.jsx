@@ -55,7 +55,7 @@ const Navbar = () => {
       className='absolute w-full z-10 box-shadow'
       initial={{ y: isHomePage ? -130 : 0 }}
       animate= {{ y: 0 }}
-      transition={{ duration: .7, ease: easeInOut }}
+      transition={{ duration: .5, ease: easeInOut }}
       >
 
         {/* Top Section */}

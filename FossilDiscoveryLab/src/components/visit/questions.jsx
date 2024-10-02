@@ -1,6 +1,7 @@
 import { QuestionMark } from '../../assets';
 import { FrequentQuestions } from '../../constants';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const questions = () => {
 
@@ -12,13 +13,57 @@ const questions = () => {
     }));
   };
 
+  
+    const lineVariants = {
+      hiddenLeft: { width: 0 },  
+      hiddenRight: { width: 0 }, 
+      visibleLeft: { width: '547px', amount: 1, transition: { duration: 1 } },
+      visibleRight: { width: '547px', amount: 1, transition: { duration: 1 } }
+    };
+  
+    const questionMarkVariants = {
+      initial: { opacity:1, scale: 1 },
+      pulse: {
+        scale: [1, 1.2, 1],
+        transition: {
+          delay: 1.5, 
+          duration: 0.6,
+          repeat: 2, 
+          repeatType: 'reverse'
+        }
+      }
+    };
+
   return (
     <section className='max-container'>
 
       <div className='flexCenter'>
-        <div className='bg-secondary h-[4px] w-[547px] border-0'></div>
-          <img src={QuestionMark} alt='Question Mark' className='w-[101px] h-[176px]'/>
-        <div className='bg-secondary h-[4px] w-[547px] border-0'></div>
+        <motion.div 
+          className='bg-secondary h-[4px] w-[547px] border-0'
+          variants={lineVariants}
+          initial="hiddenLeft"
+          whileInView="visibleLeft"
+          viewport={{ once: true, amount: 1}}
+        >
+        </motion.div>
+
+          <motion.img 
+            src={QuestionMark} 
+            alt='Question Mark' 
+            className='w-[101px] h-[176px]'
+            variants={questionMarkVariants}
+            initial="initial"
+            whileInView="pulse"
+          />
+
+        <motion.div 
+          className='bg-secondary h-[4px] w-[547px] border-0'
+          variants={lineVariants}
+          initial="hiddenRight"
+          whileInView="visibleRight"
+          viewport={{ once: true, amount: 1}}
+        >
+        </motion.div>
       </div>
 
       <h1 className='font-semibold font-inter leader-[150%] text-[32px] md:text-[48px] mt-[60px] md:mt-[110px]'>Frequently Asked Questions</h1>
@@ -44,16 +89,12 @@ const questions = () => {
                 </div>
                 )}
 
-
-
-
             </div>
             
           ))}
         
       </div>
 
-      
     </section>
   )
 }
