@@ -1,11 +1,6 @@
 import { ExtraResources } from '../../constants';
 import { motion } from 'framer-motion';
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 }
-};
-
 const imageVariants = {
   hidden: { opacity: 0, scale: 0.9 },
   visible: { opacity: 1, scale: 1 }
@@ -38,12 +33,12 @@ const Extras = () => {
               alt={extra.title} 
               className='w-full h-[337px] object-cover'
               variants={imageVariants}
-              transition={{ duration: 0.5, ease: 'easeInOut', delay: 2 }}
+              transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.1 }}
             />
 
             <motion.div
               variants={contentVariants}
-              transition={{ delay: 0.2, duration: 0.5, ease: 'easeInOut', delay: 2  }}
+              transition={{ delay: 1.1, duration: 0.5, ease: 'easeInOut',  }}
             >
               <h3 className="text-bold-18 max-w-[523px] mt-3">
                 {extra.title}

@@ -60,6 +60,7 @@ const Newsletter = ({ status, message, onValidated }) => {
 
       <div className='relative w-full'>
 
+        {/* Orange BG */}
         <motion.div 
           className='bg-primary w-full h-[180px] xxs:h-[273px] object-cover'
           initial={{opacity:0}}
@@ -70,6 +71,8 @@ const Newsletter = ({ status, message, onValidated }) => {
         </motion.div>
 
         <div className='padding-x max-container absolute inset-0 flex items-center justify-center md:justify-between flex-col md:flex-row gap-5 '>
+
+          {/* Newsletter h1*/}
           <motion.h1 
             className='text-flat font-inter font-normal leading-[150%] text-[16px] xxs:text-[24px] '
             {...animationVariants.left}
@@ -78,7 +81,7 @@ const Newsletter = ({ status, message, onValidated }) => {
           >Sign Up For Our Newsletter
           </motion.h1>
         
-        
+          {/* Input Box */}
           <motion.input 
             onChange={(event) => setEmail(event?.target?.value ?? '')}
             id='email'
@@ -92,7 +95,7 @@ const Newsletter = ({ status, message, onValidated }) => {
             transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.9}}
           />   
         
-
+          {/* Submit Button */}
           <motion.button 
             type="button" 
             className='custom__button__bevel custom__button__medium'
@@ -105,19 +108,19 @@ const Newsletter = ({ status, message, onValidated }) => {
 
         </div>
         
-          {/* Error Handling */}
-          <div className="min-h-42px absolute inset-0 top-[180px] left-[850px]">
-            { 'sending' === status ? <Loading showSpinner message="Sending..." contentColorClass="text-white" hasVisibilityToggle={false}/> : null }
-            {'error' === status || error ? (
-              <div
-                className="text-red-700 pt-2"
-                dangerouslySetInnerHTML={{ __html: error || getMessage( message ) }}
-              />
-            ) : null }
-            {'success' === status && 'error' !== status && !error && (
-              <div className="text-green-200 font-bold pt-2" dangerouslySetInnerHTML={{ __html: sanitize(message) }} />
-            )}
-          </div>
+        {/* Error Handling */}
+        <div className="min-h-42px absolute inset-0 top-[180px] left-[850px]">
+          { 'sending' === status ? <Loading showSpinner message="Sending..." contentColorClass="text-white" hasVisibilityToggle={false}/> : null }
+          {'error' === status || error ? (
+            <div
+              className="text-red-700 font-bold pt-2"
+              dangerouslySetInnerHTML={{ __html: error || getMessage( message ) }}
+            />
+          ) : null }
+          {'success' === status && 'error' !== status && !error && (
+            <div className="text-flat font-inter font-bold pt-2" dangerouslySetInnerHTML={{ __html: sanitize(message) }} />
+          )}
+        </div>
 
       </div>
 

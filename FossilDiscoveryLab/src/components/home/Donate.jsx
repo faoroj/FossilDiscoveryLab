@@ -15,7 +15,7 @@ const Donate = () => {
         className='w-full h-[260px] xs:h-[320px] sm:h-[420px] object-cover'
         initial={{opacity:0}}
         whileInView={{opacity:1}}
-        viewport={{ once: true, amount:1 }}
+        viewport={{ once: true, amount:.4 }}
         transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.1 }}
       />
       
