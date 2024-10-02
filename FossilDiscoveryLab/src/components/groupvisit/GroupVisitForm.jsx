@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css'; // Import the CSS
+import 'react-datepicker/dist/react-datepicker.css'; 
 import { GroupForm } from '../../constants';
 import { motion } from 'framer-motion';
 
