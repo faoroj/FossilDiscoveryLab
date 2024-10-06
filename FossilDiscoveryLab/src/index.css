@@ -152,7 +152,7 @@
 }
 
 .react-datepicker {
-  z-index: 9999 !important; 
+  z-index: 9999; 
 }
 
 .react-datepicker-wrapper {

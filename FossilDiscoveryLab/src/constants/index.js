@@ -23,12 +23,12 @@ export const navLinks = [
     {
         id: "explore",
         title: "Explore",
-        path: "/Explore"
+        path: ""
     },
     {
         id: "learn",
         title: "Learn",
-        path: "/Learn"
+        path: ""
     },
   ];
 
