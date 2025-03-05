@@ -47,7 +47,7 @@ const Navbar = () => {
 
   const handleVisitClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
-    setActiveParent('Visit');
+
   };
 
   return (
@@ -90,8 +90,8 @@ const Navbar = () => {
                     ${(active === nav.title || (activeParent === 'Visit' && nav.title === 'Visit')) ? "text-secondary" : "text-White"} 
                     ${index === navLinks.length - 1 ? "mr-0" : "mr-6 md:mr-7"} hover:text-secondary`}
                   onClick={nav.title === 'Visit' ? handleVisitClick : null}
-                  
                 >
+
                   {nav.title !== 'Visit' ? (
                     <Link to={nav.path} className="block w-full h-[70%]">{nav.title}</Link>
                     ) : (
