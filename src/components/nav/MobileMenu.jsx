@@ -40,12 +40,13 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, s
                       >{nav.title}
                       </Link>
 
-                      {index >= 2 && (
+                      {index == 2 && (
                         <img 
                           src={collapsedItems[index] ? Whiteminus : Plus}
                           alt={`Image for ${nav.title}`} 
                           className="w-[30px] h-[30px] cursor-pointer"
-                          onClick={() => toggleCollapse(index)} />
+                          onClick={() => toggleCollapse(index)} 
+                        />
                         )}
                     </div>
 
@@ -55,8 +56,8 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, s
                           
                           <Link to={nav.path}>
                             <div className='flex items-center gap-1 mt-2'>
-                              <h1 key={index} className='text-medium-21 text-flat hover:text-secondary underline underline-offset-[4px] cursor-pointer'>
-                              {nav.title}
+                              <h1 key="{index}" className='text-medium-21 text-flat hover:text-secondary underline underline-offset-[4px] cursor-pointer'>
+                              {nav.dropdowntitle}
                               </h1>
                               <img src={nav.icon} alt='white arrow' className='w-[21px] h-[21px]'/>
                             </div>
