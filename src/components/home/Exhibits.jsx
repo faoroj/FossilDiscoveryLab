@@ -3,8 +3,8 @@ import { Rightarrow } from '../../assets';
 import { motion } from 'framer-motion';
 
 const animationVariants = {
-  left: { initial: { opacity: 0, x: -100 }, whileInView: { opacity: 1, x: 0 } },
-  right: { initial: { opacity: 0, x: 100 }, whileInView: { opacity: 1, x: 0 } },
+  left: { initial: { opacity: 0, x: -50 }, whileInView: { opacity: 1, x: 0 } },
+  right: { initial: { opacity: 0, x: 50 }, whileInView: { opacity: 1, x: 0 } },
   scale: { initial: { opacity: 0 }, whileInView: { opacity: 1 } }
 };
 
