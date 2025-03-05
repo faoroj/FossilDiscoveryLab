@@ -56,7 +56,7 @@ const Newsletter = ({ status, message, onValidated }) => {
 
 
   return (
-    <section className='relative w-full'>
+    <section className='relative w-full '>
 
       <div className='relative w-full'>
 

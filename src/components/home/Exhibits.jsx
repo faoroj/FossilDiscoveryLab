@@ -35,7 +35,7 @@ const ExhibitCard = ({ image, title, content, index }) => (
 );
 
 const Exhibits = () => (
-  <section className='max-container'>
+  <section className='max-container '>
     <motion.div className='flexBetween flex-col sm:flex-row'
       {...animationVariants.scale}
       viewport={{ once: true, amount:1 }}
@@ -56,7 +56,7 @@ const Exhibits = () => (
       </div>
     </motion.div>
 
-    <div className='grid grid-cols-1 ss:grid-cols-2 gap-[20px] sm:gap-[80px] md:gap-[150px] mt-10 justify-items-center'>
+    <div className='grid grid-cols-1 ss:grid-cols-2 gap-[20px] sm:gap-[80px] md:gap-[150px] mt-10 justify-items-center '>
       {exhibits.map((exhibit, index) => (
         <ExhibitCard key={exhibit.id} {...exhibit} index={index} />
       ))}
