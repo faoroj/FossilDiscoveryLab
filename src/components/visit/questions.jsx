@@ -66,9 +66,13 @@ const questions = () => {
         </motion.div>
       </div>
 
+      {/* Frequently Asked Questions Header */}
       <h1 className='font-semibold font-inter leader-[150%] text-[32px] md:text-[48px] mt-[60px] md:mt-[110px]'>Frequently Asked Questions</h1>
+
+      {/* Orange Line */}
       <div className="w-[173px] h-[1px] bg-primary mt-[29px]"></div>
 
+      {/* Questions */}
       <div className='flex flex-col mt-3'>
         
         {FrequentQuestions.map((item, index) => (

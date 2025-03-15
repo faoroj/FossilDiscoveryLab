@@ -26,6 +26,8 @@ const GroupVisitForm = () => {
 
   return (
     <section className='max-container'>
+
+      {/* Group Visit Form Items */}
       {GroupForm.map((form, index) => (
         <motion.div 
           key={form.id} 
@@ -36,14 +38,13 @@ const GroupVisitForm = () => {
           transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.5 }} 
         >
           
-          
+          {/* P tag header for each input + red star */}
           <p className='text-bold-16'>
-            {form.header.slice(0, -1)}
-            {index !=8 && (
-            <span className="text-red-500">{form.header.slice(-1)}</span>
-            )}
+            {form.header.slice(0, -1)} 
+            {index !=8 && <span className="text-red-500"> {form.header.slice(-1)}</span>} 
           </p>
-       
+
+          {/* Contact Name Variation */}
           {index === 1 && (
             <div className='flex flex-col ss:flex-row'>
               <input 
@@ -59,34 +60,41 @@ const GroupVisitForm = () => {
             </div>
           )}
 
+          {/* Creates input boxes for everything except Contact Name */}
           {index !== 1 && (
             <>
-              {index === 4 ? (
-                
+
+              {/* If Desired Date add a datepicker for the input box and its icon underneath */}
+              {index === 4 ? 
                 <div className='relative flex flex-col'>
-                  
                   <DatePicker
-                  
                     selected={selectedDate}
                     onChange={handleDateChange}
                     dateFormat="MM/dd/yyyy"
                     className='border-black border px-4 w-full md:w-[100%] h-[45px] rounded-[6px] mt-4'
-                    placeholderText="mm/dd/yyyy"    
-                    
+                    placeholderText="mm/dd/yyyy"   
+                    ref={datePickerRef} 
+                    open={calendarOpen}
+                    portalId="datepicker-portal"
+                    // onInputClick={() => setCalendarOpen(false)}
+                    readOnly
                   />
 
+                  {/* Calender Icon*/}
                   {form.icon && (
                     <img 
                       src={form.icon} 
                       alt={`${form.title} icon`} 
                       className='w-[30px] h-[30px] mt-1 cursor-pointer'
-                      onClick={() => document.querySelector('.react-datepicker__input-container input').focus()}
+                      // onClick={() => document.querySelector('.react-datepicker__input-container input').focus()}
+                      onClick={() => toggleCalendar()}
                     />
                   )}
+
                 </div>
 
-              ) : (
-                
+                // All of the other input boxes that arent Desired Date
+                : 
                 <input 
                   type="text"
                   className={index === 8 
@@ -94,12 +102,14 @@ const GroupVisitForm = () => {
                     :'border-black border px-4 w-full md:w-[40%] h-[45px] rounded-[6px] mt-4'}
                   placeholder=''
                 />
-              )}
+              }
+              
             </>
           )}
         </motion.div>
       ))}
 
+      {/* Submit Button */}
       <motion.div 
         className='mt-[50px] flexCenter'
         initial= {{ opacity: 0}}
@@ -112,6 +122,7 @@ const GroupVisitForm = () => {
           Submit
         </button>
       </motion.div>  
+
     </section>
   );
 };

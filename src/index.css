@@ -124,6 +124,10 @@
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
+#datepicker-portal {
+  position: relative;
+  z-index: 9999; 
+}
 
 @media (max-width: 1200px) {
   .custom__button__open {
@@ -151,7 +155,7 @@
   color: white; 
 }
 
-.react-datepicker {
+.react-datepicker-popper {
   z-index: 9999; 
 }
 
