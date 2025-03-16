@@ -1,10 +1,18 @@
+import { useState } from "react";
 import { Donate, Exhibits, Hero, Latest, Learn, Services, Navbar, Footer, Newsletter, NewsletterSubscribe } from "../components/";
+import SearchBar from "../components/nav/SearchBar";
+
 
 
 const App = () => {
+
+  const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+  const handleSearchClick = () => {setIsSearchBarOpen(!isSearchBarOpen);};
+
   return (
     <main className="relative"> 
-      <Navbar />
+      <Navbar isSearchBarOpen={isSearchBarOpen} handleSearchClick={handleSearchClick}/>
+      <SearchBar isSearchBarOpen={isSearchBarOpen} handleSearchClick={handleSearchClick} />
 
       <section className='padding-b'>
         <Hero />
