@@ -37,6 +37,8 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, s
                   >
 
                     <div className="flex items-center justify-between">
+                      {/* All nav bar items except visit */}
+                      {index !==2 && (
                       <Link 
                         to={nav.path} 
                         onClick={() => {
@@ -46,7 +48,19 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, s
                         className={`${active === nav.title ? "text-secondary" : "text-White"} hover:text-secondary`}
                       >{nav.title}
                       </Link>
+                      )}
 
+                      {/* Visit nav bar text */}
+                      {index ===2 && (
+                      <h1
+                        to={nav.path} 
+                        onClick={() => toggleCollapse(index)} 
+                        className={`${active === nav.title ? "text-secondary" : "text-White"} hover:text-secondary cursor-pointer`}
+                      >{nav.title}
+                      </h1>
+                      )}
+
+                      {/* + Icon */}
                       {index == 2 && (
                         <img 
                           src={collapsedItems[index] ? Whiteminus : Plus}
