@@ -1,19 +1,16 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; 
 import { GroupForm } from '../../constants';
 import { motion } from 'framer-motion';
 import { format } from "date-fns";
 
-// For every single index except 8 check if there is input 
-// If every single one has input and you click submit change the bg to red
-// If every single one doesnt have input then send an alert saying must fill out required inputs 
-
-
 const GroupVisitForm = () => {
   const [selectedDate, setSelectedDate] = useState(null);
-  const [calendarOpen, setCalendarOpen] = useState(false);
+  const [calendarOpen, setCalendarOpen] = useState(false); 
   const [submitForm, setSubmitForm] = useState(false);
+
+  //Form data to be populated by inputs and emailed when submitted
   const [formData, setFormData] = useState({
     GroupType: "",
     ContactName: "",
@@ -26,36 +23,35 @@ const GroupVisitForm = () => {
     Accessibility: "",
   })
 
+  //Creates first and last name useState when firstName or lastName inputs change its updated into formData
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const handleNameChange = (e, type) => {
+    if (type === "first") {
+      setFirstName(e.target.value);
+    } else {
+      setLastName(e.target.value);
+    }
+    setFormData((prevData) => ({
+      ...prevData,
+      ContactName: `${type === "first" ? e.target.value : firstName} ${type === "last" ? e.target.value : lastName}`.trim(),
+    }));
+  };
   
-  const datePickerRef = useRef(null);
-
-  const handleSubmitButton = () => {
-    setSubmitForm(true);
-    changeBackground();
-  }
-
+  //Checks every input with the id check-inputs returns false if anything required is empty otherwise it returns true
   function checkInputsFilled() {
     const inputs = document.querySelectorAll('#check-inputs');
     return Array.from(inputs).every(input => input.value.trim() !== "");
   }
-
+  
+  // Destructures each input so we can populate the form EX: GroupType: "Name of Group"
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: value, 
     });
   };
-
-  const changeBackground = () => {
-    if(submitForm && checkInputsFilled()){
-      // SEND EMAIL TO cooperangwow@gmail.com
-      // const finalFormData = { ...formData, DesiredDate: selectedDate };
-      console.log(formData)
-    } else {
-      alert("Please fill in all required fields.")
-    }
-  }
 
   // Function to handle date change
   const handleDateChange = (date) => {
@@ -69,13 +65,25 @@ const GroupVisitForm = () => {
   };
 
   const toggleCalendar = () => {
-    if (calendarOpen) {
-      datePickerRef.current.setOpen(false); // Close the calendar
-    } else {
-      datePickerRef.current.setOpen(true); // Open the calendar
-    }
     setCalendarOpen(!calendarOpen); // Toggle state
   };
+
+  //handleSubmitButton sets the submitForm to true which 
+  //triggers the useEffect to check whether we send the formData or have not filled out all fields and gives us an alert
+  const handleSubmitButton = () => {
+    setSubmitForm(true);
+  }
+
+  useEffect(() => {
+    if (submitForm) {
+      if (checkInputsFilled()) {
+        console.log(formData); // Replace with actual form submission logic
+      } else {
+        alert("Please fill in all required fields.");
+      }
+      setSubmitForm(false); // Reset for future submissions
+    }
+  }, [submitForm]); 
 
   return (
     <section className='max-container '>
@@ -103,11 +111,17 @@ const GroupVisitForm = () => {
               <input 
                 type="text"
                 className='w-full md:w-[19%] h-[45px] border rounded-[6px] px-4 mt-4 border-black mr-[30px]'
+                id='check-inputs'
+                value={firstName}
+                onChange={(e) => handleNameChange(e, "first")}
                 placeholder='First Name'
               />
               <input 
                 type="text"
                 className='w-full md:w-[19%] h-[45px] border rounded-[6px] px-4 mt-4 border-black'
+                id='check-inputs'
+                value={lastName}
+                onChange={(e) => handleNameChange(e, "last")}
                 placeholder='Last Name'
               />
             </div>
@@ -127,7 +141,6 @@ const GroupVisitForm = () => {
                     dateFormat="MM/dd/yyyy"
                     className='border-black border px-4 w-full md:w-[100%] h-[45px] rounded-[6px] mt-4'
                     placeholderText="mm/dd/yyyy"   
-                    ref={datePickerRef} 
                     open={calendarOpen}
                     portalId="datepicker-portal"
                     // onInputClick={() => setCalendarOpen(false)}
