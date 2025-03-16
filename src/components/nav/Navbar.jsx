@@ -2,7 +2,7 @@ import { navLinks, visitLinks } from '../../constants';
 import {  logo, search } from '../../assets';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Hamburgermenu } from '../../assets';
+import { Hamburgermenu, Exitmenu } from '../../assets';
 import MobileMenu from './MobileMenu';
 import { easeInOut, motion } from 'framer-motion'
 
@@ -15,6 +15,7 @@ const Navbar = () => {
   const currentDay = new Date().getDay();
   const hours = currentDay === 0 ? "11am-5pm" : "8am-6pm"; 
   const isHomePage = location.pathname === '/';
+  const [isSearchBarOpen, setIsSearchBarOpen] = useState(false)
 
 
   useEffect(() => {
@@ -44,6 +45,9 @@ const Navbar = () => {
     };
   }, [isMobileMenuOpen]);
 
+  const handleSearchClick = () => {
+    setIsSearchBarOpen(!isSearchBarOpen);
+  };
 
   const handleVisitClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -51,12 +55,48 @@ const Navbar = () => {
   };
 
   return (
+    
     <motion.header 
       className='absolute w-full z-10 box-shadow'
       initial={{ y: isHomePage ? -130 : 0 }}
       animate= {{ y: 0 }}
       transition={{ duration: .5, ease: easeInOut }}
-      >
+    >
+
+        {/* Search Bar Popup */}
+        {isSearchBarOpen && (
+          <motion.div 
+            className="w-full h-[200px] bg-primary fixed z-20 padding-x"
+            initial={{ y: isHomePage ? -100 : 0 }}
+            animate= {{ y: 0 }}
+            transition={{ duration: .3, ease: easeInOut }}
+          >
+            <div className="relative w-full max-container mt-[50px]">
+              <img src={Exitmenu} alt="Exit Menu" className='w-[29px] h-[29px] cursor-pointer absolute right-0 -top-[20px]' onClick={handleSearchClick}/>
+              <h1 className='text-[18px] xs:text-[36px] font-bold font-inter leading-[150%] text-flat max-w-[800px]'>Search the website</h1>
+
+                <div className="relative flex items-center w-full rounded-[6px] border border-black bg-flat h-[50px] overflow-hidden min-w-[250px]">
+                  <input
+                      id="search-bar"
+                      type="search"
+                      inputMode="text"
+                      placeholder="What would you like to find?"
+                      className="flex-1 h-full pl-4 text-normal-16 focus:outline-none text-ellipsis overflow-hidden"
+                    />
+
+                    {/* Search button */}
+                    <button className="bg-flat h-full rounded-[6px] w-[60px] flexCenter  hover:bg-gray-200 transition-colors flex-shrink-0">
+                      <img
+                        src={search} // Path to your search icon
+                        alt="Search Icon"
+                        className="w-[30px] h-[30px] cursor-pointer"
+                      />
+                    </button>
+                </div>
+
+            </div>
+          </motion.div>
+        )}
 
         {/* Top Section */}
         <div className='bg-primary w-full'>
@@ -146,13 +186,13 @@ const Navbar = () => {
               
               {/*Search */}
               <div className='flexCenter w-[115px] h-[33px]'> 
-                <img src={search} alt="search logo" className='ml-[10.92px] w-[25px] h-[25px] cursor-pointer '></img>
+                <img src={search} alt="search logo" className='ml-[10.92px] w-[25px] h-[25px] cursor-pointer ' onClick={handleSearchClick}></img>
                 <p className='ml-[2px] text-semibold-16'>Search</p>
               </div>
             </div>
             
           </div>
-
+          
 
           {/* Mobile Menu */}
           <MobileMenu 
@@ -162,7 +202,6 @@ const Navbar = () => {
           active={active}
           setActive={setActive}
         />
-
         </div>
     </motion.header>
   )
