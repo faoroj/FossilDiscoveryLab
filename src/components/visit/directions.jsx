@@ -22,7 +22,20 @@ const directions = () => {
     >
 
       <h1 className='font-semibold font-inter leader-[150%] text-[32px] md:text-[48px]'>Directions and Parking</h1>
-      <img src={Googlemap} alt='Google Map' className='w-full h-[250px] md:h-[450px] sm:h-[350px] object-cover mt-5'/>
+      
+      {/* <img src={Googlemap} alt='Google Map' className='w-full h-[250px] md:h-[450px] sm:h-[350px] object-cover mt-5'/> */}
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.912682369583!2d-75.1812594!3d39.965704900000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c7b42cc0082b%3A0x199af810631a91cf!2s2600%20Benjamin%20Franklin%20Pkwy%2C%20Philadelphia%2C%20PA%2019130!5e0!3m2!1sen!2sus!4v1742094244425!5m2!1sen!2sus" 
+        className='w-full h-[250px] md:h-[450px] sm:h-[350px] object-cover mt-5'
+        style={{border:0 }}
+        allowFullScreen
+        loading="lazy" 
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Google Map"
+        >
+          
+      </iframe>
+
       <hr className='bg-black h-[1px] border-0 mt-[20px]'/>
 
       <div className='flex flex-col md:flex-row justify-between items-start'>

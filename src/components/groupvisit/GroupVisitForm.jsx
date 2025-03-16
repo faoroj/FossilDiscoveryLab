@@ -25,6 +25,8 @@ const GroupVisitForm = () => {
     Accessibility: "",
   })
 
+  
+
   const datePickerRef = useRef(null);
 
   const handleSubmitButton = () => {
@@ -71,7 +73,7 @@ const GroupVisitForm = () => {
 
   return (
     <section className='max-container '>
-
+      <form>
       {/* Group Visit Form Items */}
       {GroupForm.map((form, index) => (
         <motion.div 
@@ -155,9 +157,11 @@ const GroupVisitForm = () => {
               }
               
             </>
+            
           )}
         </motion.div>
       ))}
+      </form>
 
       {/* Submit Button */}
       <motion.div 
