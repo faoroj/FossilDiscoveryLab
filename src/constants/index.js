@@ -322,39 +322,48 @@ export const services = [
     {
       id: "GroupForm-1",
       header: "Group Type*",
+      submit: "GroupType"
     },
     {
       id: "GroupForm-2",
       header: "Contact Name*",
+      submit: "ContactName"
     },
     {
       id: "GroupForm-3",
       header: "Contact Email*",
+      submit: "ContactEmail"
     },
     {
       id: "GroupForm-4",
       header: "Contact Phone*",
+      submit: "ContactPhone"
     },
     {
       id: "GroupForm-5",
       header: "Desired Date*",
+      submit: "DesiredDate",
       icon: Calender,
     },
     {
       id: "GroupForm-6",
       header: "Number in group*",
+      submit: "GroupNumber",
     },
     {
       id: "GroupForm-7",
       header: "Arrival Time*",
+      submit: "ArrivalTime",
     },
     {
       id: "GroupForm-8",
       header: "Departure Time*",
+      submit: "DepartureTime",
     },
     {
       id: "GroupForm-9",
       header: "Accessibility Requests*",
+      submit: "Accessibility",
     }
 
   ];

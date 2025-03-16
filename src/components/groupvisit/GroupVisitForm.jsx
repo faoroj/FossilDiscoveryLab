@@ -4,10 +4,55 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { GroupForm } from '../../constants';
 import { motion } from 'framer-motion';
 
+// For every single index except 8 check if there is input 
+// If every single one has input and you click submit change the bg to red
+// If every single one doesnt have input then send an alert saying must fill out required inputs 
+
+
 const GroupVisitForm = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [calendarOpen, setCalendarOpen] = useState(false);
+  const [submitForm, setSubmitForm] = useState(false);
+  const [formData, setFormData] = useState({
+    GroupType: "",
+    ContactName: "",
+    ContactEmail: "",
+    ContactPhone: "",
+    DesiredDate: "",
+    GroupNumber: "",
+    ArrivalTime: "",
+    DepartureTime: "",
+    Accessibility: "",
+  })
+
   const datePickerRef = useRef(null);
+
+  const handleSubmitButton = () => {
+    setSubmitForm(true);
+    changeBackground();
+  }
+
+  function checkInputsFilled() {
+    const inputs = document.querySelectorAll('#check-inputs');
+    return Array.from(inputs).every(input => input.value.trim() !== "");
+  }
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const changeBackground = () => {
+    if(submitForm && checkInputsFilled()){
+      // SEND EMAIL TO cooperangwow@gmail.com
+      console.log(formData)
+    } else {
+      alert("Please fill in all required fields.")
+    }
+  }
 
   // Function to handle date change
   const handleDateChange = (date) => {
@@ -25,7 +70,7 @@ const GroupVisitForm = () => {
   };
 
   return (
-    <section className='max-container'>
+    <section className='max-container '>
 
       {/* Group Visit Form Items */}
       {GroupForm.map((form, index) => (
@@ -70,6 +115,7 @@ const GroupVisitForm = () => {
                   <DatePicker
                     selected={selectedDate}
                     onChange={handleDateChange}
+                    id='check-inputs'
                     dateFormat="MM/dd/yyyy"
                     className='border-black border px-4 w-full md:w-[100%] h-[45px] rounded-[6px] mt-4'
                     placeholderText="mm/dd/yyyy"   
@@ -97,6 +143,10 @@ const GroupVisitForm = () => {
                 : 
                 <input 
                   type="text"
+                  id={index !== 8 ? "check-inputs" : undefined}
+                  name={form.submit}
+                  value={formData[form.submit] || ''}
+                  onChange={handleInputChange}
                   className={index === 8 
                     ? 'w-full md:w-[40%] h-[75px] xs:h-[45px] border rounded-[6px] px-4 mt-4 border-black' 
                     :'border-black border px-4 w-full md:w-[40%] h-[45px] rounded-[6px] mt-4'}
@@ -117,8 +167,10 @@ const GroupVisitForm = () => {
         viewport={{ once: true }}
         transition={{ type: 'spring', damping: 18, mass: 0.75, delay: 0.8 }} 
       >
-        <button className='bg-tertiarySecondary h-[50px] w-[250px] rounded-[10px] py-[17px] px-[50px] 
-          flexCenter text-bold-21 text-flat hover:bg-secondary'>
+        <button 
+          className='bg-tertiarySecondary h-[50px] w-[250px] rounded-[10px] py-[17px] px-[50px] flexCenter text-bold-21 text-flat hover:bg-secondary'
+          onClick={() => handleSubmitButton()}
+        >
           Submit
         </button>
       </motion.div>  
