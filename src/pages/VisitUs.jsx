@@ -13,7 +13,7 @@ const VisitUs = () => {
         <Directions />
       </section>
 
-      <section className="padding-x padding-t">
+      <section className="padding-x padding-t overflow-hidden">
         <Admission />
       </section>
 

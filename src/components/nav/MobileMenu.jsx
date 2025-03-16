@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Exitmenu, Plus, Whiteminus } from '../../assets';
 import { useState } from 'react';
 import { visitLinks } from '../../constants';
+import { motion } from 'framer-motion'
 
 const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, setActive }) => {
 
@@ -15,7 +16,13 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, s
 
     return (
         isMobileMenuOpen && (
-            <div className="md:hidden flex flex-col absolute top-[0px] left-0 bg-primary w-full h-screen z-100">
+            <motion.div 
+              className="md:hidden flex flex-col absolute top-[0px] left-0 bg-primary w-full h-screen z-100"
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: 'spring', damping: 12, mass: 0.3, delay: 0 }} 
+              initial= {{ opacity: 1, x: "-100%" }}
+            >
 
               <div className='w-full flex items-center bg-flat h-[55px] px-12 py-4'> 
                 <p className='flexCenter flex-1 font-inter font-normal text-[16px] xs:text-[21px]'>Todays hours: 8am-6pm</p>
@@ -73,7 +80,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks, active, s
                 ))}
               </ul>
 
-            </div>
+            </motion.div>
         )
     );
 };

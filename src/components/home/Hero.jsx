@@ -14,7 +14,7 @@ const Hero = () => {
       <img 
         src={hero} 
         alt='hero' 
-        className='flex-shrink-0 self-stretch w-full h-screen object-cover' 
+        className='flex-shrink-0 self-stretch w-full h-screen object-cover noSelect' 
       />
 
       <div className='padding absolute inset-0 flexCenter text-center flex-col mt-10'>
@@ -30,7 +30,7 @@ const Hero = () => {
               <img 
                 src={pointer} 
                 alt="pointer" 
-                className='w-[39px] h-[39px] absolute left-[-50px] top-[32px] transform -translate-y-1/2 hidden sm:block' 
+                className='w-[39px] h-[39px] absolute left-[-50px] top-[32px] transform -translate-y-1/2 hidden sm:block noSelect' 
               /> 
               Welcome to The <span className='text-secondary'>Fossil</span> Discovery Lab
             </span>

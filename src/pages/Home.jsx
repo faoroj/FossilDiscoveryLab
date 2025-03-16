@@ -10,7 +10,7 @@ const App = () => {
         <Hero />
       </section>
 
-      <section className="padding-x">
+      <section className="padding-x overflow-hidden">
         <Exhibits />
       </section>
 

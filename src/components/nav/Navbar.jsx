@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     
     <motion.header 
-      className='absolute w-full z-10 box-shadow'
+      className='absolute w-full z-10 box-shadow noSelect'
       initial={{ y: isHomePage ? -130 : 0 }}
       animate= {{ y: 0 }}
       transition={{ duration: .5, ease: easeInOut }}
@@ -67,7 +67,7 @@ const Navbar = () => {
         {isSearchBarOpen && (
           <motion.div 
             className="w-full h-[200px] bg-primary fixed z-20 padding-x"
-            initial={{ y: isHomePage ? -100 : 0 }}
+            initial={{ y: -100  }}
             animate= {{ y: 0 }}
             transition={{ duration: .3, ease: easeInOut }}
           >
@@ -81,11 +81,11 @@ const Navbar = () => {
                       type="search"
                       inputMode="text"
                       placeholder="What would you like to find?"
-                      className="flex-1 h-full pl-4 text-normal-16 focus:outline-none text-ellipsis overflow-hidden"
+                      className="flex-1 h-full pl-4 text-normal-16 focus:outline-none text-ellipsis bg-flat overflow-hidden"
                     />
 
                     {/* Search button */}
-                    <button className="bg-flat h-full rounded-[6px] w-[60px] flexCenter  hover:bg-gray-200 transition-colors flex-shrink-0">
+                    <button className="bg-flat h-full rounded-[6px] w-[60px] flexCenter focus:outline-none hover:bg-gray-200 transition-colors flex-shrink-0">
                       <img
                         src={search} // Path to your search icon
                         alt="Search Icon"

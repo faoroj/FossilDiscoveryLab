@@ -16,7 +16,7 @@ const ExhibitCard = ({ image, title, content, index }) => (
     viewport={{ once: true }}
     transition={{ type: 'spring', damping: 12, mass: 0.3, delay: 0.7 }} 
   >
-    <div className='w-full'>
+    <div className='w-full noSelect'>
       <img src={image} alt="exhibit" className="w-full h-full object-cover" />
     </div>
 
@@ -42,15 +42,11 @@ const Exhibits = () => (
       transition={{ duration: 0.85, ease: 'easeInOut', delay: 0.1 }}
     
     >
-      <h1
-        className='font-inter text-[21px] xxs:text-[32px] md:text-[48px] font-semibold leading-[150%]'
-      >
+      <h1 className='font-inter text-[21px] xxs:text-[32px] md:text-[48px] font-semibold leading-[150%]'>
         Explore our Exhibits
       </h1>
 
-      <div
-        className='flexCenter'
-      >
+      <div className='flexCenter'>
         <p className='text-semibold-16 md:text-semibold-18 mr-2 cursor-pointer hover:underline'>View All</p>
         <img src={Rightarrow} alt='right arrow' className='h-[13px] w-[10px] hidden sm:block'/>
       </div>
