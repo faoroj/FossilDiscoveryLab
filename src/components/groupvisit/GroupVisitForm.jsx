@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; 
 import { GroupForm } from '../../constants';
 import { motion } from 'framer-motion';
+import { format } from "date-fns";
 
 // For every single index except 8 check if there is input 
 // If every single one has input and you click submit change the bg to red
@@ -18,7 +19,7 @@ const GroupVisitForm = () => {
     ContactName: "",
     ContactEmail: "",
     ContactPhone: "",
-    DesiredDate: "",
+    DesiredDate: selectedDate || "",
     GroupNumber: "",
     ArrivalTime: "",
     DepartureTime: "",
@@ -26,7 +27,6 @@ const GroupVisitForm = () => {
   })
 
   
-
   const datePickerRef = useRef(null);
 
   const handleSubmitButton = () => {
@@ -50,6 +50,7 @@ const GroupVisitForm = () => {
   const changeBackground = () => {
     if(submitForm && checkInputsFilled()){
       // SEND EMAIL TO cooperangwow@gmail.com
+      // const finalFormData = { ...formData, DesiredDate: selectedDate };
       console.log(formData)
     } else {
       alert("Please fill in all required fields.")
@@ -58,7 +59,12 @@ const GroupVisitForm = () => {
 
   // Function to handle date change
   const handleDateChange = (date) => {
+    const formattedDate = format(date, "MM/dd/yyyy");
     setSelectedDate(date);
+    setFormData((prevData) => ({
+      ...prevData,
+      DesiredDate: formattedDate, // Ensure formData has the updated date
+    }));
     setCalendarOpen(false); 
   };
 
