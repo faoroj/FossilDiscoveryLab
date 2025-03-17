@@ -1,9 +1,14 @@
 import {  Questions, Admission, Help, Directions, Hours, Newsletter, Footer, Navbar } from "../components/";
+import { useState } from "react";
+import SearchBar from "../components/nav/SearchBar";
 
 const VisitUs = () => {
+    const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+    const handleSearchClick = () => {setIsSearchBarOpen(!isSearchBarOpen);};
   return (
     <main> 
-      <Navbar />
+      <Navbar isSearchBarOpen={isSearchBarOpen} handleSearchClick={handleSearchClick}/>
+      <SearchBar isSearchBarOpen={isSearchBarOpen} handleSearchClick={handleSearchClick} />
 
       <section className="padding-x pt-[40px] md:pt-[80px]">
         <Hours />

@@ -1,9 +1,15 @@
 import {  Navbar, Footer, Newsletter, GroupVisitHero, GroupVisitForm } from "../components/";
+import { useState } from "react";
+import SearchBar from "../components/nav/SearchBar";
 
 const GroupVisit = () => {
+    const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+    const handleSearchClick = () => {setIsSearchBarOpen(!isSearchBarOpen);};
+
   return (
   <main className="relative"> 
-    <Navbar />
+    <Navbar isSearchBarOpen={isSearchBarOpen} handleSearchClick={handleSearchClick}/>
+    <SearchBar isSearchBarOpen={isSearchBarOpen} handleSearchClick={handleSearchClick} />
 
    <section className="padding-x pt-[35px]">
     <GroupVisitHero />
