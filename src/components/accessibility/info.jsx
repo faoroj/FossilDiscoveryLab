@@ -15,7 +15,7 @@ const info = () => {
 
       {/* Parking */}
       <h1 className='text-bold-21'>Parking</h1>
-      <p>The museum has accessibile parking available along with ramps elevators 
+      <p>The museum has accessibile parking available along with ramps, elevators 
         and hallways designed to be accessible to wheelchairs and other mobility aids.
       </p>
 
