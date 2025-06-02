@@ -39,7 +39,7 @@ const info = () => {
       {/* Audio Induction Loops */}  
       <h1 className='text-bold-21 mt-[35px] ss:mt-[45px] md:mt-[80px]'>Audio Induction Loops</h1>
       <p>
-        Visitors whom would benefit from the audio induction loop system are invited to request a 
+        Visitors who would benefit from the audio induction loop system are invited to request a 
         receiver at the information desk. Our staff will be happy to assist in setting up the device 
         for optimal listening comfort.
       </p>
