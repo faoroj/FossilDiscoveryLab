@@ -48,7 +48,7 @@ const info = () => {
       <h1 className='text-bold-21 mt-[35px] ss:mt-[45px] md:mt-[80px]'>Free Wi-fi</h1>
       <p>
         We are pleased to offer free WiFi access to enhance your visit and provide convenience 
-        during your stay.
+        during your stay..
       </p>
 
       {/* Sign Language Interpreters */}   
