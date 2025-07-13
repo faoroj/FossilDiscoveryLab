@@ -41,7 +41,7 @@ const info = () => {
       <p>
         Visitors who would benefit from the audio induction loop system are invited to request a 
         receiver at the information desk. Our staff will be happy to assist in setting up the device 
-        for optimal listening comfort.
+        for optimal listening comfort..
       </p>
       
       {/* Free Wi-fi */}  
