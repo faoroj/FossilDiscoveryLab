@@ -139,7 +139,7 @@ export const services = [
     {
       id: "social-media-2",
       icon: twitter,
-      link: "https://www.twitter.com/",
+      link: "https://www.x.com/",
        
     },
     {
