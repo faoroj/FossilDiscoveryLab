@@ -1,6 +1,6 @@
 import { 
   Assistance, Divider, DonateBanner, facebook, hero, instagram, Learning, 
-  logo,  Programs ,Tours, Trex, Trex2, Triceratops, twitter, youtube, Learning2, 
+   Programs ,Tours, Trex, Trex2, Triceratops, twitter, youtube, Learning2, 
   ContactUs, JoinUs, FAQ, Address, Handicap, Car, Map, Dropdown, DropdownBlack, Calender, Whitearrowright
 } from "../assets";
 
