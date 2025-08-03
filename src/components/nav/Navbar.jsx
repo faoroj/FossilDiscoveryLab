@@ -2,7 +2,7 @@ import { navLinks, visitLinks } from '../../constants';
 import {  logo, search } from '../../assets';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Hamburgermenu, Exitmenu } from '../../assets';
+import { Hamburgermenu } from '../../assets';
 import MobileMenu from './MobileMenu';
 import { easeInOut, motion } from 'framer-motion'
 
